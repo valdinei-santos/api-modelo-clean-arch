@@ -1,0 +1,23 @@
+
+// COM TESTIFY
+
+"github.com/stretchr/testify/mock"
+
+type PresenterMock struct {
+	mock.Mock
+}
+
+func (p *PresenterMock) Show(stamp string, out []*usecase.Response) error {
+	args := p.Called(stamp, out)
+	return args.Error(0)
+}
+
+func (p *PresenterMock) ShowError(stamp string, msgErro string) error {
+	args := p.Called(stamp, msgErro)
+	return args.Error(0)
+}
+
+
+
+// PARA TESTAR
+go test -v domain/simaposentadoria/getdados/usecase/usecase_test.g

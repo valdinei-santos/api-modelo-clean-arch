@@ -1,0 +1,115 @@
+2024/07/26 12:52:03 connectDB.go:28: params=user=user1 password="SECRET-HA83HlqBBd0=" connectString=192.168.1.1:1521/orcl
+libDir=/opt/oracle/instantclient_19_9/ timezone= poolIncrement=1 poolMaxSessions=1000 poolMinSessions=1 poolSessionMaxLifetime=1h0m0s
+poolSessionTimeout=5m0s poolWaitTimeout=30s extAuth=0: ORA-12170: TNS:Connect timeout occurred
+2024/07/26 12:52:29 server.go:61: start api-modelo-clean-arch - PORT: 8800
+2024/07/26 12:52:52 server.go:61: start api-modelo-clean-arch - PORT: 8888
+2024/07/26 15:55:27 server.go:61: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/26 16:05:55 server.go:52: /cliente/get01/:id
+2024/07/26 16:05:55 start-get01.go:19: 20240726160555 - cliente/get01 - Start
+2024/07/26 16:05:55 controller.go:13: 20240726160555 - Controller - cliente/get01 - Execute
+2024/07/26 16:05:55 usecase.go:22: 20240726160555 - cliente/get01 - usecase - Execute
+2024/07/26 16:05:55 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataPessoa cpf: 
+2024/07/26 16:13:48 server.go:61: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/26 16:13:54 server.go:52: /cliente/get01/:id
+2024/07/26 16:13:54 start-get01.go:19: 20240726161354 - cliente/get01 - Start
+2024/07/26 16:13:54 controller.go:13: 20240726161354 - Controller - cliente/get01 - Execute
+2024/07/26 16:13:54 usecase.go:22: 20240726161354 - cliente/get01 - usecase - Execute
+2024/07/26 16:13:54 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf: 
+2024/07/26 16:18:59 server.go:61: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/26 16:20:26 server.go:61: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/26 16:21:45 server.go:52: /cliente/get01/:id
+2024/07/26 16:21:45 start-get01.go:19: 20240726162145 - cliente/get01 - Start
+2024/07/26 16:21:45 controller.go:13: 20240726162145 - Controller - cliente/get01 - Execute
+2024/07/26 16:21:45 usecase.go:22: 20240726162145 - cliente/get01 - usecase - Execute
+2024/07/26 16:21:45 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf: 
+2024/07/26 16:24:03 server.go:61: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/26 16:24:15 server.go:52: /cliente/get01/:cpf
+2024/07/26 16:24:15 start-get01.go:19: 20240726162415 - cliente/get01 - Start
+2024/07/26 16:24:15 controller.go:13: 20240726162415 - Controller - cliente/get01 - Execute
+2024/07/26 16:24:15 controller.go:22: 20240726162415 - Controller - cliente/get01 - Execute - CPF:1
+2024/07/26 16:24:15 usecase.go:22: 20240726162415 - cliente/get01 - usecase - Execute
+2024/07/26 16:24:15 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/26 16:34:35 server.go:61: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/26 16:34:41 server.go:52: /cliente/get01/:cpf
+2024/07/26 16:34:41 start-get01.go:19: 20240726163441 - cliente/get01 - Start
+2024/07/26 16:34:41 controller.go:13: 20240726163441 - Controller - cliente/get01 - Execute
+2024/07/26 16:34:41 controller.go:22: 20240726163441 - Controller - cliente/get01 - Execute - CPF:1
+2024/07/26 16:34:41 usecase.go:22: 20240726163441 - cliente/get01 - usecase - Execute
+2024/07/26 16:34:41 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/26 16:50:36 server.go:61: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/26 16:50:57 server.go:52: /cliente/get01/:cpf
+2024/07/26 16:50:57 start-get01.go:19: 20240726165057 - cliente/get01 - Start
+2024/07/26 16:50:57 controller.go:13: 20240726165057 - cliente/get01 - Controller - Execute
+2024/07/26 16:50:57 controller.go:22: 20240726165057 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/26 16:50:57 usecase.go:22: 20240726165057 - cliente/get01 - usecase - Execute
+2024/07/26 16:50:57 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/26 16:50:57 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/26 16:50:57 usecase.go:38: 20240726165057 - ERRO-API: Erro em cliente/get01 Execute - dpiStmt_execute: ORA-00904: "ID": identificador inválido
+2024/07/26 16:50:57 presenter.go:34: 20240726165057 - ShowError
+2024/07/26 16:50:57 view.go:30: 20240726165057 - ShowError
+2024/07/26 16:50:57 controller.go:25: 20240726165057 - Error: dpiStmt_execute: ORA-00904: "ID": identificador inválido
+2024/07/26 16:50:57 start-get01.go:26: 20240726165057 - Error: dpiStmt_execute: ORA-00904: "ID": identificador inválido
+2024/07/26 16:50:57 presenter.go:34: 20240726165057 - ShowError
+2024/07/26 16:50:57 view.go:30: 20240726165057 - ShowError
+2024/07/26 16:56:28 server.go:61: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/26 16:57:05 server.go:61: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/26 16:57:09 server.go:52: /cliente/get01/:cpf
+2024/07/26 16:57:09 start-get01.go:19: 20240726165709 - cliente/get01 - Start
+2024/07/26 16:57:09 controller.go:13: 20240726165709 - cliente/get01 - Controller - Execute
+2024/07/26 16:57:09 controller.go:22: 20240726165709 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/26 16:57:09 usecase.go:22: 20240726165709 - cliente/get01 - usecase - Execute
+2024/07/26 16:57:09 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/26 16:57:09 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/26 16:57:09 usecase.go:38: 20240726165709 - ERRO-API: Erro em cliente/get01 Execute - Telefone - dpiStmt_execute: ORA-00904: "ID": identificador inválido
+2024/07/26 16:57:09 presenter.go:34: 20240726165709 - ShowError
+2024/07/26 16:57:09 view.go:30: 20240726165709 - ShowError
+2024/07/26 16:57:09 controller.go:25: 20240726165709 - Error: dpiStmt_execute: ORA-00904: "ID": identificador inválido
+2024/07/26 16:57:09 start-get01.go:26: 20240726165709 - Error: dpiStmt_execute: ORA-00904: "ID": identificador inválido
+2024/07/26 16:57:09 presenter.go:34: 20240726165709 - ShowError
+2024/07/26 16:57:09 view.go:30: 20240726165709 - ShowError
+2024/07/26 17:00:05 server.go:61: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/26 17:00:10 server.go:52: /cliente/get01/:cpf
+2024/07/26 17:00:10 start-get01.go:19: 20240726170010 - cliente/get01 - Start
+2024/07/26 17:00:10 controller.go:13: 20240726170010 - cliente/get01 - Controller - Execute
+2024/07/26 17:00:10 controller.go:22: 20240726170010 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/26 17:00:10 usecase.go:22: 20240726170010 - cliente/get01 - usecase - Execute
+2024/07/26 17:00:10 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/26 17:00:10 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/26 17:00:10 presenter.go:21: 20240726170010 - Show
+2024/07/26 17:00:10 view.go:24: 20240726170010 - Show
+2024/07/26 17:01:24 server.go:61: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/26 17:01:26 server.go:52: /cliente/get01/:cpf
+2024/07/26 17:01:26 start-get01.go:19: 20240726170126 - cliente/get01 - Start
+2024/07/26 17:01:26 controller.go:13: 20240726170126 - cliente/get01 - Controller - Execute
+2024/07/26 17:01:26 controller.go:22: 20240726170126 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/26 17:01:26 usecase.go:22: 20240726170126 - cliente/get01 - usecase - Execute
+2024/07/26 17:01:26 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/26 17:01:26 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/26 17:01:26 presenter.go:21: 20240726170126 - Show
+2024/07/26 17:01:26 view.go:24: 20240726170126 - Show
+2024/07/26 17:22:33 server.go:61: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/26 17:30:25 server.go:52: /cliente/get01/:cpf
+2024/07/26 17:30:25 start-get01.go:19: 20240726173025 - cliente/get01 - Start
+2024/07/26 17:30:25 controller.go:13: 20240726173025 - cliente/get01 - Controller - Execute
+2024/07/26 17:30:25 controller.go:22: 20240726173025 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/26 17:30:25 usecase.go:22: 20240726173025 - cliente/get01 - usecase - Execute
+2024/07/26 17:30:25 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/26 17:30:25 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/26 17:30:25 usecase.go:47: 48999448383
+2024/07/26 17:30:25 usecase.go:47: 48999448383
+2024/07/26 17:30:25 presenter.go:21: 20240726173025 - Show
+2024/07/26 17:30:25 view.go:24: 20240726173025 - Show
+2024/07/26 17:33:19 server.go:61: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/26 17:33:39 server.go:52: /cliente/get01/:cpf
+2024/07/26 17:33:39 start-get01.go:19: 20240726173339 - cliente/get01 - Start
+2024/07/26 17:33:39 controller.go:13: 20240726173339 - cliente/get01 - Controller - Execute
+2024/07/26 17:33:39 controller.go:22: 20240726173339 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/26 17:33:39 usecase.go:22: 20240726173339 - cliente/get01 - usecase - Execute
+2024/07/26 17:33:39 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/26 17:33:39 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/26 17:33:39 repo-Oracle.go:80: 4832215526
+2024/07/26 17:33:39 repo-Oracle.go:80: 48999448383
+2024/07/26 17:33:39 usecase.go:47: 48999448383
+2024/07/26 17:33:39 usecase.go:47: 48999448383
+2024/07/26 17:33:39 presenter.go:21: 20240726173339 - Show
+2024/07/26 17:33:39 view.go:24: 20240726173339 - Show
