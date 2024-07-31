@@ -113,3 +113,83 @@ poolSessionTimeout=5m0s poolWaitTimeout=30s extAuth=0: ORA-12170: TNS:Connect ti
 2024/07/26 17:33:39 usecase.go:47: 48999448383
 2024/07/26 17:33:39 presenter.go:21: 20240726173339 - Show
 2024/07/26 17:33:39 view.go:24: 20240726173339 - Show
+2024/07/26 17:48:41 server.go:61: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/26 17:48:44 server.go:52: /cliente/get01/:cpf
+2024/07/26 17:48:44 start-get01.go:19: 20240726174844 - cliente/get01 - Start
+2024/07/26 17:48:44 controller.go:13: 20240726174844 - cliente/get01 - Controller - Execute
+2024/07/26 17:48:44 controller.go:22: 20240726174844 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/26 17:48:44 usecase.go:22: 20240726174844 - cliente/get01 - usecase - Execute
+2024/07/26 17:48:44 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/26 17:48:44 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/26 17:48:44 usecase.go:47: 48999448383
+2024/07/26 17:48:44 usecase.go:47: 48999448383
+2024/07/26 17:48:44 presenter.go:21: 20240726174844 - Show
+2024/07/26 17:48:44 view.go:24: 20240726174844 - Show
+2024/07/29 19:26:06 server.go:94: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/29 19:26:32 server.go:83: /cliente/get01/:cpf
+2024/07/29 19:26:32 start-get01.go:19: 20240729192632 - cliente/get01 - Start
+2024/07/29 19:26:32 controller.go:13: 20240729192632 - cliente/get01 - Controller - Execute
+2024/07/29 19:26:32 controller.go:22: 20240729192632 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/29 19:26:32 usecase.go:22: 20240729192632 - cliente/get01 - usecase - Execute
+2024/07/29 19:26:32 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/29 19:26:32 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/29 19:26:32 usecase.go:47: 48999448383
+2024/07/29 19:26:32 usecase.go:47: 48999448383
+2024/07/29 19:26:32 presenter.go:21: 20240729192632 - Show
+2024/07/29 19:26:32 view.go:24: 20240729192632 - Show
+2024/07/29 19:29:44 server.go:94: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/29 22:43:42 main.go:94: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/29 22:48:38 main.go:94: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/29 22:49:45 main.go:94: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/29 22:56:11 main.go:104: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/29 23:00:00 main.go:104: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/29 23:00:44 main.go:85: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/29 23:02:21 main.go:85: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/29 23:05:58 main.go:104: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/29 23:14:13 main.go:105: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/29 23:51:49 router.go:77: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/29 23:52:19 router.go:68: /cliente/get01/:cpf
+2024/07/29 23:52:19 start-get01.go:19: 20240729235219 - cliente/get01 - Start
+2024/07/29 23:52:19 controller.go:13: 20240729235219 - cliente/get01 - Controller - Execute
+2024/07/29 23:52:19 controller.go:22: 20240729235219 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/29 23:52:19 usecase.go:22: 20240729235219 - cliente/get01 - usecase - Execute
+2024/07/29 23:52:19 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/29 23:52:20 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/29 23:52:20 usecase.go:47: 48999448383
+2024/07/29 23:52:20 usecase.go:47: 48999448383
+2024/07/29 23:52:20 presenter.go:21: 20240729235219 - Show
+2024/07/29 23:52:20 view.go:24: 20240729235219 - Show
+2024/07/29 23:57:03 router.go:77: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/29 23:57:21 router.go:68: /cliente/get01/:cpf
+2024/07/29 23:57:21 start-get01.go:19: 20240729235721 - cliente/get01 - Start
+2024/07/29 23:57:21 controller.go:13: 20240729235721 - cliente/get01 - Controller - Execute
+2024/07/29 23:57:21 controller.go:22: 20240729235721 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/29 23:57:21 usecase.go:22: 20240729235721 - cliente/get01 - usecase - Execute
+2024/07/29 23:57:21 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/29 23:57:21 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/29 23:57:21 usecase.go:47: 48999448383
+2024/07/29 23:57:21 usecase.go:47: 48999448383
+2024/07/29 23:57:21 presenter.go:21: 20240729235721 - Show
+2024/07/29 23:57:21 view.go:24: 20240729235721 - Show
+2024/07/29 23:59:01 router.go:89: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/30 00:02:00 router.go:77: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/30 00:03:34 router.go:77: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/30 00:04:13 router.go:66: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/30 00:05:15 router.go:66: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/30 00:08:59 router.go:66: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/30 00:12:12 router.go:66: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/30 00:18:36 router.go:66: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/30 00:31:40 router.go:74: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/30 10:33:08 router.go:67: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/30 10:45:29 router.go:67: start github.com/valdinei-santos/api-modelo-clean-arch - PORT: 8888
+2024/07/30 10:46:48 router.go:86: /cliente/get01/:cpf
+2024/07/30 10:46:48 start-get01.go:19: 20240730104648 - cliente/get01 - Start
+2024/07/30 10:46:48 controller.go:24: 20240730104648 - cliente/get01 - Controller - Execute
+2024/07/30 10:46:48 controller.go:33: 20240730104648 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/30 10:46:48 usecase.go:22: 20240730104648 - cliente/get01 - usecase - Execute
+2024/07/30 10:46:48 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/30 10:46:48 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/30 10:46:48 usecase.go:47: 48999448383
+2024/07/30 10:46:48 usecase.go:47: 48999448383
+2024/07/30 10:46:48 presenter.go:21: 20240730104648 - Show
+2024/07/30 10:46:48 view.go:24: 20240730104648 - Show

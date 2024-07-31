@@ -9,6 +9,17 @@ import (
 )
 
 // Execute - ...
+// @BasePath /api/modelo
+
+// PingExample godoc
+// @Summary ping example
+// @Schemes
+// @Description do ping
+// @Tags example
+// @Accept json
+// @Produce json
+// @Success 200 {string} Helloworld
+// @Router /example/helloworld [get]
 func Execute(stamp string, c *gin.Context, useCase usecase.IUsecase) error {
 	log.Printf("%v - cliente/get01 - Controller - Execute", stamp)
 

@@ -1,0 +1,67 @@
+basePath: /api/modelo/
+definitions:
+  router.ClienteResponse:
+    properties:
+      cpf:
+        type: string
+      dt_nasc:
+        type: string
+      nome:
+        type: string
+    type: object
+  router.ErrorResponse:
+    properties:
+      errorCode:
+        type: string
+      message:
+        type: string
+    type: object
+externalDocs:
+  description: OpenAPI
+  url: https://swagger.io/resources/open-api/
+host: site.com.br:8888
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: API com implementação usando Clean Architeture
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: API-MODELO-CLEAN-ARCH
+  version: "1.0"
+paths:
+  /cliente/get01/{cpf}:
+    get:
+      consumes:
+      - application/json
+      description: get cliente by CPF
+      operationId: get-cliente-by-cpf
+      parameters:
+      - description: Cliente CPF
+        in: path
+        name: cpf
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/router.ClienteResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/router.ErrorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/router.ErrorResponse'
+      summary: Get cliente by CPF
+securityDefinitions:
+  BasicAuth:
+    type: basic
+swagger: "2.0"

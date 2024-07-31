@@ -2,10 +2,10 @@
 #   STEP 1 build executable binary  #
 #####################################
 #FROM golang:alpine AS builder
-FROM golang:1.18 as builder
+FROM golang:1.22 as builder
 
 # Create appuser.
-ENV USER=apicardeal02
+ENV USER=apimodelo
 ENV UID=10001 
 # See https://stackoverflow.com/a/55757473/12429735RUN 
 RUN adduser \    
