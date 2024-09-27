@@ -2,7 +2,6 @@ package view
 
 import (
 	"encoding/json"
-	"log"
 	"net/http"
 
 	"github.com/valdinei-santos/api-modelo-clean-arch/domain/cliente/post01/adapters/presenter"
@@ -21,13 +20,11 @@ func NewView(c *gin.Context) *View {
 }
 
 func (v *View) Show(stamp string, out *presenter.Output) error {
-	log.Printf("%v - Show", stamp)
 	FormatResponseToJSON(v.CtxGin.Writer, http.StatusOK, out)
 	return nil
 }
 
 func (v *View) ShowError(stamp string, msgErro string) error {
-	log.Printf("%v - ShowError", stamp)
 	dataJErro := presenter.OutputDefault{
 		StatusCode: -1,
 		Message:    msgErro,

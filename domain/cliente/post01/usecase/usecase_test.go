@@ -1,11 +1,10 @@
 package usecase_test
 
 import (
-	"time"
+	"errors"
 
-	"github.com/valdinei-santos/api-modelo-clean-arch/config"
-	"github.com/valdinei-santos/api-modelo-clean-arch/domain/cliente/post01/infra/repository"
 	"github.com/valdinei-santos/api-modelo-clean-arch/domain/cliente/post01/usecase"
+	"github.com/valdinei-santos/api-modelo-clean-arch/domain/cliente/post01/usecase/mocks"
 
 	//"api-modelo-clean-arch/domain/extrato/getdados/mock"
 	"testing"
@@ -14,7 +13,9 @@ import (
 
 	//"github.com/golang/mock/gomock"
 
+	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
+	"go.uber.org/mock/gomock"
 )
 
 // Com Mock Testify
@@ -39,75 +40,49 @@ func (p *PresenterMock) ShowError(stamp string, msgErro string) error {
 	mock.Mock
 }
 
-func (p *RepositoryMock) QueryDados(stamp string, nrMatricula int) (*entity.Dados, error) {
+func (p *RepositoryMock) QueryDados(stamp string, nrMatricula int) (*entities.Dados, error) {
 	args := p.Called(stamp, nrMatricula)
-	return args.Get(0).(*entity.Dados), args.Error(1)
+	return args.Get(0).(*entities.Dados), args.Error(1)
 } */
 
 func Test_Execute(t *testing.T) {
-	dbTest := config.InitDBTest()
-	defer dbTest.Close()
-	repo := repository.NewRepoOracle(dbTest)
-	stamp := time.Now().Format(("20060102150405"))
-	cpf := "01234567890"
-	nome := "João da Silva"
-	dtNasc := "02/07/1975"
+	control := gomock.NewController(t)
+	defer control.Finish()
 
-	// Com gomock
-	/* controller := gomock.NewController(t)
-	defer controller.Finish()
-	service := mock.NewMockIUsecase(controller)
-	service.EXPECT().
-		Execute(stamp, nrMatriculaInt).
-		Return(nil)
-
-	err := service.Execute(stamp, nrMatriculaInt)
-	assert := assert.New(t)
-	assert.Nil(err)
-	//assert.Equal(d.NrMatricula, result.NrMatricula)
-	*/
-
-	// Com Testify
-	p := &usecase.Pessoa{
-		Nome:   nome,
-		DtNasc: dtNasc,
-		CPF:    cpf,
+	clienteOK := &usecase.Request{
+		CPF:       "1",
+		Nome:      "Cliente 1",
+		DtNasc:    "02/07/1975",
+		Telefones: []string{"4832453548", "48999884455"},
 	}
 
-	t1 := &usecase.Telefone{
-		Numero: "48912345678",
-	}
-	t2 := &usecase.Telefone{
-		Numero: "48987654321",
-	}
-	var listaTel []*usecase.Telefone
-	listaTel = append(listaTel, t1)
-	listaTel = append(listaTel, t2)
+	t.Run("Caso de Sucesso", func(t *testing.T) {
+		r := mocks.NewMockIRepository(control)
+		r.EXPECT().InsertCliente(gomock.Any(), gomock.Any()).Return(nil)
+		//v := mocks.NewMockIView(control)
+		//v.EXPECT().Show("", "").Return(nil)
+		p := mocks.NewMockIPresenter(control)
+		p.EXPECT().Show(gomock.Any(), gomock.Any()).Return(nil)
 
-	res := usecase.Response{
-		Pessoa:    p,
-		Telefones: listaTel,
-	}
-	// create an instance of our test object
-	//thePresenterMock := PresenterMock{} // Cria o Mock
-	thePresenterMock := new(PresenterMock) // Cria o Mock
+		uc := usecase.NewUseCase(r, p)
+		//err := uc.Execute("", tarifasOK_UC)
+		err := uc.Execute("", clienteOK)
+		assert.Nil(t, err)
+	})
 
-	// setup expectations
-	// Quando os dados que serão passados como parametros não podem ser previstos
-	//thePresenterMock.On("Show", mock.Anything, mock.Anything).Return(nil) // Se Show(mock.Anything, mock.Anything) é chamado, então retorna nil
+	t.Run("Caso de Erro", func(t *testing.T) {
+		errExpect := errors.New("dummy error")
+		r := mocks.NewMockIRepository(control)
+		r.EXPECT().InsertCliente(gomock.Any(), gomock.Any()).Return(errExpect)
+		//v := mocks.NewMockIView(control)
+		//v.EXPECT().Show("", "").Return(nil)
+		p := mocks.NewMockIPresenter(control)
+		p.EXPECT().ShowError(gomock.Any(), gomock.Any()).Return(nil)
 
-	// Quando os dados que serão passados como parametros podem ser fixados
-	thePresenterMock.On("Show", stamp, &res).Return(nil)
-
-	// g := greeter{&theDBMock, "sg"}
-	// call the code we are testing
-	u := usecase.UseCase{repo, thePresenterMock}
-	u.Execute(stamp, cpf)
-
-	// assert that the expectations were met
-	thePresenterMock.AssertExpectations(t)
-
-	//assert.Equal(t, "Message is: nil", u.Execute(stamp, nrMatriculaInt))
-	//thePresenterMock.AssertExpectations(t)
+		uc := usecase.NewUseCase(r, p)
+		//err := uc.Execute("", tarifasOK_UC)
+		err := uc.Execute("", clienteOK)
+		assert.NotNil(t, err)
+	})
 
 }

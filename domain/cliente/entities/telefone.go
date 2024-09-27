@@ -1,4 +1,4 @@
-package entity
+package entities
 
 import (
 	"errors"
@@ -8,7 +8,7 @@ import (
 
 type Telefone struct {
 	Cpf    string `json:"cpf"`
-	Numero string `json:"numerp"`
+	Numero string `json:"numero"`
 }
 
 func NewTelefone(
@@ -21,7 +21,7 @@ func NewTelefone(
 	}
 	err := r2.Validate()
 	if err != nil {
-		return nil, errors.New("erro na construção do objeto telefone")
+		return nil, errors.New("erro na construção do objeto telefone do endpoint get02")
 	}
 	return r2, nil
 }

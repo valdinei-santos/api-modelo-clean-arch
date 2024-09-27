@@ -6,20 +6,21 @@ package usecase
 	Dado3      string  `json:"dado3"`
 } */
 
-type Telefone struct {
+/* type Telefone struct {
 	//Id     int `json:"id"`
 	Numero string `json:"numero"`
-}
+} */
 
 type Cliente struct {
-	Nome   string `json:"nome"`
-	DtNasc string `json:"dt_nasc"`
-	CPF    string `json:"cpf"`
+	Nome      string   `json:"nome"`
+	DtNasc    string   `json:"dt_nasc"`
+	CPF       string   `json:"cpf"`
+	Telefones []string `json:"telefones"`
 }
 
 type Response struct {
-	Cliente   *Cliente    `json:"cliente"`
-	Telefones []*Telefone `json:"telefones"`
+	Cliente Cliente `json:"cliente"`
+	//Telefones []string `json:"telefones"`
 }
 
 /* type ResponseAssisitdo struct {

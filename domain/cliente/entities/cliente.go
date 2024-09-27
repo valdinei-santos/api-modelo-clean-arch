@@ -1,10 +1,17 @@
-package entity
+package entities
 
 import (
 	"errors"
 
 	"github.com/go-playground/validator/v10"
 )
+
+type ClienteComTel struct {
+	Cpf       string   `json:"cpf"`
+	Nome      string   `json:"nome"`
+	DtNasc    string   `json:"dt_nasc"`
+	Telefones []string `json:"telefones"`
+}
 
 type Cliente struct {
 	Cpf    string `json:"cpf"`
@@ -24,7 +31,7 @@ func NewCliente(
 	}
 	err := r2.Validate()
 	if err != nil {
-		return nil, errors.New("erro na construção do objeto Cliente")
+		return nil, errors.New("erro na construção do objeto Cliente endpoint get02")
 	}
 	return r2, nil
 }

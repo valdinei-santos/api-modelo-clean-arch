@@ -1,0 +1,53 @@
+### Variables 
+@url = http://localhost:8888
+@apiurl = {{url}}/api/modelo
+
+GET {{url}}/ping
+Accept: application/json
+
+### Listar 1 cliente
+GET {{apiurl}}/cliente/1
+Accept: application/json
+
+### Listar todos os clientes
+GET {{apiurl}}/cliente
+Accept: application/json
+
+### Adicionar um cliente
+POST {{apiurl}}/cliente
+Content-Type: application/json
+
+{
+  "nome": "Cliente 4",
+  "cpf": "4",
+  "dt_nasc": "13/08/1969",
+  "telefones": [
+    "4832453548",
+    "4832215526"
+  ]
+}
+
+### Listar 1 livro especifico
+GET http://localhost:8080/books/2
+Accept: application/json
+
+### Atualizar um livro existente
+GET http://localhost:8080/books/2
+Content-Type: application/json
+
+{
+  "title": "Clean Code",
+  "author": "Robert C. Martin",
+  "genre": "Software Development"
+}
+
+### Deletar um livro
+DELETE http://localhost:8080/books/1
+
+### Simular leitura de múltiplos livros via POST com JSON
+POST http://localhost:8080/simulate-reading
+Content-Type: application/json
+
+{
+  "book_ids": [1, 2, 3]
+}

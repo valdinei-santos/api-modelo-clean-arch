@@ -10,14 +10,15 @@ type Telefone struct {
 }
 
 type Telefones struct {
-	Numeros []Telefone `json:"numeros"`
+	Numeros string `json:"numeros"`
 }
 
 type Cliente struct {
-	Nome      string    `json:"nome"`
-	Cpf       string    `json:"cpf"`
-	DtNasc    string    `json:"dt_nasc"`
-	Telefones Telefones `json:"telefones"`
+	Nome   string `json:"nome"`
+	Cpf    string `json:"cpf"`
+	DtNasc string `json:"dt_nasc"`
+	//Telefones []Telefone `json:"telefones"`
+	Telefones []string `json:"telefones"`
 }
 
 type Output struct {

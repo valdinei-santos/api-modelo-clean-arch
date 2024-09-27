@@ -1,7 +1,8 @@
 package usecase
 
 import (
-	"log"
+	"github.com/valdinei-santos/api-modelo-clean-arch/config/logger"
+	"go.uber.org/zap"
 )
 
 // UseCase - ...
@@ -19,21 +20,26 @@ func NewUseCase(r IRepository, p IPresenter) *UseCase {
 
 // Execute - ...
 func (u *UseCase) Execute(stamp string, in *Request) error {
-	log.Printf("%v - cliente/post01 - usecase - Execute", stamp)
-	p := &Pessoa{
-		CPF:    in.Pessoa.CPF,
-		Nome:   in.Pessoa.Nome,
-		DtNasc: in.Pessoa.DtNasc,
+	logger.Info("Entrou...", zap.String("id", stamp), zap.String("mtd", "cliente/post01 - UseCase - Execute"))
+	var telefones []string
+	//for _, v := range in.Telefones {
+	telefones = append(telefones, in.Telefones...)
+	//}
+	p := &Cliente{
+		CPF:       in.CPF,
+		Nome:      in.Nome,
+		DtNasc:    in.DtNasc,
+		Telefones: telefones,
 	}
-	err := u.Repo.InsertPessoa(stamp, p)
+	err := u.Repo.InsertCliente(stamp, p)
 	if err != nil {
-		log.Printf("%v - ERRO-API: Erro em cliente/post01 Execute - %s", stamp, err.Error())
+		logger.Error("Erro", err, zap.String("id", stamp), zap.String("mtd", "cliente/post01 - UseCase - Execute"))
 		u.Presenter.ShowError(stamp, "ERRO-API: Erro no Insert de dados!")
 		return err
 	}
 
-	var result *Response
-	result = &Response{
+	//var result *Response
+	result := &Response{
 		StatusCode: 1,
 		Message:    "Insert OK",
 	}

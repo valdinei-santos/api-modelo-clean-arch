@@ -2,9 +2,10 @@ package presenter
 
 import (
 	"encoding/json"
-	"log"
 
+	"github.com/valdinei-santos/api-modelo-clean-arch/config/logger"
 	"github.com/valdinei-santos/api-modelo-clean-arch/domain/cliente/get01/usecase"
+	"go.uber.org/zap"
 )
 
 type Presenter struct {
@@ -18,7 +19,7 @@ func NewPresenter(v IView) *Presenter {
 }
 
 func (p *Presenter) Show(stamp string, t *usecase.Response) error {
-	log.Printf("%v - Show", stamp)
+	logger.Info("Entrou...", zap.String("id", stamp), zap.String("mtd", "cliente/get01 - Presenter - Show"))
 	saida, err := GetViewModelFromResponse(t)
 	if err != nil {
 		return err
@@ -31,7 +32,7 @@ func (p *Presenter) Show(stamp string, t *usecase.Response) error {
 }
 
 func (p *Presenter) ShowError(stamp string, msgErro string) error {
-	log.Printf("%v - ShowError", stamp)
+	logger.Info("Entrou...", zap.String("id", stamp), zap.String("mtd", "cliente/get01 - Presenter - ShowError"))
 	err := p.View.ShowError(stamp, msgErro)
 	if err != nil {
 		return err
@@ -46,5 +47,6 @@ func GetViewModelFromResponse(res interface{}) (*Output, error) {
 	if err != nil {
 		return nil, err
 	}
+	logger.Info("Response:"+out.Cliente.Nome, zap.String("id", ""), zap.String("mtd", "cliente/get01 - Presenter - GetViewModelFromResponse"))
 	return out, nil
 }

@@ -1,7 +1,7 @@
 package usecase
 
 import (
-	"github.com/valdinei-santos/api-modelo-clean-arch/domain/cliente/get01/entity"
+	"github.com/valdinei-santos/api-modelo-clean-arch/domain/cliente/entities"
 )
 
 // IUsecase - ...
@@ -16,6 +16,6 @@ type IPresenter interface {
 }
 
 type IRepository interface {
-	QueryLoadDataCliente(stamp, cpf string) (*entity.Cliente, error)
-	QueryLoadDataTelefone(stamp, cpf string) ([]*entity.Telefone, error)
+	QueryLoadDataCliente(stamp, cpf string) (*entities.Cliente, error)
+	QueryLoadDataTelefone(stamp, cpf string) ([]entities.Telefone, error)
 }

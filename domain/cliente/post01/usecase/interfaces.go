@@ -12,6 +12,6 @@ type IPresenter interface {
 }
 
 type IRepository interface {
-	InsertPessoa(stamp string, p *Pessoa) error
+	InsertCliente(stamp string, p *Cliente) error
 	InsertTelefone(stamp string, t *Telefone) error
 }

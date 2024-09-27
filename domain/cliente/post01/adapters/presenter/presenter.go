@@ -2,7 +2,6 @@ package presenter
 
 import (
 	"encoding/json"
-	"log"
 
 	"github.com/valdinei-santos/api-modelo-clean-arch/domain/cliente/post01/usecase"
 )
@@ -18,7 +17,6 @@ func NewPresenter(v IView) *Presenter {
 }
 
 func (p *Presenter) Show(stamp string, t *usecase.Response) error {
-	log.Printf("%v - Show", stamp)
 	saida, err := GetViewModelFromResponse(t)
 	if err != nil {
 		return err
@@ -31,7 +29,6 @@ func (p *Presenter) Show(stamp string, t *usecase.Response) error {
 }
 
 func (p *Presenter) ShowError(stamp string, msgErro string) error {
-	log.Printf("%v - ShowError", stamp)
 	err := p.View.ShowError(stamp, msgErro)
 	if err != nil {
 		return err

@@ -1,8 +1,8 @@
 #####################################
 #   STEP 1 build executable binary  #
 #####################################
-#FROM golang:alpine AS builder
-FROM golang:1.22 as builder
+#FROM golang:1.18 as builder
+FROM golang:1.23.0-bullseye AS builder
 
 # Create appuser.
 ENV USER=apimodelo
@@ -25,7 +25,7 @@ COPY . .
 
 # Build the binary.
 # RUN CGO_ENABLED=0 GOOS=linux go build -o apirest
-# Por causa do Kafka tem que usar CGO_ENABLED=1 e -tags musl
+# Por causa do Kafka/Oracle/Etc tem que usar CGO_ENABLED=1 e -tags musl
 RUN CGO_ENABLED=1 GOOS=linux go build -ldflags="-w -s" -o apimodelo api/server.go
 
 #####################################
@@ -41,6 +41,10 @@ COPY --from=builder /etc/group /etc/group
 
 # Use an unprivileged user.
 USER apimodelo:apimodelo
+
+# Definição da variável de ambiente para o cliente Oracle
+#ENV LD_LIBRARY_PATH=/usr/lib/oracle/19.15/client64/lib
+ENV ORACLE_LIB_DIR=/usr/lib/oracle/19.15/client64/lib
 
 CMD ["./apimodelo"]  
 EXPOSE 8800

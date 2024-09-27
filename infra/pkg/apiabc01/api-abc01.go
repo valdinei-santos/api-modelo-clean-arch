@@ -9,10 +9,9 @@ type Retorno struct {
 /* //GetDadosGerais - ...
 func GetDadosGerais(stamp, param1, param2 string) (string, error) {
 	urlApi := config.AllConfig.APIextrerna + "dadosgerais/" + param1 + "/" + param2
-	log.Printf("%v - Vai buscar: %v ", stamp, urlApi)
 	response, err := http.Get(urlApi)
 	if err != nil {
-		log.Printf("%v - ERRO-API: Erro ao buscar: %v ", stamp, urlApi)
+		logger.Error("Erro", err, zap.String("id", stamp), zap.String("mtd", "apiabc01 - GetDadosGerais"))
 		return "", errors.New("Erro ao buscar " + param1 + " -- " + err.Error())
 	}
 	defer response.Body.Close()

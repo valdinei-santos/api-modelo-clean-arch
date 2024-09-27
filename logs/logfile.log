@@ -193,3 +193,1464 @@ poolSessionTimeout=5m0s poolWaitTimeout=30s extAuth=0: ORA-12170: TNS:Connect ti
 2024/07/30 10:46:48 usecase.go:47: 48999448383
 2024/07/30 10:46:48 presenter.go:21: 20240730104648 - Show
 2024/07/30 10:46:48 view.go:24: 20240730104648 - Show
+2024/07/31 18:27:54 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 18:30:00 server.go:53: /cliente/get01/:cpf
+2024/07/31 18:30:00 start-get01.go:19: 20240731183000 - cliente/get01 - Start
+2024/07/31 18:30:00 controller.go:24: 20240731183000 - cliente/get01 - Controller - Execute
+2024/07/31 18:30:00 controller.go:33: 20240731183000 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 18:30:00 usecase.go:22: 20240731183000 - cliente/get01 - usecase - Execute
+2024/07/31 18:30:00 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 18:30:00 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 18:30:00 usecase.go:47: 48999448383
+2024/07/31 18:30:00 usecase.go:47: 48999448383
+2024/07/31 18:30:00 presenter.go:21: 20240731183000 - Show
+2024/07/31 18:30:00 view.go:24: 20240731183000 - Show
+2024/07/31 18:33:59 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 18:34:11 server.go:53: /cliente/get01/:cpf
+2024/07/31 18:34:11 start-get01.go:19: 20240731183411 - cliente/get01 - Start
+2024/07/31 18:34:11 controller.go:13: 20240731183411 - cliente/get01 - Controller - Execute
+2024/07/31 18:34:11 controller.go:22: 20240731183411 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 18:34:11 usecase.go:22: 20240731183411 - cliente/get01 - usecase - Execute
+2024/07/31 18:34:11 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 18:34:11 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 18:34:11 usecase.go:47: 48999448383
+2024/07/31 18:34:11 usecase.go:47: 48999448383
+2024/07/31 18:34:11 usecase.go:51: 48999448383
+2024/07/31 18:34:11 usecase.go:51: 48999448383
+2024/07/31 18:34:11 presenter.go:21: 20240731183411 - Show
+2024/07/31 18:34:11 view.go:24: 20240731183411 - Show
+2024/07/31 18:36:17 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 18:36:22 server.go:53: /cliente/get01/:cpf
+2024/07/31 18:36:22 start-get01.go:19: 20240731183622 - cliente/get01 - Start
+2024/07/31 18:36:22 controller.go:13: 20240731183622 - cliente/get01 - Controller - Execute
+2024/07/31 18:36:22 controller.go:22: 20240731183622 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 18:36:22 usecase.go:22: 20240731183622 - cliente/get01 - usecase - Execute
+2024/07/31 18:36:22 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 18:36:22 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 18:36:22 usecase.go:44: 48999448383
+2024/07/31 18:36:22 usecase.go:48: 48999448383
+2024/07/31 18:36:22 usecase.go:44: 48999448383
+2024/07/31 18:36:22 usecase.go:48: 48999448383
+2024/07/31 18:36:22 usecase.go:52: 48999448383
+2024/07/31 18:36:22 usecase.go:52: 48999448383
+2024/07/31 18:36:22 presenter.go:21: 20240731183622 - Show
+2024/07/31 18:36:22 view.go:24: 20240731183622 - Show
+2024/07/31 18:39:19 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 18:39:23 server.go:53: /cliente/get01/:cpf
+2024/07/31 18:39:23 start-get01.go:19: 20240731183923 - cliente/get01 - Start
+2024/07/31 18:39:23 controller.go:13: 20240731183923 - cliente/get01 - Controller - Execute
+2024/07/31 18:39:23 controller.go:22: 20240731183923 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 18:39:23 usecase.go:22: 20240731183923 - cliente/get01 - usecase - Execute
+2024/07/31 18:39:23 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 18:39:23 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 18:39:23 repo-Oracle.go:80: 4832215526
+2024/07/31 18:39:23 repo-Oracle.go:80: 48999448383
+2024/07/31 18:39:23 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 18:39:23 usecase.go:44: 48999448383
+2024/07/31 18:39:23 usecase.go:48: 48999448383
+2024/07/31 18:39:23 usecase.go:44: 48999448383
+2024/07/31 18:39:23 usecase.go:48: 48999448383
+2024/07/31 18:39:23 usecase.go:52: 48999448383
+2024/07/31 18:39:23 usecase.go:52: 48999448383
+2024/07/31 18:39:23 presenter.go:21: 20240731183923 - Show
+2024/07/31 18:39:23 view.go:24: 20240731183923 - Show
+2024/07/31 18:41:14 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 18:41:19 server.go:53: /cliente/get01/:cpf
+2024/07/31 18:41:19 start-get01.go:19: 20240731184119 - cliente/get01 - Start
+2024/07/31 18:41:19 controller.go:13: 20240731184119 - cliente/get01 - Controller - Execute
+2024/07/31 18:41:19 controller.go:22: 20240731184119 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 18:41:19 usecase.go:22: 20240731184119 - cliente/get01 - usecase - Execute
+2024/07/31 18:41:19 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 18:41:19 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 18:41:19 repo-Oracle.go:80: 4832215526
+2024/07/31 18:41:19 repo-Oracle.go:80: 48999448383
+2024/07/31 18:41:19 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 18:41:19 usecase.go:42: 1: 48999448383
+2024/07/31 18:41:19 usecase.go:43: 2: 48999448383
+2024/07/31 18:41:19 usecase.go:46: 48999448383
+2024/07/31 18:41:19 usecase.go:50: 48999448383
+2024/07/31 18:41:19 usecase.go:46: 48999448383
+2024/07/31 18:41:19 usecase.go:50: 48999448383
+2024/07/31 18:41:19 usecase.go:54: 48999448383
+2024/07/31 18:41:19 usecase.go:54: 48999448383
+2024/07/31 18:41:19 presenter.go:21: 20240731184119 - Show
+2024/07/31 18:41:19 view.go:24: 20240731184119 - Show
+2024/07/31 18:47:08 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 18:47:14 server.go:53: /cliente/get01/:cpf
+2024/07/31 18:47:14 start-get01.go:19: 20240731184714 - cliente/get01 - Start
+2024/07/31 18:47:14 controller.go:13: 20240731184714 - cliente/get01 - Controller - Execute
+2024/07/31 18:47:14 controller.go:22: 20240731184714 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 18:47:14 usecase.go:22: 20240731184714 - cliente/get01 - usecase - Execute
+2024/07/31 18:47:14 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 18:47:14 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 18:47:14 repo-Oracle.go:80: 4832215526
+2024/07/31 18:47:14 repo-Oracle.go:80: 48999448383
+2024/07/31 18:47:14 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 18:47:14 usecase.go:42: 1: 48999448383
+2024/07/31 18:47:14 usecase.go:43: 2: 48999448383
+2024/07/31 18:47:14 usecase.go:46: idx: 0 - valor: 48999448383
+2024/07/31 18:47:14 usecase.go:50: 48999448383
+2024/07/31 18:47:14 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 18:47:14 usecase.go:50: 48999448383
+2024/07/31 18:47:14 usecase.go:54: 48999448383
+2024/07/31 18:47:14 usecase.go:54: 48999448383
+2024/07/31 18:47:14 presenter.go:21: 20240731184714 - Show
+2024/07/31 18:47:14 view.go:24: 20240731184714 - Show
+2024/07/31 18:51:35 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 18:51:40 server.go:53: /cliente/get01/:cpf
+2024/07/31 18:51:40 start-get01.go:19: 20240731185140 - cliente/get01 - Start
+2024/07/31 18:51:40 controller.go:13: 20240731185140 - cliente/get01 - Controller - Execute
+2024/07/31 18:51:40 controller.go:22: 20240731185140 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 18:51:40 usecase.go:22: 20240731185140 - cliente/get01 - usecase - Execute
+2024/07/31 18:51:40 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 18:51:40 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 18:57:23 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 18:57:26 server.go:53: /cliente/get01/:cpf
+2024/07/31 18:57:26 start-get01.go:19: 20240731185726 - cliente/get01 - Start
+2024/07/31 18:57:26 controller.go:13: 20240731185726 - cliente/get01 - Controller - Execute
+2024/07/31 18:57:26 controller.go:22: 20240731185726 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 18:57:26 usecase.go:22: 20240731185726 - cliente/get01 - usecase - Execute
+2024/07/31 18:57:26 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 18:57:26 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 18:57:26 repo-Oracle.go:80: 4832215526
+2024/07/31 18:57:26 repo-Oracle.go:80: 48999448383
+2024/07/31 18:57:26 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 18:57:26 usecase.go:42: 1: 4832215526
+2024/07/31 18:57:26 usecase.go:43: 2: 48999448383
+2024/07/31 18:57:26 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 18:57:26 usecase.go:50: 4832215526
+2024/07/31 18:57:26 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 18:57:26 usecase.go:50: 48999448383
+2024/07/31 18:57:26 usecase.go:54: 4832215526
+2024/07/31 18:57:26 usecase.go:54: 48999448383
+2024/07/31 18:57:26 presenter.go:21: 20240731185726 - Show
+2024/07/31 18:57:26 view.go:24: 20240731185726 - Show
+2024/07/31 18:58:52 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 18:58:55 server.go:53: /cliente/get01/:cpf
+2024/07/31 18:58:55 start-get01.go:19: 20240731185855 - cliente/get01 - Start
+2024/07/31 18:58:55 controller.go:13: 20240731185855 - cliente/get01 - Controller - Execute
+2024/07/31 18:58:55 controller.go:22: 20240731185855 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 18:58:55 usecase.go:22: 20240731185855 - cliente/get01 - usecase - Execute
+2024/07/31 18:58:55 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 18:58:55 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 18:58:55 repo-Oracle.go:80: 4832215526
+2024/07/31 18:58:55 repo-Oracle.go:80: 48999448383
+2024/07/31 18:58:55 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 18:58:55 usecase.go:42: 1: 4832215526
+2024/07/31 18:58:55 usecase.go:43: 2: 48999448383
+2024/07/31 18:58:55 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 18:58:55 usecase.go:50: 4832215526
+2024/07/31 18:58:55 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 18:58:55 usecase.go:50: 48999448383
+2024/07/31 18:58:55 usecase.go:54: 4832215526
+2024/07/31 18:58:55 usecase.go:54: 48999448383
+2024/07/31 18:58:55 presenter.go:21: 20240731185855 - Show
+2024/07/31 18:58:55 view.go:24: 20240731185855 - Show
+2024/07/31 18:59:50 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 18:59:53 server.go:53: /cliente/get01/:cpf
+2024/07/31 18:59:53 start-get01.go:19: 20240731185953 - cliente/get01 - Start
+2024/07/31 18:59:53 controller.go:13: 20240731185953 - cliente/get01 - Controller - Execute
+2024/07/31 18:59:53 controller.go:22: 20240731185953 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 18:59:53 usecase.go:22: 20240731185953 - cliente/get01 - usecase - Execute
+2024/07/31 18:59:53 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 18:59:53 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 18:59:53 repo-Oracle.go:80: 4832215526
+2024/07/31 18:59:53 repo-Oracle.go:80: 48999448383
+2024/07/31 18:59:53 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 18:59:53 usecase.go:42: 1: 4832215526
+2024/07/31 18:59:53 usecase.go:43: 2: 48999448383
+2024/07/31 18:59:53 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 18:59:53 usecase.go:50: 4832215526
+2024/07/31 18:59:53 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 18:59:53 usecase.go:50: 48999448383
+2024/07/31 18:59:53 usecase.go:54: 4832215526
+2024/07/31 18:59:53 usecase.go:54: 48999448383
+2024/07/31 18:59:53 presenter.go:21: 20240731185953 - Show
+2024/07/31 18:59:53 view.go:24: 20240731185953 - Show
+2024/07/31 18:59:54 server.go:53: /cliente/get01/:cpf
+2024/07/31 18:59:54 start-get01.go:19: 20240731185954 - cliente/get01 - Start
+2024/07/31 18:59:54 controller.go:13: 20240731185954 - cliente/get01 - Controller - Execute
+2024/07/31 18:59:54 controller.go:22: 20240731185954 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 18:59:54 usecase.go:22: 20240731185954 - cliente/get01 - usecase - Execute
+2024/07/31 18:59:54 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 18:59:54 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 18:59:54 repo-Oracle.go:80: 4832215526
+2024/07/31 18:59:54 repo-Oracle.go:80: 48999448383
+2024/07/31 18:59:54 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 18:59:54 usecase.go:42: 1: 4832215526
+2024/07/31 18:59:54 usecase.go:43: 2: 48999448383
+2024/07/31 18:59:54 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 18:59:54 usecase.go:50: 4832215526
+2024/07/31 18:59:54 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 18:59:54 usecase.go:50: 48999448383
+2024/07/31 18:59:54 usecase.go:54: 4832215526
+2024/07/31 18:59:54 usecase.go:54: 48999448383
+2024/07/31 18:59:54 presenter.go:21: 20240731185954 - Show
+2024/07/31 18:59:54 view.go:24: 20240731185954 - Show
+2024/07/31 19:00:30 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:00:33 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:00:33 start-get01.go:19: 20240731190033 - cliente/get01 - Start
+2024/07/31 19:00:33 controller.go:13: 20240731190033 - cliente/get01 - Controller - Execute
+2024/07/31 19:00:33 controller.go:22: 20240731190033 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:00:33 usecase.go:22: 20240731190033 - cliente/get01 - usecase - Execute
+2024/07/31 19:00:33 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:00:33 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:00:33 repo-Oracle.go:80: 4832215526
+2024/07/31 19:00:33 repo-Oracle.go:80: 48999448383
+2024/07/31 19:00:33 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:00:33 usecase.go:42: 1: 4832215526
+2024/07/31 19:00:33 usecase.go:43: 2: 48999448383
+2024/07/31 19:00:33 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:00:33 usecase.go:50: 4832215526
+2024/07/31 19:00:33 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:00:33 usecase.go:50: 48999448383
+2024/07/31 19:00:33 usecase.go:54: 4832215526
+2024/07/31 19:00:33 usecase.go:54: 48999448383
+2024/07/31 19:00:33 presenter.go:21: 20240731190033 - Show
+2024/07/31 19:00:33 view.go:24: 20240731190033 - Show
+2024/07/31 19:01:12 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:01:14 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:01:14 start-get01.go:19: 20240731190114 - cliente/get01 - Start
+2024/07/31 19:01:14 controller.go:13: 20240731190114 - cliente/get01 - Controller - Execute
+2024/07/31 19:01:14 controller.go:22: 20240731190114 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:01:14 usecase.go:22: 20240731190114 - cliente/get01 - usecase - Execute
+2024/07/31 19:01:14 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:01:14 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:01:14 repo-Oracle.go:80: 4832215526
+2024/07/31 19:01:14 repo-Oracle.go:80: 48999448383
+2024/07/31 19:01:14 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:01:14 usecase.go:42: 1: 4832215526
+2024/07/31 19:01:14 usecase.go:43: 2: 48999448383
+2024/07/31 19:01:14 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:01:14 usecase.go:50: 4832215526
+2024/07/31 19:01:14 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:01:14 usecase.go:50: 48999448383
+2024/07/31 19:01:14 usecase.go:54: 4832215526
+2024/07/31 19:01:14 usecase.go:54: 48999448383
+2024/07/31 19:01:14 presenter.go:21: 20240731190114 - Show
+2024/07/31 19:01:14 view.go:24: 20240731190114 - Show
+2024/07/31 19:02:33 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:02:36 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:02:36 start-get01.go:19: 20240731190236 - cliente/get01 - Start
+2024/07/31 19:02:36 controller.go:13: 20240731190236 - cliente/get01 - Controller - Execute
+2024/07/31 19:02:36 controller.go:22: 20240731190236 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:02:36 usecase.go:22: 20240731190236 - cliente/get01 - usecase - Execute
+2024/07/31 19:02:36 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:02:36 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:02:36 repo-Oracle.go:80: 4832215526
+2024/07/31 19:02:36 repo-Oracle.go:80: 48999448383
+2024/07/31 19:02:36 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:02:36 usecase.go:42: 1: 4832215526
+2024/07/31 19:02:36 usecase.go:43: 2: 48999448383
+2024/07/31 19:02:36 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:02:36 usecase.go:50: 4832215526
+2024/07/31 19:02:36 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:02:36 usecase.go:50: 48999448383
+2024/07/31 19:02:36 usecase.go:54: 4832215526
+2024/07/31 19:02:36 usecase.go:54: 48999448383
+2024/07/31 19:02:36 presenter.go:21: 20240731190236 - Show
+2024/07/31 19:02:36 view.go:24: 20240731190236 - Show
+2024/07/31 19:10:15 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:10:19 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:10:19 start-get01.go:19: 20240731191019 - cliente/get01 - Start
+2024/07/31 19:10:19 controller.go:13: 20240731191019 - cliente/get01 - Controller - Execute
+2024/07/31 19:10:19 controller.go:22: 20240731191019 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:10:19 usecase.go:22: 20240731191019 - cliente/get01 - usecase - Execute
+2024/07/31 19:10:19 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:10:19 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:10:19 repo-Oracle.go:80: 4832215526
+2024/07/31 19:10:19 repo-Oracle.go:80: 48999448383
+2024/07/31 19:10:19 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:10:19 usecase.go:42: 1: 4832215526
+2024/07/31 19:10:19 usecase.go:43: 2: 48999448383
+2024/07/31 19:10:19 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:10:19 usecase.go:50: 4832215526
+2024/07/31 19:10:19 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:10:19 usecase.go:50: 48999448383
+2024/07/31 19:10:19 usecase.go:54: 4832215526
+2024/07/31 19:10:19 usecase.go:54: 48999448383
+2024/07/31 19:10:19 presenter.go:21: 20240731191019 - Show
+2024/07/31 19:10:19 view.go:24: 20240731191019 - Show
+2024/07/31 19:10:37 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:10:39 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:10:39 start-get01.go:19: 20240731191039 - cliente/get01 - Start
+2024/07/31 19:10:39 controller.go:13: 20240731191039 - cliente/get01 - Controller - Execute
+2024/07/31 19:10:39 controller.go:22: 20240731191039 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:10:39 usecase.go:22: 20240731191039 - cliente/get01 - usecase - Execute
+2024/07/31 19:10:39 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:10:39 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:10:39 repo-Oracle.go:80: 4832215526
+2024/07/31 19:10:39 repo-Oracle.go:80: 48999448383
+2024/07/31 19:10:39 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:10:39 usecase.go:42: 1: 4832215526
+2024/07/31 19:10:39 usecase.go:43: 2: 48999448383
+2024/07/31 19:10:39 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:10:39 usecase.go:50: 4832215526
+2024/07/31 19:10:39 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:10:39 usecase.go:50: 48999448383
+2024/07/31 19:10:39 usecase.go:54: 4832215526
+2024/07/31 19:10:39 usecase.go:54: 48999448383
+2024/07/31 19:10:39 presenter.go:21: 20240731191039 - Show
+2024/07/31 19:10:39 view.go:24: 20240731191039 - Show
+2024/07/31 19:10:58 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:11:00 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:11:00 start-get01.go:19: 20240731191100 - cliente/get01 - Start
+2024/07/31 19:11:00 controller.go:13: 20240731191100 - cliente/get01 - Controller - Execute
+2024/07/31 19:11:00 controller.go:22: 20240731191100 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:11:00 usecase.go:22: 20240731191100 - cliente/get01 - usecase - Execute
+2024/07/31 19:11:00 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:11:00 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:11:00 repo-Oracle.go:80: 4832215526
+2024/07/31 19:11:00 repo-Oracle.go:80: 48999448383
+2024/07/31 19:11:00 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:11:00 usecase.go:42: 1: 4832215526
+2024/07/31 19:11:00 usecase.go:43: 2: 48999448383
+2024/07/31 19:11:00 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:11:00 usecase.go:50: 4832215526
+2024/07/31 19:11:00 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:11:00 usecase.go:50: 48999448383
+2024/07/31 19:11:00 usecase.go:54: 4832215526
+2024/07/31 19:11:00 usecase.go:54: 48999448383
+2024/07/31 19:11:00 presenter.go:21: 20240731191100 - Show
+2024/07/31 19:11:00 view.go:24: 20240731191100 - Show
+2024/07/31 19:11:13 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:11:21 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:11:36 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:12:41 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:13:17 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:13:23 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:13:23 start-get01.go:19: 20240731191323 - cliente/get01 - Start
+2024/07/31 19:13:23 controller.go:13: 20240731191323 - cliente/get01 - Controller - Execute
+2024/07/31 19:13:23 controller.go:22: 20240731191323 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:13:23 usecase.go:22: 20240731191323 - cliente/get01 - usecase - Execute
+2024/07/31 19:13:23 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:13:23 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:13:23 repo-Oracle.go:80: 4832215526
+2024/07/31 19:13:23 repo-Oracle.go:80: 48999448383
+2024/07/31 19:13:23 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:13:23 usecase.go:42: 1: 4832215526
+2024/07/31 19:13:23 usecase.go:43: 2: 48999448383
+2024/07/31 19:13:23 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:13:23 usecase.go:50: 4832215526
+2024/07/31 19:13:23 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:13:23 usecase.go:50: 48999448383
+2024/07/31 19:13:23 usecase.go:54: 4832215526
+2024/07/31 19:13:23 usecase.go:54: 48999448383
+2024/07/31 19:13:23 presenter.go:21: 20240731191323 - Show
+2024/07/31 19:13:23 view.go:24: 20240731191323 - Show
+2024/07/31 19:14:13 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:14:17 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:14:17 start-get01.go:19: 20240731191417 - cliente/get01 - Start
+2024/07/31 19:14:17 controller.go:13: 20240731191417 - cliente/get01 - Controller - Execute
+2024/07/31 19:14:17 controller.go:22: 20240731191417 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:14:17 usecase.go:22: 20240731191417 - cliente/get01 - usecase - Execute
+2024/07/31 19:14:17 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:14:17 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:14:17 repo-Oracle.go:80: 4832215526
+2024/07/31 19:14:17 repo-Oracle.go:80: 48999448383
+2024/07/31 19:14:17 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:14:17 usecase.go:42: 1: 4832215526
+2024/07/31 19:14:17 usecase.go:43: 2: 48999448383
+2024/07/31 19:14:17 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:14:17 usecase.go:50: 4832215526
+2024/07/31 19:14:17 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:14:17 usecase.go:50: 48999448383
+2024/07/31 19:14:17 usecase.go:54: 4832215526
+2024/07/31 19:14:17 usecase.go:54: 48999448383
+2024/07/31 19:14:17 presenter.go:21: 20240731191417 - Show
+2024/07/31 19:15:13 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:15:16 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:15:16 start-get01.go:19: 20240731191516 - cliente/get01 - Start
+2024/07/31 19:15:16 controller.go:13: 20240731191516 - cliente/get01 - Controller - Execute
+2024/07/31 19:15:16 controller.go:22: 20240731191516 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:15:16 usecase.go:22: 20240731191516 - cliente/get01 - usecase - Execute
+2024/07/31 19:15:16 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:15:16 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:15:16 repo-Oracle.go:80: 4832215526
+2024/07/31 19:15:16 repo-Oracle.go:80: 48999448383
+2024/07/31 19:15:16 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:15:16 usecase.go:42: 1: 4832215526
+2024/07/31 19:15:16 usecase.go:43: 2: 48999448383
+2024/07/31 19:15:16 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:15:16 usecase.go:50: 4832215526
+2024/07/31 19:15:16 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:15:16 usecase.go:50: 48999448383
+2024/07/31 19:15:16 usecase.go:54: 4832215526
+2024/07/31 19:15:16 usecase.go:54: 48999448383
+2024/07/31 19:15:16 presenter.go:21: 20240731191516 - Show
+2024/07/31 19:15:43 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:15:45 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:15:45 start-get01.go:19: 20240731191545 - cliente/get01 - Start
+2024/07/31 19:15:45 controller.go:13: 20240731191545 - cliente/get01 - Controller - Execute
+2024/07/31 19:15:45 controller.go:22: 20240731191545 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:15:45 usecase.go:22: 20240731191545 - cliente/get01 - usecase - Execute
+2024/07/31 19:15:45 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:15:45 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:15:45 repo-Oracle.go:80: 4832215526
+2024/07/31 19:15:45 repo-Oracle.go:80: 48999448383
+2024/07/31 19:15:45 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:15:45 usecase.go:42: 1: 4832215526
+2024/07/31 19:15:45 usecase.go:43: 2: 48999448383
+2024/07/31 19:15:45 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:15:45 usecase.go:50: 4832215526
+2024/07/31 19:15:45 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:15:45 usecase.go:50: 48999448383
+2024/07/31 19:15:45 usecase.go:54: 4832215526
+2024/07/31 19:15:45 usecase.go:54: 48999448383
+2024/07/31 19:15:45 presenter.go:21: 20240731191545 - Show
+2024/07/31 19:15:45 view.go:24: 20240731191545 - Show
+2024/07/31 19:16:57 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:17:00 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:17:00 start-get01.go:19: 20240731191700 - cliente/get01 - Start
+2024/07/31 19:17:00 controller.go:13: 20240731191700 - cliente/get01 - Controller - Execute
+2024/07/31 19:17:00 controller.go:22: 20240731191700 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:17:00 usecase.go:22: 20240731191700 - cliente/get01 - usecase - Execute
+2024/07/31 19:17:00 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:17:00 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:17:00 repo-Oracle.go:80: 4832215526
+2024/07/31 19:17:00 repo-Oracle.go:80: 48999448383
+2024/07/31 19:17:00 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:17:00 usecase.go:42: 1: 4832215526
+2024/07/31 19:17:00 usecase.go:43: 2: 48999448383
+2024/07/31 19:17:00 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:17:00 usecase.go:50: 4832215526
+2024/07/31 19:17:00 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:17:00 usecase.go:50: 48999448383
+2024/07/31 19:17:00 usecase.go:54: 4832215526
+2024/07/31 19:17:00 usecase.go:54: 48999448383
+2024/07/31 19:17:00 presenter.go:21: 20240731191700 - Show
+2024/07/31 19:17:00 presenter.go:45: Response: &{0xc000423320 [0xc00040d650 0xc00040d670]}
+2024/07/31 19:17:00 view.go:24: 20240731191700 - Show
+2024/07/31 19:18:02 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:18:07 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:18:07 start-get01.go:19: 20240731191807 - cliente/get01 - Start
+2024/07/31 19:18:07 controller.go:13: 20240731191807 - cliente/get01 - Controller - Execute
+2024/07/31 19:18:07 controller.go:22: 20240731191807 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:18:07 usecase.go:22: 20240731191807 - cliente/get01 - usecase - Execute
+2024/07/31 19:18:07 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:18:09 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:18:09 repo-Oracle.go:80: 4832215526
+2024/07/31 19:18:09 repo-Oracle.go:80: 48999448383
+2024/07/31 19:18:09 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:18:09 usecase.go:42: 1: 4832215526
+2024/07/31 19:18:09 usecase.go:43: 2: 48999448383
+2024/07/31 19:18:09 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:18:09 usecase.go:50: 4832215526
+2024/07/31 19:18:09 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:18:09 usecase.go:50: 48999448383
+2024/07/31 19:18:09 usecase.go:54: 4832215526
+2024/07/31 19:18:09 usecase.go:54: 48999448383
+2024/07/31 19:18:09 presenter.go:21: 20240731191807 - Show
+2024/07/31 19:18:09 presenter.go:45: Response: [123 34 99 108 105 101 110 116 101 34 58 123 34 110 111 109 101 34 58 34 67 108 105 101 110 116 101 32 49 34 44 34 100 116 95 110 97 115 99 34 58 34 49 57 55 53 45 48 55 45 48 50 84 48 48 58 48 48 58 48 48 45 48 51 58 48 48 34 44 34 99 112 102 34 58 34 49 34 125 44 34 116 101 108 101 102 111 110 101 115 34 58 91 123 34 110 117 109 101 114 111 34 58 34 52 56 51 50 50 49 53 53 50 54 34 125 44 123 34 110 117 109 101 114 111 34 58 34 52 56 57 57 57 52 52 56 51 56 51 34 125 93 125]
+2024/07/31 19:18:09 view.go:24: 20240731191807 - Show
+2024/07/31 19:19:30 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:19:32 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:19:32 start-get01.go:19: 20240731191932 - cliente/get01 - Start
+2024/07/31 19:19:32 controller.go:13: 20240731191932 - cliente/get01 - Controller - Execute
+2024/07/31 19:19:32 controller.go:22: 20240731191932 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:19:32 usecase.go:22: 20240731191932 - cliente/get01 - usecase - Execute
+2024/07/31 19:19:32 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:19:32 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:19:32 repo-Oracle.go:80: 4832215526
+2024/07/31 19:19:32 repo-Oracle.go:80: 48999448383
+2024/07/31 19:19:32 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:19:32 usecase.go:42: 1: 4832215526
+2024/07/31 19:19:32 usecase.go:43: 2: 48999448383
+2024/07/31 19:19:32 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:19:32 usecase.go:50: 4832215526
+2024/07/31 19:19:32 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:19:32 usecase.go:50: 48999448383
+2024/07/31 19:19:32 usecase.go:54: 4832215526
+2024/07/31 19:19:32 usecase.go:54: 48999448383
+2024/07/31 19:19:32 presenter.go:21: 20240731191932 - Show
+2024/07/31 19:19:32 presenter.go:45: Response: <nil>
+2024/07/31 19:19:32 view.go:24: 20240731191932 - Show
+2024/07/31 19:20:07 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:20:08 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:20:08 start-get01.go:19: 20240731192008 - cliente/get01 - Start
+2024/07/31 19:20:08 controller.go:13: 20240731192008 - cliente/get01 - Controller - Execute
+2024/07/31 19:20:08 controller.go:22: 20240731192008 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:20:08 usecase.go:22: 20240731192008 - cliente/get01 - usecase - Execute
+2024/07/31 19:20:08 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:20:08 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:20:08 repo-Oracle.go:80: 4832215526
+2024/07/31 19:20:08 repo-Oracle.go:80: 48999448383
+2024/07/31 19:20:08 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:20:08 usecase.go:42: 1: 4832215526
+2024/07/31 19:20:08 usecase.go:43: 2: 48999448383
+2024/07/31 19:20:08 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:20:08 usecase.go:50: 4832215526
+2024/07/31 19:20:08 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:20:08 usecase.go:50: 48999448383
+2024/07/31 19:20:08 usecase.go:54: 4832215526
+2024/07/31 19:20:08 usecase.go:54: 48999448383
+2024/07/31 19:20:08 presenter.go:21: 20240731192008 - Show
+2024/07/31 19:20:08 presenter.go:49: Response: &{0xc00008a190}
+2024/07/31 19:20:08 view.go:24: 20240731192008 - Show
+2024/07/31 19:20:46 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:20:47 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:20:47 start-get01.go:19: 20240731192047 - cliente/get01 - Start
+2024/07/31 19:20:47 controller.go:13: 20240731192047 - cliente/get01 - Controller - Execute
+2024/07/31 19:20:47 controller.go:22: 20240731192047 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:20:47 usecase.go:22: 20240731192047 - cliente/get01 - usecase - Execute
+2024/07/31 19:20:47 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:20:47 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:20:47 repo-Oracle.go:80: 4832215526
+2024/07/31 19:20:47 repo-Oracle.go:80: 48999448383
+2024/07/31 19:20:47 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:20:47 usecase.go:42: 1: 4832215526
+2024/07/31 19:20:47 usecase.go:43: 2: 48999448383
+2024/07/31 19:20:47 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:20:47 usecase.go:50: 4832215526
+2024/07/31 19:20:47 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:20:47 usecase.go:50: 48999448383
+2024/07/31 19:20:47 usecase.go:54: 4832215526
+2024/07/31 19:20:47 usecase.go:54: 48999448383
+2024/07/31 19:20:47 presenter.go:21: 20240731192047 - Show
+2024/07/31 19:20:47 presenter.go:49: Response: Cliente 1
+2024/07/31 19:20:47 view.go:24: 20240731192047 - Show
+2024/07/31 19:21:18 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:21:22 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:21:22 start-get01.go:19: 20240731192122 - cliente/get01 - Start
+2024/07/31 19:21:22 controller.go:13: 20240731192122 - cliente/get01 - Controller - Execute
+2024/07/31 19:21:22 controller.go:22: 20240731192122 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:21:22 usecase.go:22: 20240731192122 - cliente/get01 - usecase - Execute
+2024/07/31 19:21:22 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:21:22 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:21:22 repo-Oracle.go:80: 4832215526
+2024/07/31 19:21:22 repo-Oracle.go:80: 48999448383
+2024/07/31 19:21:22 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:21:22 usecase.go:42: 1: 4832215526
+2024/07/31 19:21:22 usecase.go:43: 2: 48999448383
+2024/07/31 19:21:22 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:21:22 usecase.go:50: 4832215526
+2024/07/31 19:21:22 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:21:22 usecase.go:50: 48999448383
+2024/07/31 19:21:22 usecase.go:54: 4832215526
+2024/07/31 19:21:22 usecase.go:54: 48999448383
+2024/07/31 19:21:22 presenter.go:21: 20240731192122 - Show
+2024/07/31 19:21:22 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 {[]}}
+2024/07/31 19:21:22 view.go:24: 20240731192122 - Show
+2024/07/31 19:27:00 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/07/31 19:27:04 server.go:53: /cliente/get01/:cpf
+2024/07/31 19:27:04 start-get01.go:19: 20240731192704 - cliente/get01 - Start
+2024/07/31 19:27:04 controller.go:13: 20240731192704 - cliente/get01 - Controller - Execute
+2024/07/31 19:27:04 controller.go:22: 20240731192704 - cliente/get01 - Controller - Execute - CPF:1
+2024/07/31 19:27:04 usecase.go:22: 20240731192704 - cliente/get01 - usecase - Execute
+2024/07/31 19:27:04 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/07/31 19:27:04 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/07/31 19:27:04 repo-Oracle.go:80: 4832215526
+2024/07/31 19:27:04 repo-Oracle.go:80: 48999448383
+2024/07/31 19:27:04 repo-Oracle.go:84: Counts Telefone: 2
+2024/07/31 19:27:04 usecase.go:42: 1: 4832215526
+2024/07/31 19:27:04 usecase.go:43: 2: 48999448383
+2024/07/31 19:27:04 usecase.go:46: idx: 0 - valor: 4832215526
+2024/07/31 19:27:04 usecase.go:50: 4832215526
+2024/07/31 19:27:04 usecase.go:46: idx: 1 - valor: 48999448383
+2024/07/31 19:27:04 usecase.go:50: 48999448383
+2024/07/31 19:27:04 usecase.go:54: 4832215526
+2024/07/31 19:27:04 usecase.go:54: 48999448383
+2024/07/31 19:27:04 presenter.go:21: 20240731192704 - Show
+2024/07/31 19:27:04 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 {[]}}
+2024/07/31 19:27:04 view.go:24: 20240731192704 - Show
+2024/08/08 17:35:31 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/08 17:35:49 server.go:53: /cliente/get01/:cpf
+2024/08/08 17:35:49 start-get01.go:19: 20240808173549 - cliente/get01 - Start
+2024/08/08 17:35:49 controller.go:13: 20240808173549 - cliente/get01 - Controller - Execute
+2024/08/08 17:35:49 controller.go:22: 20240808173549 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/08 17:35:49 usecase.go:22: 20240808173549 - cliente/get01 - usecase - Execute
+2024/08/08 17:35:49 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/08 17:35:49 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/08 17:35:49 repo-Oracle.go:80: 4832215526
+2024/08/08 17:35:49 repo-Oracle.go:80: 48999448383
+2024/08/08 17:35:49 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/08 17:35:49 usecase.go:42: 1: 4832215526
+2024/08/08 17:35:49 usecase.go:43: 2: 48999448383
+2024/08/08 17:35:49 usecase.go:46: idx: 0 - valor: 4832215526
+2024/08/08 17:35:49 usecase.go:50: 4832215526
+2024/08/08 17:35:49 usecase.go:46: idx: 1 - valor: 48999448383
+2024/08/08 17:35:49 usecase.go:50: 48999448383
+2024/08/08 17:35:49 usecase.go:54: 4832215526
+2024/08/08 17:35:49 usecase.go:54: 48999448383
+2024/08/08 17:35:49 presenter.go:21: 20240808173549 - Show
+2024/08/08 17:35:49 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 {[]}}
+2024/08/08 17:35:49 view.go:24: 20240808173549 - Show
+2024/08/08 18:08:16 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/08 18:08:34 server.go:53: /cliente/get01/:cpf
+2024/08/08 18:08:34 start-get01.go:19: 20240808180834 - cliente/get01 - Start
+2024/08/08 18:08:34 controller.go:13: 20240808180834 - cliente/get01 - Controller - Execute
+2024/08/08 18:08:34 controller.go:22: 20240808180834 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/08 18:08:34 usecase.go:22: 20240808180834 - cliente/get01 - usecase - Execute
+2024/08/08 18:08:34 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/08 18:08:34 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/08 18:08:34 repo-Oracle.go:80: 4832215526
+2024/08/08 18:08:34 repo-Oracle.go:80: 48999448383
+2024/08/08 18:08:34 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/08 18:08:34 usecase.go:42: 1: 4832215526
+2024/08/08 18:08:34 usecase.go:43: 2: 48999448383
+2024/08/08 18:08:34 usecase.go:46: idx: 0 - valor: 4832215526
+2024/08/08 18:08:34 usecase.go:50: {Numero:4832215526}
+2024/08/08 18:08:34 usecase.go:46: idx: 1 - valor: 48999448383
+2024/08/08 18:08:34 usecase.go:50: {Numero:48999448383}
+2024/08/08 18:08:34 usecase.go:54: 4832215526
+2024/08/08 18:08:34 usecase.go:54: 48999448383
+2024/08/08 18:08:34 usecase.go:61: [{Numero:4832215526} {Numero:48999448383}]
+2024/08/08 18:08:34 presenter.go:21: 20240808180834 - Show
+2024/08/08 18:08:34 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 {[]}}
+2024/08/08 18:08:34 view.go:24: 20240808180834 - Show
+2024/08/08 18:11:43 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/08 18:11:48 server.go:53: /cliente/get01/:cpf
+2024/08/08 18:11:48 start-get01.go:19: 20240808181148 - cliente/get01 - Start
+2024/08/08 18:11:48 controller.go:13: 20240808181148 - cliente/get01 - Controller - Execute
+2024/08/08 18:11:48 controller.go:22: 20240808181148 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/08 18:11:48 usecase.go:22: 20240808181148 - cliente/get01 - usecase - Execute
+2024/08/08 18:11:48 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/08 18:11:48 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/08 18:11:48 repo-Oracle.go:80: 4832215526
+2024/08/08 18:11:48 repo-Oracle.go:80: 48999448383
+2024/08/08 18:11:48 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/08 18:11:48 usecase.go:42: 1: 4832215526
+2024/08/08 18:11:48 usecase.go:43: 2: 48999448383
+2024/08/08 18:11:48 usecase.go:46: idx: 0 - valor: 4832215526
+2024/08/08 18:11:48 usecase.go:50: {Numero:4832215526}
+2024/08/08 18:11:48 usecase.go:46: idx: 1 - valor: 48999448383
+2024/08/08 18:11:48 usecase.go:50: {Numero:48999448383}
+2024/08/08 18:11:48 usecase.go:54: 4832215526
+2024/08/08 18:11:48 usecase.go:54: 48999448383
+2024/08/08 18:11:48 usecase.go:61: [{Numero:4832215526} {Numero:48999448383}]
+2024/08/08 18:11:48 presenter.go:21: 20240808181148 - Show
+2024/08/08 18:11:48 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 []}
+2024/08/08 18:11:48 view.go:24: 20240808181148 - Show
+2024/08/08 18:13:54 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/08 18:14:03 server.go:53: /cliente/get01/:cpf
+2024/08/08 18:14:03 start-get01.go:19: 20240808181403 - cliente/get01 - Start
+2024/08/08 18:14:03 controller.go:13: 20240808181403 - cliente/get01 - Controller - Execute
+2024/08/08 18:14:03 controller.go:22: 20240808181403 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/08 18:14:03 usecase.go:22: 20240808181403 - cliente/get01 - usecase - Execute
+2024/08/08 18:14:03 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/08 18:14:03 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/08 18:14:03 repo-Oracle.go:80: 4832215526
+2024/08/08 18:14:03 repo-Oracle.go:80: 48999448383
+2024/08/08 18:14:03 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/08 18:14:03 usecase.go:42: 1: 4832215526
+2024/08/08 18:14:03 usecase.go:43: 2: 48999448383
+2024/08/08 18:14:03 usecase.go:46: idx: 0 - valor: 4832215526
+2024/08/08 18:14:03 usecase.go:50: {Numero:4832215526}
+2024/08/08 18:14:03 usecase.go:46: idx: 1 - valor: 48999448383
+2024/08/08 18:14:03 usecase.go:50: {Numero:48999448383}
+2024/08/08 18:14:03 usecase.go:54: 4832215526
+2024/08/08 18:14:03 usecase.go:54: 48999448383
+2024/08/08 18:14:03 usecase.go:61: [{Numero:4832215526} {Numero:48999448383}]
+2024/08/08 18:14:03 presenter.go:21: 20240808181403 - Show
+2024/08/08 18:14:03 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00}
+2024/08/08 18:14:03 view.go:24: 20240808181403 - Show
+2024/08/08 18:15:03 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/08 18:15:06 server.go:53: /cliente/get01/:cpf
+2024/08/08 18:15:06 start-get01.go:19: 20240808181506 - cliente/get01 - Start
+2024/08/08 18:15:06 controller.go:13: 20240808181506 - cliente/get01 - Controller - Execute
+2024/08/08 18:15:06 controller.go:22: 20240808181506 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/08 18:15:06 usecase.go:22: 20240808181506 - cliente/get01 - usecase - Execute
+2024/08/08 18:15:06 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/08 18:15:06 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/08 18:15:06 repo-Oracle.go:80: 4832215526
+2024/08/08 18:15:06 repo-Oracle.go:80: 48999448383
+2024/08/08 18:15:06 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/08 18:15:06 usecase.go:42: 1: 4832215526
+2024/08/08 18:15:06 usecase.go:43: 2: 48999448383
+2024/08/08 18:15:06 usecase.go:46: idx: 0 - valor: 4832215526
+2024/08/08 18:15:06 usecase.go:50: {Numero:4832215526}
+2024/08/08 18:15:06 usecase.go:46: idx: 1 - valor: 48999448383
+2024/08/08 18:15:06 usecase.go:50: {Numero:48999448383}
+2024/08/08 18:15:06 usecase.go:54: 4832215526
+2024/08/08 18:15:06 usecase.go:54: 48999448383
+2024/08/08 18:15:06 usecase.go:61: [{Numero:4832215526} {Numero:48999448383}]
+2024/08/08 18:15:06 presenter.go:21: 20240808181506 - Show
+2024/08/08 18:15:06 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 []}
+2024/08/08 18:15:06 view.go:24: 20240808181506 - Show
+2024/08/08 18:15:59 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/08 18:16:02 server.go:53: /cliente/get01/:cpf
+2024/08/08 18:16:02 start-get01.go:19: 20240808181602 - cliente/get01 - Start
+2024/08/08 18:16:02 controller.go:13: 20240808181602 - cliente/get01 - Controller - Execute
+2024/08/08 18:16:02 controller.go:22: 20240808181602 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/08 18:16:02 usecase.go:22: 20240808181602 - cliente/get01 - usecase - Execute
+2024/08/08 18:16:02 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/08 18:16:02 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/08 18:16:02 repo-Oracle.go:80: 4832215526
+2024/08/08 18:16:02 repo-Oracle.go:80: 48999448383
+2024/08/08 18:16:02 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/08 18:16:02 usecase.go:42: 1: 4832215526
+2024/08/08 18:16:02 usecase.go:43: 2: 48999448383
+2024/08/08 18:16:02 usecase.go:46: idx: 0 - valor: 4832215526
+2024/08/08 18:16:02 usecase.go:50: {Numero:4832215526}
+2024/08/08 18:16:02 usecase.go:46: idx: 1 - valor: 48999448383
+2024/08/08 18:16:02 usecase.go:50: {Numero:48999448383}
+2024/08/08 18:16:02 usecase.go:54: 4832215526
+2024/08/08 18:16:02 usecase.go:54: 48999448383
+2024/08/08 18:16:02 usecase.go:61: [{Numero:4832215526} {Numero:48999448383}]
+2024/08/08 18:16:02 presenter.go:21: 20240808181602 - Show
+2024/08/08 18:16:02 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 {[]}}
+2024/08/08 18:16:02 view.go:24: 20240808181602 - Show
+2024/08/08 18:17:02 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/08 18:17:05 server.go:53: /cliente/get01/:cpf
+2024/08/08 18:17:05 start-get01.go:19: 20240808181705 - cliente/get01 - Start
+2024/08/08 18:17:05 controller.go:13: 20240808181705 - cliente/get01 - Controller - Execute
+2024/08/08 18:17:05 controller.go:22: 20240808181705 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/08 18:17:05 usecase.go:22: 20240808181705 - cliente/get01 - usecase - Execute
+2024/08/08 18:17:05 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/08 18:17:05 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/08 18:17:05 repo-Oracle.go:80: 4832215526
+2024/08/08 18:17:05 repo-Oracle.go:80: 48999448383
+2024/08/08 18:17:05 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/08 18:17:05 usecase.go:42: 1: 4832215526
+2024/08/08 18:17:05 usecase.go:43: 2: 48999448383
+2024/08/08 18:17:05 usecase.go:46: idx: 0 - valor: 4832215526
+2024/08/08 18:17:05 usecase.go:50: {Numero:4832215526}
+2024/08/08 18:17:05 usecase.go:46: idx: 1 - valor: 48999448383
+2024/08/08 18:17:05 usecase.go:50: {Numero:48999448383}
+2024/08/08 18:17:05 usecase.go:54: 4832215526
+2024/08/08 18:17:05 usecase.go:54: 48999448383
+2024/08/08 18:17:05 usecase.go:61: [{Numero:4832215526} {Numero:48999448383}]
+2024/08/08 18:17:05 presenter.go:21: 20240808181705 - Show
+2024/08/08 18:17:05 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 []}
+2024/08/08 18:17:05 view.go:24: 20240808181705 - Show
+2024/08/08 18:20:48 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/08 18:20:52 server.go:53: /cliente/get01/:cpf
+2024/08/08 18:20:52 start-get01.go:19: 20240808182052 - cliente/get01 - Start
+2024/08/08 18:20:52 controller.go:13: 20240808182052 - cliente/get01 - Controller - Execute
+2024/08/08 18:20:52 controller.go:22: 20240808182052 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/08 18:20:52 usecase.go:22: 20240808182052 - cliente/get01 - usecase - Execute
+2024/08/08 18:20:52 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/08 18:20:52 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/08 18:20:52 repo-Oracle.go:80: 4832215526
+2024/08/08 18:20:52 repo-Oracle.go:80: 48999448383
+2024/08/08 18:20:52 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/08 18:20:52 usecase.go:42: 1: 4832215526
+2024/08/08 18:20:52 usecase.go:43: 2: 48999448383
+2024/08/08 18:20:52 usecase.go:47: idx: 0 - valor: 4832215526
+2024/08/08 18:20:52 usecase.go:52: 4832215526
+2024/08/08 18:20:52 usecase.go:47: idx: 1 - valor: 48999448383
+2024/08/08 18:20:52 usecase.go:52: 48999448383
+2024/08/08 18:20:52 usecase.go:63: 4832215526
+2024/08/08 18:20:52 presenter.go:21: 20240808182052 - Show
+2024/08/08 18:20:52 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 []}
+2024/08/08 18:20:52 view.go:24: 20240808182052 - Show
+2024/08/08 18:20:55 server.go:53: /cliente/get01/:cpf
+2024/08/08 18:20:55 start-get01.go:19: 20240808182055 - cliente/get01 - Start
+2024/08/08 18:20:55 controller.go:13: 20240808182055 - cliente/get01 - Controller - Execute
+2024/08/08 18:20:55 controller.go:22: 20240808182055 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/08 18:20:55 usecase.go:22: 20240808182055 - cliente/get01 - usecase - Execute
+2024/08/08 18:20:55 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/08 18:20:55 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/08 18:20:55 repo-Oracle.go:80: 4832215526
+2024/08/08 18:20:55 repo-Oracle.go:80: 48999448383
+2024/08/08 18:20:55 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/08 18:20:55 usecase.go:42: 1: 4832215526
+2024/08/08 18:20:55 usecase.go:43: 2: 48999448383
+2024/08/08 18:20:55 usecase.go:47: idx: 0 - valor: 4832215526
+2024/08/08 18:20:55 usecase.go:52: 4832215526
+2024/08/08 18:20:55 usecase.go:47: idx: 1 - valor: 48999448383
+2024/08/08 18:20:55 usecase.go:52: 48999448383
+2024/08/08 18:20:55 usecase.go:63: 4832215526
+2024/08/08 18:20:55 presenter.go:21: 20240808182055 - Show
+2024/08/08 18:20:55 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 []}
+2024/08/08 18:20:55 view.go:24: 20240808182055 - Show
+2024/08/08 18:21:17 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/08 18:21:19 server.go:53: /cliente/get01/:cpf
+2024/08/08 18:21:19 start-get01.go:19: 20240808182119 - cliente/get01 - Start
+2024/08/08 18:21:19 controller.go:13: 20240808182119 - cliente/get01 - Controller - Execute
+2024/08/08 18:21:19 controller.go:22: 20240808182119 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/08 18:21:19 usecase.go:22: 20240808182119 - cliente/get01 - usecase - Execute
+2024/08/08 18:21:19 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/08 18:21:19 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/08 18:21:19 repo-Oracle.go:80: 4832215526
+2024/08/08 18:21:19 repo-Oracle.go:80: 48999448383
+2024/08/08 18:21:19 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/08 18:21:19 usecase.go:42: 1: 4832215526
+2024/08/08 18:21:19 usecase.go:43: 2: 48999448383
+2024/08/08 18:21:19 usecase.go:47: idx: 0 - valor: 4832215526
+2024/08/08 18:21:19 usecase.go:52: 4832215526
+2024/08/08 18:21:19 usecase.go:47: idx: 1 - valor: 48999448383
+2024/08/08 18:21:19 usecase.go:52: 48999448383
+2024/08/08 18:21:19 usecase.go:63: 4832215526
+2024/08/08 18:21:19 presenter.go:21: 20240808182119 - Show
+2024/08/08 18:21:19 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 []}
+2024/08/08 18:21:19 view.go:24: 20240808182119 - Show
+2024/08/08 18:23:07 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/08 18:23:15 server.go:53: /cliente/get01/:cpf
+2024/08/08 18:23:15 start-get01.go:19: 20240808182315 - cliente/get01 - Start
+2024/08/08 18:23:15 controller.go:13: 20240808182315 - cliente/get01 - Controller - Execute
+2024/08/08 18:23:15 controller.go:22: 20240808182315 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/08 18:23:15 usecase.go:22: 20240808182315 - cliente/get01 - usecase - Execute
+2024/08/08 18:23:15 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/08 18:23:15 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/08 18:23:15 repo-Oracle.go:80: 4832215526
+2024/08/08 18:23:15 repo-Oracle.go:80: 48999448383
+2024/08/08 18:23:15 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/08 18:23:15 usecase.go:42: 1: 4832215526
+2024/08/08 18:23:15 usecase.go:43: 2: 48999448383
+2024/08/08 18:23:15 usecase.go:47: idx: 0 - valor: 4832215526
+2024/08/08 18:23:15 usecase.go:52: 4832215526
+2024/08/08 18:23:15 usecase.go:47: idx: 1 - valor: 48999448383
+2024/08/08 18:23:15 usecase.go:52: 48999448383
+2024/08/08 18:23:15 presenter.go:21: 20240808182315 - Show
+2024/08/08 18:23:15 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 []}
+2024/08/08 18:23:15 view.go:24: 20240808182315 - Show
+2024/08/08 18:26:54 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/08 18:26:57 server.go:53: /cliente/get01/:cpf
+2024/08/08 18:26:57 start-get01.go:19: 20240808182657 - cliente/get01 - Start
+2024/08/08 18:26:57 controller.go:13: 20240808182657 - cliente/get01 - Controller - Execute
+2024/08/08 18:26:57 controller.go:22: 20240808182657 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/08 18:26:57 usecase.go:22: 20240808182657 - cliente/get01 - usecase - Execute
+2024/08/08 18:26:57 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/08 18:26:57 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/08 18:26:57 repo-Oracle.go:80: 4832215526
+2024/08/08 18:26:57 repo-Oracle.go:80: 48999448383
+2024/08/08 18:26:57 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/08 18:26:57 usecase.go:42: 1: 4832215526
+2024/08/08 18:26:57 usecase.go:43: 2: 48999448383
+2024/08/08 18:26:57 usecase.go:47: idx: 0 - valor: 4832215526
+2024/08/08 18:26:57 usecase.go:52: 4832215526
+2024/08/08 18:26:57 usecase.go:47: idx: 1 - valor: 48999448383
+2024/08/08 18:26:57 usecase.go:52: 48999448383
+2024/08/08 18:26:57 presenter.go:21: 20240808182657 - Show
+2024/08/08 18:26:57 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 [4832215526 48999448383]}
+2024/08/08 18:26:57 view.go:24: 20240808182657 - Show
+2024/08/21 14:44:52 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/21 14:45:54 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/21 14:47:58 server.go:53: /cliente/get01/:cpf
+2024/08/21 14:47:58 start-get01.go:19: 20240821144758 - cliente/get01 - Start
+2024/08/21 14:47:58 controller.go:13: 20240821144758 - cliente/get01 - Controller - Execute
+2024/08/21 14:47:58 controller.go:22: 20240821144758 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/21 14:47:58 usecase.go:22: 20240821144758 - cliente/get01 - usecase - Execute
+2024/08/21 14:47:58 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/21 14:47:58 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/21 14:47:58 repo-Oracle.go:80: 4832215526
+2024/08/21 14:47:58 repo-Oracle.go:80: 48999448383
+2024/08/21 14:47:58 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/21 14:47:58 usecase.go:42: 1: 4832215526
+2024/08/21 14:47:58 usecase.go:43: 2: 48999448383
+2024/08/21 14:47:58 usecase.go:47: idx: 0 - valor: 4832215526
+2024/08/21 14:47:58 usecase.go:52: 4832215526
+2024/08/21 14:47:58 usecase.go:47: idx: 1 - valor: 48999448383
+2024/08/21 14:47:58 usecase.go:52: 48999448383
+2024/08/21 14:47:58 presenter.go:21: 20240821144758 - Show
+2024/08/21 14:47:58 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 [4832215526 48999448383]}
+2024/08/21 14:47:58 view.go:24: 20240821144758 - Show
+2024/08/21 14:48:05 server.go:53: /cliente/get01/:cpf
+2024/08/21 14:48:05 start-get01.go:19: 20240821144805 - cliente/get01 - Start
+2024/08/21 14:48:05 controller.go:13: 20240821144805 - cliente/get01 - Controller - Execute
+2024/08/21 14:48:05 controller.go:22: 20240821144805 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/21 14:48:05 usecase.go:22: 20240821144805 - cliente/get01 - usecase - Execute
+2024/08/21 14:48:05 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/21 14:48:05 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/21 14:48:05 repo-Oracle.go:80: 4832215526
+2024/08/21 14:48:05 repo-Oracle.go:80: 48999448383
+2024/08/21 14:48:05 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/21 14:48:05 usecase.go:42: 1: 4832215526
+2024/08/21 14:48:05 usecase.go:43: 2: 48999448383
+2024/08/21 14:48:05 usecase.go:47: idx: 0 - valor: 4832215526
+2024/08/21 14:48:05 usecase.go:52: 4832215526
+2024/08/21 14:48:05 usecase.go:47: idx: 1 - valor: 48999448383
+2024/08/21 14:48:05 usecase.go:52: 48999448383
+2024/08/21 14:48:05 presenter.go:21: 20240821144805 - Show
+2024/08/21 14:48:05 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 [4832215526 48999448383]}
+2024/08/21 14:48:05 view.go:24: 20240821144805 - Show
+2024/08/21 14:51:57 server.go:53: /cliente/get01/:cpf
+2024/08/21 14:51:57 start-get01.go:19: 20240821145157 - cliente/get01 - Start
+2024/08/21 14:51:57 controller.go:13: 20240821145157 - cliente/get01 - Controller - Execute
+2024/08/21 14:51:57 controller.go:22: 20240821145157 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/21 14:51:57 usecase.go:22: 20240821145157 - cliente/get01 - usecase - Execute
+2024/08/21 14:51:57 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/21 14:51:57 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/21 14:51:57 repo-Oracle.go:80: 4832215526
+2024/08/21 14:51:57 repo-Oracle.go:80: 48999448383
+2024/08/21 14:51:57 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/21 14:51:57 usecase.go:42: 1: 4832215526
+2024/08/21 14:51:57 usecase.go:43: 2: 48999448383
+2024/08/21 14:51:57 usecase.go:47: idx: 0 - valor: 4832215526
+2024/08/21 14:51:57 usecase.go:52: 4832215526
+2024/08/21 14:51:57 usecase.go:47: idx: 1 - valor: 48999448383
+2024/08/21 14:51:57 usecase.go:52: 48999448383
+2024/08/21 14:51:57 presenter.go:21: 20240821145157 - Show
+2024/08/21 14:51:57 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 [4832215526 48999448383]}
+2024/08/21 14:51:57 view.go:24: 20240821145157 - Show
+2024/08/21 14:57:28 server.go:53: /cliente/get01/:cpf
+2024/08/21 14:57:28 start-get01.go:19: 20240821145728 - cliente/get01 - Start
+2024/08/21 14:57:28 controller.go:13: 20240821145728 - cliente/get01 - Controller - Execute
+2024/08/21 14:57:28 controller.go:22: 20240821145728 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/21 14:57:28 usecase.go:22: 20240821145728 - cliente/get01 - usecase - Execute
+2024/08/21 14:57:28 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/21 14:57:28 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/21 14:57:28 repo-Oracle.go:80: 4832215526
+2024/08/21 14:57:28 repo-Oracle.go:80: 48999448383
+2024/08/21 14:57:28 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/21 14:57:28 usecase.go:42: 1: 4832215526
+2024/08/21 14:57:28 usecase.go:43: 2: 48999448383
+2024/08/21 14:57:28 usecase.go:47: idx: 0 - valor: 4832215526
+2024/08/21 14:57:28 usecase.go:52: 4832215526
+2024/08/21 14:57:28 usecase.go:47: idx: 1 - valor: 48999448383
+2024/08/21 14:57:28 usecase.go:52: 48999448383
+2024/08/21 14:57:28 presenter.go:21: 20240821145728 - Show
+2024/08/21 14:57:28 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 [4832215526 48999448383]}
+2024/08/21 14:57:28 view.go:24: 20240821145728 - Show
+2024/08/21 14:59:23 server.go:58: /cliente/post01
+2024/08/21 14:59:23 start-endpoint02.go:19: 20240821145923 - cliente/post01 - Start
+2024/08/21 14:59:23 controller.go:14: 20240821145923 - Controller - cliente/post01 - Execute
+2024/08/21 14:59:23 usecase.go:22: 20240821145923 - cliente/post01 - usecase - Execute
+2024/08/21 15:07:26 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/21 15:07:32 server.go:53: /cliente/get01/:cpf
+2024/08/21 15:07:32 start-get01.go:19: 20240821150732 - cliente/get01 - Start
+2024/08/21 15:07:32 controller.go:13: 20240821150732 - cliente/get01 - Controller - Execute
+2024/08/21 15:07:32 controller.go:22: 20240821150732 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/21 15:07:32 usecase.go:22: 20240821150732 - cliente/get01 - usecase - Execute
+2024/08/21 15:07:32 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/21 15:07:32 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/21 15:07:32 repo-Oracle.go:80: 4832215526
+2024/08/21 15:07:32 repo-Oracle.go:80: 48999448383
+2024/08/21 15:07:32 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/21 15:07:32 usecase.go:42: 1: 4832215526
+2024/08/21 15:07:32 usecase.go:43: 2: 48999448383
+2024/08/21 15:07:32 usecase.go:47: idx: 0 - valor: 4832215526
+2024/08/21 15:07:32 usecase.go:52: 4832215526
+2024/08/21 15:07:32 usecase.go:47: idx: 1 - valor: 48999448383
+2024/08/21 15:07:32 usecase.go:52: 48999448383
+2024/08/21 15:07:32 presenter.go:21: 20240821150732 - Show
+2024/08/21 15:07:32 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 [4832215526 48999448383]}
+2024/08/21 15:07:32 view.go:24: 20240821150732 - Show
+2024/08/21 15:07:38 server.go:58: /cliente/post01
+2024/08/21 15:07:38 start-endpoint02.go:19: 20240821150738 - cliente/post01 - Start
+2024/08/21 15:07:38 controller.go:14: 20240821150738 - Controller - cliente/post01 - Execute
+2024/08/21 15:07:38 controller.go:19: 20240821150738 - Error Decode input: invalid character ']' looking for beginning of value
+2024/08/21 15:07:38 start-endpoint02.go:26: 20240821150738 - Error: invalid character ']' looking for beginning of value
+2024/08/21 15:07:38 presenter.go:34: 20240821150738 - ShowError
+2024/08/21 15:07:38 view.go:30: 20240821150738 - ShowError
+2024/08/21 15:08:18 server.go:58: /cliente/post01
+2024/08/21 15:08:18 start-endpoint02.go:19: 20240821150818 - cliente/post01 - Start
+2024/08/21 15:08:18 controller.go:14: 20240821150818 - Controller - cliente/post01 - Execute
+2024/08/21 15:08:18 controller.go:22: &{<nil>}
+2024/08/21 15:08:18 usecase.go:22: 20240821150818 - cliente/post01 - usecase - Execute
+2024/08/21 15:09:40 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/21 15:09:48 server.go:58: /cliente/post01
+2024/08/21 15:09:48 start-endpoint02.go:19: 20240821150948 - cliente/post01 - Start
+2024/08/21 15:09:48 controller.go:14: 20240821150948 - Controller - cliente/post01 - Execute
+2024/08/21 15:09:48 controller.go:23: map[cpf:2 dt_nasc:02/07/1975 nome:Cliente 2 telefones:[48999448383]]
+2024/08/21 15:11:21 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/21 15:11:33 server.go:58: /cliente/post01
+2024/08/21 15:11:33 start-endpoint02.go:19: 20240821151133 - cliente/post01 - Start
+2024/08/21 15:11:33 controller.go:14: 20240821151133 - Controller - cliente/post01 - Execute
+2024/08/21 15:11:33 controller.go:23: map[cpf:2 dt_nasc:02/07/1975 nome:Cliente 2 telefones:[48999448383]]
+2024/08/21 15:13:43 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/21 15:13:49 server.go:58: /cliente/post01
+2024/08/21 15:13:49 start-endpoint02.go:19: 20240821151349 - cliente/post01 - Start
+2024/08/21 15:13:49 controller.go:14: 20240821151349 - Controller - cliente/post01 - Execute
+2024/08/21 15:13:49 controller.go:23: &{2 Cliente 2 02/07/1975 [0xc0004a1350]}
+2024/08/21 15:14:44 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/21 15:14:53 server.go:58: /cliente/post01
+2024/08/21 15:14:53 start-endpoint02.go:19: 20240821151453 - cliente/post01 - Start
+2024/08/21 15:14:53 controller.go:14: 20240821151453 - Controller - cliente/post01 - Execute
+2024/08/21 15:14:53 controller.go:23: &{2 Cliente 2 02/07/1975 [0xc00049c1e0]}
+2024/08/21 15:14:53 usecase.go:22: 20240821151453 - cliente/post01 - usecase - Execute
+2024/08/21 15:14:53 repo-Oracle.go:25: cliente/get01 - repoOracle - InsertPessoa cpf:2 
+2024/08/21 15:14:53 repo-Oracle.go:30: Erro ao executar a inserção: ORA-00942: a tabela ou view não existe
+2024/08/21 15:14:53 usecase.go:32: 20240821151453 - ERRO-API: Erro em cliente/post01 Execute - ORA-00942: a tabela ou view não existe
+2024/08/21 15:14:53 presenter.go:34: 20240821151453 - ShowError
+2024/08/21 15:14:53 view.go:30: 20240821151453 - ShowError
+2024/08/21 15:14:53 controller.go:27: 20240821151453 - Error Execute useCase: ORA-00942: a tabela ou view não existe
+2024/08/21 15:14:53 start-endpoint02.go:26: 20240821151453 - Error: ORA-00942: a tabela ou view não existe
+2024/08/21 15:14:53 presenter.go:34: 20240821151453 - ShowError
+2024/08/21 15:14:53 view.go:30: 20240821151453 - ShowError
+2024/08/21 15:16:50 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/21 15:16:55 server.go:58: /cliente/post01
+2024/08/21 15:16:55 start-endpoint02.go:19: 20240821151655 - cliente/post01 - Start
+2024/08/21 15:16:55 controller.go:14: 20240821151655 - Controller - cliente/post01 - Execute
+2024/08/21 15:16:55 controller.go:23: &{2 Cliente 2 02/07/1975 [0xc000124840]}
+2024/08/21 15:16:55 usecase.go:22: 20240821151655 - cliente/post01 - usecase - Execute
+2024/08/21 15:16:55 repo-Oracle.go:25: cliente/post01 - repoOracle - InsertPessoa cpf:2 
+2024/08/21 15:16:55 repo-Oracle.go:30: Erro ao executar a inserção: ORA-01840: valor de entrada não é longo o suficiente para formato de data
+2024/08/21 15:16:55 usecase.go:32: 20240821151655 - ERRO-API: Erro em cliente/post01 Execute - ORA-01840: valor de entrada não é longo o suficiente para formato de data
+2024/08/21 15:16:55 presenter.go:34: 20240821151655 - ShowError
+2024/08/21 15:16:55 view.go:30: 20240821151655 - ShowError
+2024/08/21 15:16:55 controller.go:27: 20240821151655 - Error Execute useCase: ORA-01840: valor de entrada não é longo o suficiente para formato de data
+2024/08/21 15:16:55 start-endpoint02.go:26: 20240821151655 - Error: ORA-01840: valor de entrada não é longo o suficiente para formato de data
+2024/08/21 15:16:55 presenter.go:34: 20240821151655 - ShowError
+2024/08/21 15:16:55 view.go:30: 20240821151655 - ShowError
+2024/08/21 15:18:31 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/21 15:18:42 server.go:58: /cliente/post01
+2024/08/21 15:18:42 start-endpoint02.go:19: 20240821151842 - cliente/post01 - Start
+2024/08/21 15:18:42 controller.go:14: 20240821151842 - Controller - cliente/post01 - Execute
+2024/08/21 15:18:42 controller.go:23: &{2 Cliente 2 02/07/1975 [0xc0005221c0]}
+2024/08/21 15:18:42 usecase.go:22: 20240821151842 - cliente/post01 - usecase - Execute
+2024/08/21 15:18:42 repo-Oracle.go:25: cliente/post01 - repoOracle - InsertPessoa cpf:2 
+2024/08/21 15:18:42 repo-Oracle.go:40: Número de linhas inseridas: 1
+2024/08/21 15:18:42 presenter.go:21: 20240821151842 - Show
+2024/08/21 15:18:42 view.go:24: 20240821151842 - Show
+2024/08/21 15:23:53 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/21 15:48:57 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/21 15:49:24 server.go:58: /cliente/post01
+2024/08/21 15:49:24 start-endpoint02.go:19: 20240821154924 - cliente/post01 - Start
+2024/08/21 15:49:24 controller.go:14: 20240821154924 - Controller - cliente/post01 - Execute
+2024/08/21 15:49:24 controller.go:23: &{3 Cliente 3 12/08/1985 [4832453548]}
+2024/08/21 15:49:24 usecase.go:22: 20240821154924 - cliente/post01 - usecase - Execute
+2024/08/21 15:49:24 repo-Oracle.go:25: cliente/post01 - repoOracle - InsertPessoa cpf:3 
+2024/08/21 15:49:24 repo-Oracle.go:62: Número de linhas inseridas: 1
+2024/08/21 15:49:24 presenter.go:21: 20240821154924 - Show
+2024/08/21 15:49:24 view.go:24: 20240821154924 - Show
+2024/08/22 11:15:16 connectDB.go:28: ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: "/opt/oracle/instantclient_19_9//libclntsh.so: cannot open shared object file: No such file or directory". See https://oracle.github.io/odpi/doc/installation.html#linux for help
+2024/08/22 11:19:31 connectDB.go:28: ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: "/opt/oracle/instantclient_19_9//libclntsh.so: cannot open shared object file: No such file or directory". See https://oracle.github.io/odpi/doc/installation.html#linux for help
+2024/08/22 11:20:14 connectDB.go:28: ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: "/opt/oracle/instantclient_19_9//libclntsh.so: cannot open shared object file: No such file or directory". See https://oracle.github.io/odpi/doc/installation.html#linux for help
+2024/08/22 11:21:18 connectDB.go:28: params=user=api_oracle_hom password="SECRET-GD8psEbZFAQ=" connectString=192.168.37.34:1521/ISAPFHOM
+libDir=/usr/lib/oracle/19.15/client64/lib/ timezone= poolIncrement=1 poolMaxSessions=1000 poolMinSessions=1 poolSessionMaxLifetime=1h0m0s
+poolSessionTimeout=5m0s poolWaitTimeout=30s extAuth=0: ORA-01017: senha/nome do usuário inválido; log-on negado
+2024/08/22 11:21:40 connectDB.go:28: ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: "/opt/oracle/instantclient_19_9//libclntsh.so: cannot open shared object file: No such file or directory". See https://oracle.github.io/odpi/doc/installation.html#linux for help
+2024/08/22 11:27:36 connectDB.go:28: params=user=api_oracle_hom password="SECRET-GD8psEbZFAQ=" connectString=192.168.37.34:1521/ISAPFHOM
+libDir=/usr/lib/oracle/19.15/client64/lib/ timezone= poolIncrement=1 poolMaxSessions=1000 poolMinSessions=1 poolSessionMaxLifetime=1h0m0s
+poolSessionTimeout=5m0s poolWaitTimeout=30s extAuth=0: ORA-01017: senha/nome do usuário inválido; log-on negado
+2024/08/22 11:28:17 connectDB.go:28: ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: "/opt/oracle/instantclient_19_9//libclntsh.so: cannot open shared object file: No such file or directory". See https://oracle.github.io/odpi/doc/installation.html#linux for help
+2024/08/22 11:31:16 connectDB.go:28: params=user=api_oracle_hom password="SECRET-GD8psEbZFAQ=" connectString=192.168.37.34:1521/ISAPFHOM
+libDir=/usr/lib/oracle/19.15/client64/lib/ timezone= poolIncrement=1 poolMaxSessions=1000 poolMinSessions=1 poolSessionMaxLifetime=1h0m0s
+poolSessionTimeout=5m0s poolWaitTimeout=30s extAuth=0: ORA-01017: senha/nome do usuário inválido; log-on negado
+2024/08/22 11:35:27 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 11:41:00 connectDB.go:28: params=user=api_oracle_hom password="SECRET-GD8psEbZFAQ=" connectString=192.168.37.34:1521/ISAPFHOM
+libDir=/usr/lib/oracle/19.15/client64/lib/ timezone= poolIncrement=1 poolMaxSessions=1000 poolMinSessions=1 poolSessionMaxLifetime=1h0m0s
+poolSessionTimeout=5m0s poolWaitTimeout=30s extAuth=0: ORA-01017: senha/nome do usuário inválido; log-on negado
+2024/08/22 11:43:12 connectDB.go:28: params=user=api_oracle_hom password="SECRET-GD8psEbZFAQ=" connectString=192.168.37.34:1521/ISAPFHOM
+libDir=/usr/lib/oracle/19.15/client64/lib/ timezone= poolIncrement=1 poolMaxSessions=1000 poolMinSessions=1 poolSessionMaxLifetime=1h0m0s
+poolSessionTimeout=5m0s poolWaitTimeout=30s extAuth=0: ORA-01017: senha/nome do usuário inválido; log-on negado
+2024/08/22 11:43:56 connectDB.go:28: params=user=api_oracle_hom password="SECRET-GD8psEbZFAQ=" connectString=192.168.37.34:1521/ISAPFHOM
+libDir=/usr/lib/oracle/19.15/client64/lib/ timezone= poolIncrement=1 poolMaxSessions=1000 poolMinSessions=1 poolSessionMaxLifetime=1h0m0s
+poolSessionTimeout=5m0s poolWaitTimeout=30s extAuth=0: ORA-01017: senha/nome do usuário inválido; log-on negado
+2024/08/22 11:47:36 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 11:50:33 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 11:55:50 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 12:23:26 connectDB.go:28: ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: "/usr/lib/oracle/19.15/client64/lib//libclntsh.so: cannot open shared object file: No such file or directory". See https://oracle.github.io/odpi/doc/installation.html#linux for help
+2024/08/22 12:28:55 server.go:62: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 12:29:07 server.go:53: /cliente/get01/:cpf
+2024/08/22 12:29:07 start-get01.go:19: 20240822122907 - cliente/get01 - Start
+2024/08/22 12:29:07 controller.go:13: 20240822122907 - cliente/get01 - Controller - Execute
+2024/08/22 12:29:07 controller.go:22: 20240822122907 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/22 12:29:07 usecase.go:22: 20240822122907 - cliente/get01 - usecase - Execute
+2024/08/22 12:29:07 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/22 12:29:07 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/22 12:29:07 repo-Oracle.go:80: 4832215526
+2024/08/22 12:29:07 repo-Oracle.go:80: 48999448383
+2024/08/22 12:29:07 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/22 12:29:07 usecase.go:39: idx: 0 - valor: 4832215526
+2024/08/22 12:29:07 usecase.go:41: 4832215526
+2024/08/22 12:29:07 usecase.go:39: idx: 1 - valor: 48999448383
+2024/08/22 12:29:07 usecase.go:41: 48999448383
+2024/08/22 12:29:07 presenter.go:21: 20240822122907 - Show
+2024/08/22 12:29:07 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 [4832215526 48999448383]}
+2024/08/22 12:29:07 view.go:24: 20240822122907 - Show
+2024/08/22 12:48:43 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 12:49:02 server.go:59: /cliente/get02
+2024/08/22 12:49:02 start-get02.go:19: 20240822124902 - cliente/get02 - Start
+2024/08/22 12:49:02 controller.go:13: 20240822124902 - cliente/get01 - Controller - Execute
+2024/08/22 12:49:02 controller.go:22: 20240822124902 - cliente/get01 - Controller - Execute - CPF:
+2024/08/22 12:49:02 usecase.go:22: 20240822124902 - cliente/get01 - usecase - Execute
+2024/08/22 12:49:02 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf: 
+2024/08/22 12:49:02 usecase.go:25: 20240822124902 - ERRO-API: Erro em cliente/get01 Execute - Cliente - sql: no rows in result set
+2024/08/22 12:49:02 presenter.go:34: 20240822124902 - ShowError
+2024/08/22 12:49:02 view.go:30: 20240822124902 - ShowError
+2024/08/22 12:49:02 controller.go:25: 20240822124902 - Error: sql: no rows in result set
+2024/08/22 12:49:02 start-get02.go:26: 20240822124902 - Error: sql: no rows in result set
+2024/08/22 12:49:02 presenter.go:34: 20240822124902 - ShowError
+2024/08/22 12:49:02 view.go:30: 20240822124902 - ShowError
+2024/08/22 14:58:36 connectDB.go:28: ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: "/opt/oracle/instantclient_19_9//libclntsh.so: cannot open shared object file: No such file or directory". See https://oracle.github.io/odpi/doc/installation.html#linux for help
+2024/08/22 15:11:42 connectDB.go:28: ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: "/opt/oracle/instantclient_19_9//libclntsh.so: cannot open shared object file: No such file or directory". See https://oracle.github.io/odpi/doc/installation.html#linux for help
+2024/08/22 15:14:44 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 15:16:47 server.go:54: /cliente/get01/:cpf
+2024/08/22 15:16:47 start-get01.go:19: 20240822151647 - cliente/get01 - Start
+2024/08/22 15:16:47 controller.go:13: 20240822151647 - cliente/get01 - Controller - Execute
+2024/08/22 15:16:47 controller.go:22: 20240822151647 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/22 15:16:47 usecase.go:22: 20240822151647 - cliente/get01 - usecase - Execute
+2024/08/22 15:16:47 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/22 15:16:47 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/22 15:16:47 repo-Oracle.go:80: 4832215526
+2024/08/22 15:16:47 repo-Oracle.go:80: 48999448383
+2024/08/22 15:16:47 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/22 15:16:47 usecase.go:39: idx: 0 - valor: 4832215526
+2024/08/22 15:16:47 usecase.go:41: 4832215526
+2024/08/22 15:16:47 usecase.go:39: idx: 1 - valor: 48999448383
+2024/08/22 15:16:47 usecase.go:41: 48999448383
+2024/08/22 15:16:47 presenter.go:21: 20240822151647 - Show
+2024/08/22 15:16:47 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 [4832215526 48999448383]}
+2024/08/22 15:16:47 view.go:24: 20240822151647 - Show
+2024/08/22 15:16:52 server.go:59: /cliente/get02
+2024/08/22 15:16:52 start-get02.go:19: 20240822151652 - cliente/get02 - Start
+2024/08/22 15:16:52 controller.go:13: 20240822151652 - cliente/get01 - Controller - Execute
+2024/08/22 15:16:52 controller.go:22: 20240822151652 - cliente/get01 - Controller - Execute - CPF:
+2024/08/22 15:16:52 usecase.go:22: 20240822151652 - cliente/get01 - usecase - Execute
+2024/08/22 15:16:52 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf: 
+2024/08/22 15:16:52 usecase.go:25: 20240822151652 - ERRO-API: Erro em cliente/get01 Execute - Cliente - sql: no rows in result set
+2024/08/22 15:16:52 presenter.go:34: 20240822151652 - ShowError
+2024/08/22 15:16:52 view.go:30: 20240822151652 - ShowError
+2024/08/22 15:16:52 controller.go:25: 20240822151652 - Error: sql: no rows in result set
+2024/08/22 15:16:52 start-get02.go:26: 20240822151652 - Error: sql: no rows in result set
+2024/08/22 15:16:52 presenter.go:34: 20240822151652 - ShowError
+2024/08/22 15:16:52 view.go:30: 20240822151652 - ShowError
+2024/08/22 16:06:41 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:06:51 server.go:54: /cliente/get01/:cpf
+2024/08/22 16:06:51 start-get01.go:19: 20240822160651 - cliente/get01 - Start
+2024/08/22 16:06:51 controller.go:13: 20240822160651 - cliente/get01 - Controller - Execute
+2024/08/22 16:06:51 controller.go:22: 20240822160651 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/22 16:06:51 usecase.go:22: 20240822160651 - cliente/get01 - usecase - Execute
+2024/08/22 16:06:51 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/22 16:06:51 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/22 16:06:51 repo-Oracle.go:80: 4832215526
+2024/08/22 16:06:51 repo-Oracle.go:80: 48999448383
+2024/08/22 16:06:51 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/22 16:06:51 usecase.go:39: idx: 0 - valor: 4832215526
+2024/08/22 16:06:51 usecase.go:41: 4832215526
+2024/08/22 16:06:51 usecase.go:39: idx: 1 - valor: 48999448383
+2024/08/22 16:06:51 usecase.go:41: 48999448383
+2024/08/22 16:06:51 presenter.go:21: 20240822160651 - Show
+2024/08/22 16:06:51 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 [4832215526 48999448383]}
+2024/08/22 16:06:51 view.go:24: 20240822160651 - Show
+2024/08/22 16:06:54 server.go:59: /cliente/get02
+2024/08/22 16:06:54 start-get02.go:19: 20240822160654 - cliente/get02 - Start
+2024/08/22 16:06:54 controller.go:13: 20240822160654 - cliente/get01 - Controller - Execute
+2024/08/22 16:06:54 controller.go:22: 20240822160654 - cliente/get01 - Controller - Execute - CPF:
+2024/08/22 16:06:54 usecase.go:22: 20240822160654 - cliente/get01 - usecase - Execute
+2024/08/22 16:06:54 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf: 
+2024/08/22 16:06:54 usecase.go:25: 20240822160654 - ERRO-API: Erro em cliente/get01 Execute - Cliente - sql: no rows in result set
+2024/08/22 16:06:54 presenter.go:34: 20240822160654 - ShowError
+2024/08/22 16:06:54 view.go:30: 20240822160654 - ShowError
+2024/08/22 16:06:54 controller.go:25: 20240822160654 - Error: sql: no rows in result set
+2024/08/22 16:06:54 start-get02.go:26: 20240822160654 - Error: sql: no rows in result set
+2024/08/22 16:06:54 presenter.go:34: 20240822160654 - ShowError
+2024/08/22 16:06:54 view.go:30: 20240822160654 - ShowError
+2024/08/22 16:10:19 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:10:41 server.go:54: /cliente/get01/:cpf
+2024/08/22 16:10:41 start-get01.go:19: 20240822161041 - cliente/get01 - Start
+2024/08/22 16:10:41 controller.go:13: 20240822161041 - cliente/get01 - Controller - Execute
+2024/08/22 16:10:41 controller.go:22: 20240822161041 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/22 16:10:41 usecase.go:22: 20240822161041 - cliente/get01 - usecase - Execute
+2024/08/22 16:10:41 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/22 16:10:41 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/22 16:10:41 repo-Oracle.go:80: 4832215526
+2024/08/22 16:10:41 repo-Oracle.go:80: 48999448383
+2024/08/22 16:10:41 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/22 16:10:41 usecase.go:39: idx: 0 - valor: 4832215526
+2024/08/22 16:10:41 usecase.go:41: 4832215526
+2024/08/22 16:10:41 usecase.go:39: idx: 1 - valor: 48999448383
+2024/08/22 16:10:41 usecase.go:41: 48999448383
+2024/08/22 16:10:41 presenter.go:21: 20240822161041 - Show
+2024/08/22 16:10:41 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 [4832215526 48999448383]}
+2024/08/22 16:10:41 view.go:24: 20240822161041 - Show
+2024/08/22 16:10:44 server.go:59: /cliente/get02
+2024/08/22 16:10:44 start-get02.go:19: 20240822161044 - cliente/get02 - Start
+2024/08/22 16:10:44 controller.go:13: 20240822161044 - cliente/get02 - Controller - Execute
+2024/08/22 16:10:44 usecase.go:22: 20240822161044 - cliente/get02 - usecase - Execute
+2024/08/22 16:10:44 repo-Oracle.go:25: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 16:12:14 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:13:17 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:13:27 server.go:59: /cliente/get02
+2024/08/22 16:13:27 start-get02.go:19: 20240822161327 - cliente/get02 - Start
+2024/08/22 16:13:27 controller.go:13: 20240822161327 - cliente/get02 - Controller - Execute
+2024/08/22 16:13:27 usecase.go:22: 20240822161327 - cliente/get02 - usecase - Execute
+2024/08/22 16:13:27 repo-Oracle.go:25: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 16:18:00 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:18:09 server.go:59: /cliente/get02
+2024/08/22 16:18:09 start-get02.go:19: 20240822161809 - cliente/get02 - Start
+2024/08/22 16:18:09 controller.go:13: 20240822161809 - cliente/get02 - Controller - Execute
+2024/08/22 16:18:09 usecase.go:22: 20240822161809 - cliente/get02 - usecase - Execute
+2024/08/22 16:18:09 repo-Oracle.go:25: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 16:19:20 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:19:29 server.go:59: /cliente/get02
+2024/08/22 16:19:29 start-get02.go:19: 20240822161929 - cliente/get02 - Start
+2024/08/22 16:19:29 controller.go:13: 20240822161929 - cliente/get02 - Controller - Execute
+2024/08/22 16:19:29 usecase.go:22: 20240822161929 - cliente/get02 - usecase - Execute
+2024/08/22 16:19:29 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 16:22:09 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:25:41 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:25:45 server.go:59: /cliente/get02
+2024/08/22 16:25:45 start-get02.go:19: 20240822162545 - cliente/get02 - Start
+2024/08/22 16:25:45 controller.go:13: 20240822162545 - cliente/get02 - Controller - Execute
+2024/08/22 16:25:45 usecase.go:22: 20240822162545 - cliente/get02 - usecase - Execute
+2024/08/22 16:25:45 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 16:29:25 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:29:29 server.go:59: /cliente/get02
+2024/08/22 16:29:29 start-get02.go:19: 20240822162929 - cliente/get02 - Start
+2024/08/22 16:29:29 controller.go:13: 20240822162929 - cliente/get02 - Controller - Execute
+2024/08/22 16:29:29 usecase.go:22: 20240822162929 - cliente/get02 - usecase - Execute
+2024/08/22 16:29:29 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 16:31:08 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:31:16 server.go:59: /cliente/get02
+2024/08/22 16:31:16 start-get02.go:19: 20240822163116 - cliente/get02 - Start
+2024/08/22 16:31:16 controller.go:13: 20240822163116 - cliente/get02 - Controller - Execute
+2024/08/22 16:31:16 usecase.go:22: 20240822163116 - cliente/get02 - usecase - Execute
+2024/08/22 16:31:16 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 16:35:46 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:35:54 server.go:59: /cliente/get02
+2024/08/22 16:35:54 start-get02.go:19: 20240822163554 - cliente/get02 - Start
+2024/08/22 16:35:54 controller.go:13: 20240822163554 - cliente/get02 - Controller - Execute
+2024/08/22 16:35:54 usecase.go:22: 20240822163554 - cliente/get02 - usecase - Execute
+2024/08/22 16:35:54 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 16:39:46 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:39:53 server.go:59: /cliente/get02
+2024/08/22 16:39:53 start-get02.go:19: 20240822163953 - cliente/get02 - Start
+2024/08/22 16:39:53 controller.go:13: 20240822163953 - cliente/get02 - Controller - Execute
+2024/08/22 16:39:53 usecase.go:22: 20240822163953 - cliente/get02 - usecase - Execute
+2024/08/22 16:39:53 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 16:40:31 server.go:54: /cliente/get01/:cpf
+2024/08/22 16:40:31 start-get01.go:19: 20240822164031 - cliente/get01 - Start
+2024/08/22 16:40:31 controller.go:13: 20240822164031 - cliente/get01 - Controller - Execute
+2024/08/22 16:40:31 controller.go:22: 20240822164031 - cliente/get01 - Controller - Execute - CPF:1
+2024/08/22 16:40:31 usecase.go:22: 20240822164031 - cliente/get01 - usecase - Execute
+2024/08/22 16:40:31 repo-Oracle.go:25: cliente/get01 - repoOracle - QueryLoadDataCliente cpf:1 
+2024/08/22 16:40:31 repo-Oracle.go:54: cliente/get01 - repoOracle - QueryLoadDataTelefone cpf:1 
+2024/08/22 16:40:31 repo-Oracle.go:80: 4832215526
+2024/08/22 16:40:31 repo-Oracle.go:80: 48999448383
+2024/08/22 16:40:31 repo-Oracle.go:84: Counts Telefone: 2
+2024/08/22 16:40:31 usecase.go:39: idx: 0 - valor: 4832215526
+2024/08/22 16:40:31 usecase.go:41: 4832215526
+2024/08/22 16:40:31 usecase.go:39: idx: 1 - valor: 48999448383
+2024/08/22 16:40:31 usecase.go:41: 48999448383
+2024/08/22 16:40:31 presenter.go:21: 20240822164031 - Show
+2024/08/22 16:40:31 presenter.go:49: Response: &{Cliente 1 1 1975-07-02T00:00:00-03:00 [4832215526 48999448383]}
+2024/08/22 16:40:31 view.go:24: 20240822164031 - Show
+2024/08/22 16:45:37 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:45:46 server.go:59: /cliente/get02
+2024/08/22 16:45:46 start-get02.go:19: 20240822164546 - cliente/get02 - Start
+2024/08/22 16:45:46 controller.go:13: 20240822164546 - cliente/get02 - Controller - Execute
+2024/08/22 16:45:46 usecase.go:22: 20240822164546 - cliente/get02 - usecase - Execute
+2024/08/22 16:45:46 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 16:49:42 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:49:48 server.go:59: /cliente/get02
+2024/08/22 16:49:48 start-get02.go:19: 20240822164948 - cliente/get02 - Start
+2024/08/22 16:49:48 controller.go:13: 20240822164948 - cliente/get02 - Controller - Execute
+2024/08/22 16:49:48 usecase.go:22: 20240822164948 - cliente/get02 - usecase - Execute
+2024/08/22 16:49:48 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 16:52:36 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:52:40 server.go:59: /cliente/get02
+2024/08/22 16:52:40 start-get02.go:19: 20240822165240 - cliente/get02 - Start
+2024/08/22 16:52:40 controller.go:13: 20240822165240 - cliente/get02 - Controller - Execute
+2024/08/22 16:52:40 usecase.go:22: 20240822165240 - cliente/get02 - usecase - Execute
+2024/08/22 16:52:40 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 16:59:32 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 16:59:35 server.go:59: /cliente/get02
+2024/08/22 16:59:35 start-get02.go:19: 20240822165935 - cliente/get02 - Start
+2024/08/22 16:59:35 controller.go:13: 20240822165935 - cliente/get02 - Controller - Execute
+2024/08/22 16:59:35 usecase.go:22: 20240822165935 - cliente/get02 - usecase - Execute
+2024/08/22 16:59:35 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 16:59:35 usecase.go:29: 20240822165935 - cliente/get02 - usecase - QueryLoadAllClientes OK
+2024/08/22 16:59:35 usecase.go:30: [{5 5 5 [23 4344]}]
+2024/08/22 17:17:16 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 17:18:03 server.go:59: /cliente/get02
+2024/08/22 17:18:03 start-get02.go:19: 20240822171803 - cliente/get02 - Start
+2024/08/22 17:18:03 controller.go:13: 20240822171803 - cliente/get02 - Controller - Execute
+2024/08/22 17:18:03 usecase.go:22: 20240822171803 - cliente/get02 - usecase - Execute
+2024/08/22 17:18:03 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 17:19:27 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 17:19:35 server.go:59: /cliente/get02
+2024/08/22 17:19:35 start-get02.go:19: 20240822171935 - cliente/get02 - Start
+2024/08/22 17:19:35 controller.go:13: 20240822171935 - cliente/get02 - Controller - Execute
+2024/08/22 17:19:35 usecase.go:22: 20240822171935 - cliente/get02 - usecase - Execute
+2024/08/22 17:19:35 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 17:20:46 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 17:20:51 server.go:59: /cliente/get02
+2024/08/22 17:20:51 start-get02.go:19: 20240822172051 - cliente/get02 - Start
+2024/08/22 17:20:51 controller.go:13: 20240822172051 - cliente/get02 - Controller - Execute
+2024/08/22 17:20:51 usecase.go:22: 20240822172051 - cliente/get02 - usecase - Execute
+2024/08/22 17:20:51 repo-Oracle.go:25: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 17:22:23 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 17:22:28 server.go:59: /cliente/get02
+2024/08/22 17:22:28 start-get02.go:19: 20240822172228 - cliente/get02 - Start
+2024/08/22 17:22:28 controller.go:13: 20240822172228 - cliente/get02 - Controller - Execute
+2024/08/22 17:22:28 usecase.go:22: 20240822172228 - cliente/get02 - usecase - Execute
+2024/08/22 17:22:28 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 17:23:18 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 17:23:25 server.go:59: /cliente/get02
+2024/08/22 17:23:25 start-get02.go:19: 20240822172325 - cliente/get02 - Start
+2024/08/22 17:23:25 controller.go:13: 20240822172325 - cliente/get02 - Controller - Execute
+2024/08/22 17:23:25 usecase.go:22: 20240822172325 - cliente/get02 - usecase - Execute
+2024/08/22 17:23:25 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 17:23:25 usecase.go:29: 20240822172325 - cliente/get02 - usecase - QueryLoadAllClientes OK
+2024/08/22 17:23:25 usecase.go:30: [{5 5 5 [23 4344]}]
+2024/08/22 17:26:07 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 17:26:18 server.go:59: /cliente/get02
+2024/08/22 17:26:18 start-get02.go:19: 20240822172618 - cliente/get02 - Start
+2024/08/22 17:26:18 controller.go:13: 20240822172618 - cliente/get02 - Controller - Execute
+2024/08/22 17:26:18 usecase.go:22: 20240822172618 - cliente/get02 - usecase - Execute
+2024/08/22 17:26:18 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 17:26:18 usecase.go:29: 20240822172618 - cliente/get02 - usecase - QueryLoadAllClientes OK
+2024/08/22 17:26:18 usecase.go:30: [{5 5 5 [23 4344]}]
+2024/08/22 17:27:00 server.go:59: /cliente/get02
+2024/08/22 17:27:00 start-get02.go:19: 20240822172700 - cliente/get02 - Start
+2024/08/22 17:27:00 controller.go:13: 20240822172700 - cliente/get02 - Controller - Execute
+2024/08/22 17:27:00 usecase.go:22: 20240822172700 - cliente/get02 - usecase - Execute
+2024/08/22 17:27:00 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 17:27:00 usecase.go:29: 20240822172700 - cliente/get02 - usecase - QueryLoadAllClientes OK
+2024/08/22 17:27:00 usecase.go:30: [{5 5 5 [23 4344]}]
+2024/08/22 17:28:37 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 17:28:44 server.go:59: /cliente/get02
+2024/08/22 17:28:44 start-get02.go:19: 20240822172844 - cliente/get02 - Start
+2024/08/22 17:28:44 controller.go:13: 20240822172844 - cliente/get02 - Controller - Execute
+2024/08/22 17:28:44 usecase.go:22: 20240822172844 - cliente/get02 - usecase - Execute
+2024/08/22 17:28:44 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 17:28:44 usecase.go:29: 20240822172844 - cliente/get02 - usecase - QueryLoadAllClientes OK
+2024/08/22 17:28:44 usecase.go:30: [{5 5 5 [23 4344]}]
+2024/08/22 17:29:12 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 17:29:18 server.go:59: /cliente/get02
+2024/08/22 17:29:18 start-get02.go:19: 20240822172918 - cliente/get02 - Start
+2024/08/22 17:29:18 controller.go:13: 20240822172918 - cliente/get02 - Controller - Execute
+2024/08/22 17:29:18 usecase.go:22: 20240822172918 - cliente/get02 - usecase - Execute
+2024/08/22 17:29:18 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 17:29:18 usecase.go:29: 20240822172918 - cliente/get02 - usecase - QueryLoadAllClientes OK
+2024/08/22 17:29:18 usecase.go:30: [{5 5 5 [23 4344]} {2 Cliente 2 1975-07-02T00:00:00-03:00 []} {3 Cliente 3 1985-08-12T00:00:00-03:00 [4832453548]} {1 Cliente 1 1975-07-02T00:00:00-03:00 [4832215526 48999448383]}]
+2024/08/22 17:33:37 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 17:34:11 server.go:59: /cliente/get02
+2024/08/22 17:34:11 start-get02.go:19: 20240822173411 - cliente/get02 - Start
+2024/08/22 17:34:11 controller.go:13: 20240822173411 - cliente/get02 - Controller - Execute
+2024/08/22 17:34:11 usecase.go:22: 20240822173411 - cliente/get02 - usecase - Execute
+2024/08/22 17:34:11 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 17:34:11 usecase.go:29: 20240822173411 - cliente/get02 - usecase - QueryLoadAllClientes OK
+2024/08/22 17:34:11 usecase.go:30: [{5 5 5 [23 4344]} {2 Cliente 2 1975-07-02T00:00:00-03:00 []} {3 Cliente 3 1985-08-12T00:00:00-03:00 [4832453548]} {1 Cliente 1 1975-07-02T00:00:00-03:00 [4832215526 48999448383]}]
+2024/08/22 17:38:37 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 17:38:44 server.go:59: /cliente/get02
+2024/08/22 17:38:44 start-get02.go:19: 20240822173844 - cliente/get02 - Start
+2024/08/22 17:38:44 controller.go:13: 20240822173844 - cliente/get02 - Controller - Execute
+2024/08/22 17:38:44 usecase.go:22: 20240822173844 - cliente/get02 - usecase - Execute
+2024/08/22 17:38:44 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 17:38:44 presenter.go:21: 20240822173844 - Show
+2024/08/22 17:45:13 server.go:68: start api-modelo-clean-arch - PORT: 8888
+2024/08/22 17:45:22 server.go:59: /cliente/get02
+2024/08/22 17:45:22 start-get02.go:19: 20240822174522 - cliente/get02 - Start
+2024/08/22 17:45:22 controller.go:13: 20240822174522 - cliente/get02 - Controller - Execute
+2024/08/22 17:45:22 usecase.go:22: 20240822174522 - cliente/get02 - usecase - Execute
+2024/08/22 17:45:22 repo-Oracle.go:26: cliente/get02 - repoOracle - QueryLoadAllClientes
+2024/08/22 17:45:22 presenter.go:21: 20240822174522 - Show
+2024/08/26 09:21:28 server.go:68: start api-modelo-clean-arch - PORT: 8888
+{"level":"info","time":"2024-09-27 12:25:16.038","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2024-09-27 12:30:08.898","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2024-09-27 12:36:58.302","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2024-09-27 12:37:35.877","message":"/cliente/get01/:cpf"}
+{"level":"info","time":"2024-09-27 12:37:35.879","message":"Entrou...","id":"20240927123735","mtd":"cliente.get01.Start"}
+{"level":"info","time":"2024-09-27 12:37:45.322","message":"/cliente/get02"}
+{"level":"info","time":"2024-09-27 15:58:07.075","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2024-09-27 15:59:17.929","message":"/cliente/get01/:cpf"}
+{"level":"info","time":"2024-09-27 15:59:17.930","message":"Entrou...","id":"20240927155917","mtd":"cliente.get01.Start"}
+{"level":"info","time":"2024-09-27 15:59:17.932","message":"Entrou...","id":"20240927155917","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 15:59:17.933","message":"CPF: 1","id":"20240927155917","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 15:59:17.934","message":"Entrou... CPF:1","id":"20240927155917","mtd":"cliente/get01 - Repository - QueryLoadDataCliente"}
+{"level":"info","time":"2024-09-27 15:59:18.944","message":"Entrou... CPF:1","id":"20240927155917","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 15:59:18.947","message":"4832215526","id":"20240927155917","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 15:59:18.948","message":"48999448383","id":"20240927155917","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 15:59:18.950","message":"Counts Telefone:2","id":"20240927155917","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 15:59:18.951","message":"Entrou...","id":"20240927155917","mtd":"cliente/get01 - Presenter - Show"}
+{"level":"info","time":"2024-09-27 15:59:18.952","message":"Response:Cliente 1","id":"","mtd":"cliente/get01 - Presenter - GetViewModelFromResponse"}
+{"level":"info","time":"2024-09-27 15:59:25.770","message":"/cliente/get02"}
+{"level":"info","time":"2024-09-27 15:59:25.772","message":"Entrou...","id":"20240927155925","mtd":"cliente/get02 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 15:59:25.783","message":"Entrou...","id":"20240927155925","mtd":"cliente/get02 - UseCase - Execute"}
+{"level":"info","time":"2024-09-27 15:59:25.785","message":"Entrou...","id":"20240927155925","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2024-09-27 16:19:06.812","message":"/cliente/get01/:cpf"}
+{"level":"info","time":"2024-09-27 16:19:06.815","message":"Entrou...","id":"20240927161906","mtd":"cliente.get01.Start"}
+{"level":"info","time":"2024-09-27 16:19:06.816","message":"Entrou...","id":"20240927161906","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 16:19:06.817","message":"CPF: 1","id":"20240927161906","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 16:19:06.819","message":"Entrou... CPF:1","id":"20240927161906","mtd":"cliente/get01 - Repository - QueryLoadDataCliente"}
+{"level":"info","time":"2024-09-27 16:19:07.019","message":"Entrou... CPF:1","id":"20240927161906","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:19:07.021","message":"4832215526","id":"20240927161906","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:19:07.023","message":"48999448383","id":"20240927161906","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:19:07.024","message":"Counts Telefone:2","id":"20240927161906","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:19:07.025","message":"Entrou...","id":"20240927161906","mtd":"cliente/get01 - Presenter - Show"}
+{"level":"info","time":"2024-09-27 16:19:07.027","message":"Response:Cliente 1","id":"","mtd":"cliente/get01 - Presenter - GetViewModelFromResponse"}
+{"level":"info","time":"2024-09-27 16:19:59.606","message":"/cliente/get01/:cpf"}
+{"level":"info","time":"2024-09-27 16:19:59.608","message":"Entrou...","id":"20240927161959","mtd":"cliente.get01.Start"}
+{"level":"info","time":"2024-09-27 16:19:59.610","message":"Entrou...","id":"20240927161959","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 16:19:59.611","message":"CPF: 1","id":"20240927161959","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 16:19:59.612","message":"Entrou... CPF:1","id":"20240927161959","mtd":"cliente/get01 - Repository - QueryLoadDataCliente"}
+{"level":"info","time":"2024-09-27 16:19:59.615","message":"Entrou... CPF:1","id":"20240927161959","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:19:59.617","message":"4832215526","id":"20240927161959","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:19:59.618","message":"48999448383","id":"20240927161959","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:19:59.619","message":"Counts Telefone:2","id":"20240927161959","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:19:59.621","message":"Entrou...","id":"20240927161959","mtd":"cliente/get01 - Presenter - Show"}
+{"level":"info","time":"2024-09-27 16:19:59.622","message":"Response:Cliente 1","id":"","mtd":"cliente/get01 - Presenter - GetViewModelFromResponse"}
+{"level":"info","time":"2024-09-27 16:28:48.371","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2024-09-27 16:32:22.568","message":"/cliente/get01/:cpf"}
+{"level":"info","time":"2024-09-27 16:32:22.570","message":"Entrou...","id":"20240927163222","mtd":"cliente.get01.Start"}
+{"level":"info","time":"2024-09-27 16:32:22.571","message":"Entrou...","id":"20240927163222","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 16:32:22.573","message":"CPF: 1","id":"20240927163222","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 16:32:22.574","message":"Entrou... CPF:1","id":"20240927163222","mtd":"cliente/get01 - Repository - QueryLoadDataCliente"}
+{"level":"info","time":"2024-09-27 16:32:22.628","message":"Entrou... CPF:1","id":"20240927163222","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:32:22.632","message":"4832215526","id":"20240927163222","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:32:22.633","message":"48999448383","id":"20240927163222","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:32:22.634","message":"Counts Telefone:2","id":"20240927163222","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:32:22.635","message":"Entrou...","id":"20240927163222","mtd":"cliente/get01 - Presenter - Show"}
+{"level":"info","time":"2024-09-27 16:32:22.637","message":"Response:Cliente 1","id":"","mtd":"cliente/get01 - Presenter - GetViewModelFromResponse"}
+{"level":"info","time":"2024-09-27 16:32:24.659","message":"/cliente/get02"}
+{"level":"info","time":"2024-09-27 16:32:24.661","message":"Entrou...","id":"20240927163224","mtd":"cliente/get02 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 16:32:24.662","message":"Entrou...","id":"20240927163224","mtd":"cliente/get02 - UseCase - Execute"}
+{"level":"info","time":"2024-09-27 16:32:24.663","message":"Entrou...","id":"20240927163224","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2024-09-27 16:36:03.979","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2024-09-27 16:44:10.701","message":"/cliente/get02"}
+{"level":"info","time":"2024-09-27 16:44:10.703","message":"Entrou...","id":"20240927164410","mtd":"cliente/get02 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 16:44:10.704","message":"Entrou...","id":"20240927164410","mtd":"cliente/get02 - UseCase - Execute"}
+{"level":"info","time":"2024-09-27 16:44:10.706","message":"Entrou...","id":"20240927164410","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2024-09-27 16:44:23.967","message":"/cliente/get01/:cpf"}
+{"level":"info","time":"2024-09-27 16:44:23.976","message":"Entrou...","id":"20240927164423","mtd":"cliente.get01.Start"}
+{"level":"info","time":"2024-09-27 16:44:23.981","message":"Entrou...","id":"20240927164423","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 16:44:23.989","message":"CPF: 1","id":"20240927164423","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 16:44:23.996","message":"Entrou... CPF:1","id":"20240927164423","mtd":"cliente/get01 - Repository - QueryLoadDataCliente"}
+{"level":"info","time":"2024-09-27 16:44:24.005","message":"Entrou... CPF:1","id":"20240927164423","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:44:24.012","message":"4832215526","id":"20240927164423","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:44:24.020","message":"48999448383","id":"20240927164423","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:44:24.027","message":"Counts Telefone:2","id":"20240927164423","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 16:44:24.036","message":"Entrou...","id":"20240927164423","mtd":"cliente/get01 - Presenter - Show"}
+{"level":"info","time":"2024-09-27 16:44:24.037","message":"Response:Cliente 1","id":"","mtd":"cliente/get01 - Presenter - GetViewModelFromResponse"}
+{"level":"info","time":"2024-09-27 16:44:31.467","message":"/cliente/get02"}
+{"level":"info","time":"2024-09-27 16:44:31.469","message":"Entrou...","id":"20240927164431","mtd":"cliente/get02 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 16:44:31.470","message":"Entrou...","id":"20240927164431","mtd":"cliente/get02 - UseCase - Execute"}
+{"level":"info","time":"2024-09-27 16:44:31.471","message":"Entrou...","id":"20240927164431","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2024-09-27 16:50:40.714","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2024-09-27 16:51:04.001","message":"/cliente/get02"}
+{"level":"info","time":"2024-09-27 16:51:04.003","message":"Entrou...","id":"20240927165104","mtd":"cliente/get02 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 16:51:04.004","message":"Entrou...","id":"20240927165104","mtd":"cliente/get02 - UseCase - Execute"}
+{"level":"info","time":"2024-09-27 16:51:04.006","message":"Entrou...","id":"20240927165104","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2024-09-27 16:53:53.400","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2024-09-27 17:28:57.552","message":"/cliente/get01/:cpf"}
+{"level":"info","time":"2024-09-27 17:28:57.565","message":"Entrou...","id":"20240927172857","mtd":"cliente.get01.Start"}
+{"level":"info","time":"2024-09-27 17:28:57.566","message":"Entrou...","id":"20240927172857","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 17:28:57.568","message":"CPF: 1","id":"20240927172857","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 17:28:57.571","message":"Entrou... CPF:1","id":"20240927172857","mtd":"cliente/get01 - Repository - QueryLoadDataCliente"}
+{"level":"info","time":"2024-09-27 17:28:57.668","message":"Entrou... CPF:1","id":"20240927172857","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 17:28:57.677","message":"4832215526","id":"20240927172857","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 17:28:57.686","message":"48999448383","id":"20240927172857","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 17:28:57.694","message":"Counts Telefone:2","id":"20240927172857","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 17:28:57.700","message":"Entrou...","id":"20240927172857","mtd":"cliente/get01 - Presenter - Show"}
+{"level":"info","time":"2024-09-27 17:28:57.710","message":"Response:Cliente 1","id":"","mtd":"cliente/get01 - Presenter - GetViewModelFromResponse"}
+{"level":"info","time":"2024-09-27 17:29:00.620","message":"/cliente/get02"}
+{"level":"info","time":"2024-09-27 17:29:00.622","message":"Entrou...","id":"20240927172900","mtd":"cliente/get02 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 17:29:00.623","message":"Entrou...","id":"20240927172900","mtd":"cliente/get02 - UseCase - Execute"}
+{"level":"info","time":"2024-09-27 17:29:00.625","message":"Entrou...","id":"20240927172900","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2024-09-27 17:30:23.146","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2024-09-27 17:30:46.966","message":"/cliente/get01/:cpf"}
+{"level":"info","time":"2024-09-27 17:30:46.973","message":"Entrou...","id":"20240927173046","mtd":"cliente.get01.Start"}
+{"level":"info","time":"2024-09-27 17:30:46.977","message":"Entrou...","id":"20240927173046","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 17:30:46.978","message":"CPF: 1","id":"20240927173046","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 17:30:46.980","message":"Entrou... CPF:1","id":"20240927173046","mtd":"cliente/get01 - Repository - QueryLoadDataCliente"}
+{"level":"info","time":"2024-09-27 17:30:47.009","message":"Entrou... CPF:1","id":"20240927173046","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 17:30:47.015","message":"4832215526","id":"20240927173046","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 17:30:47.024","message":"48999448383","id":"20240927173046","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 17:30:47.033","message":"Counts Telefone:2","id":"20240927173046","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 17:30:47.040","message":"Entrou...","id":"20240927173046","mtd":"cliente/get01 - Presenter - Show"}
+{"level":"info","time":"2024-09-27 17:30:47.044","message":"Response:Cliente 1","id":"","mtd":"cliente/get01 - Presenter - GetViewModelFromResponse"}
+{"level":"info","time":"2024-09-27 17:30:50.851","message":"/cliente/get02"}
+{"level":"info","time":"2024-09-27 17:30:50.854","message":"Entrou...","id":"20240927173050","mtd":"cliente/get02 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 17:30:50.856","message":"Entrou...","id":"20240927173050","mtd":"cliente/get02 - UseCase - Execute"}
+{"level":"info","time":"2024-09-27 17:30:50.857","message":"Entrou...","id":"20240927173050","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2024-09-27 17:39:37.429","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2024-09-27 17:50:34.022","message":"/cliente/get01/:cpf"}
+{"level":"info","time":"2024-09-27 17:50:34.024","message":"Entrou...","id":"20240927175034","mtd":"cliente.get01.Start"}
+{"level":"info","time":"2024-09-27 17:50:34.025","message":"Entrou...","id":"20240927175034","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 17:50:34.026","message":"CPF: 1","id":"20240927175034","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 17:50:34.027","message":"Entrou... CPF:1","id":"20240927175034","mtd":"cliente/get01 - Repository - QueryLoadDataCliente"}
+{"level":"info","time":"2024-09-27 17:50:34.057","message":"Entrou... CPF:1","id":"20240927175034","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 17:50:34.061","message":"4832215526","id":"20240927175034","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 17:50:34.063","message":"48999448383","id":"20240927175034","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 17:50:34.064","message":"Counts Telefone:2","id":"20240927175034","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2024-09-27 17:50:34.065","message":"Entrou...","id":"20240927175034","mtd":"cliente/get01 - Presenter - Show"}
+{"level":"info","time":"2024-09-27 17:50:34.067","message":"Response:Cliente 1","id":"","mtd":"cliente/get01 - Presenter - GetViewModelFromResponse"}
+{"level":"info","time":"2024-09-27 17:50:36.805","message":"/cliente/get02"}
+{"level":"info","time":"2024-09-27 17:50:36.807","message":"Entrou...","id":"20240927175036","mtd":"cliente/get02 - Controller - Execute"}
+{"level":"info","time":"2024-09-27 17:50:36.809","message":"Entrou...","id":"20240927175036","mtd":"cliente/get02 - UseCase - Execute"}
+{"level":"info","time":"2024-09-27 17:50:36.810","message":"Entrou...","id":"20240927175036","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}

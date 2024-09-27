@@ -1,7 +1,8 @@
 package usecase
 
 import (
-	"log"
+	"github.com/valdinei-santos/api-modelo-clean-arch/config/logger"
+	"go.uber.org/zap"
 )
 
 // UseCase - ...
@@ -19,38 +20,36 @@ func NewUseCase(r IRepository, p IPresenter) *UseCase {
 
 // Execute - ...
 func (u *UseCase) Execute(stamp, cpf string) error {
-	log.Printf("%v - cliente/get01 - usecase - Execute", stamp)
 	c, err := u.Repo.QueryLoadDataCliente(stamp, cpf)
 	if err != nil {
-		log.Printf("%v - ERRO-API: Erro em cliente/get01 Execute - Cliente - %s", stamp, err.Error())
+		logger.Error("Erro Cliente...", err, zap.String("id", stamp), zap.String("mtd", "cliente/get01 - UseCase - Execute"))
 		u.Presenter.ShowError(stamp, "ERRO-API: Erro na carga de dados!")
 		return err
-	}
-	cliente := &Cliente{
-		Nome:   c.Nome,
-		DtNasc: c.DtNasc,
-		CPF:    c.Cpf,
 	}
 
 	tels, err := u.Repo.QueryLoadDataTelefone(stamp, cpf)
 	if err != nil {
-		log.Printf("%v - ERRO-API: Erro em cliente/get01 Execute - Telefone - %s", stamp, err.Error())
+		logger.Error("Erro Telefone...", err, zap.String("id", stamp), zap.String("mtd", "cliente/get01 - UseCase - Execute"))
 		u.Presenter.ShowError(stamp, "ERRO-API: Erro na carga de dados!")
 		return err
 	}
 
-	var telefones []*Telefone
+	// Transforma da entidade entities.Cliente para o DTO Cliente
+	var telefones []string
 	for _, v := range tels {
-		umDado := &Telefone{
-			Numero: v.Numero,
-		}
-		log.Printf(umDado.Numero)
-		telefones = append(telefones, umDado)
+		telefones = append(telefones, v.Numero)
+	}
+	cliente := &Cliente{
+		Nome:      c.Nome,
+		DtNasc:    c.DtNasc,
+		CPF:       c.Cpf,
+		Telefones: telefones,
 	}
 
+	// Retorna o DTO Cliente com Telefones no DTO Response.
 	result := &Response{
-		Cliente:   cliente,
-		Telefones: telefones,
+		Cliente: *cliente,
+		//Telefones: telefones,
 	}
 	u.Presenter.Show(stamp, result)
 	return nil

@@ -6,26 +6,21 @@ type Telefone struct {
 	Numero string `json:"numero"`
 }
 
-type Pessoa struct {
-	CPF    string `json:"cpf"`
-	Nome   string `json:"nome"`
-	DtNasc string `json:"dt_nasc"`
+type Cliente struct {
+	CPF       string   `json:"cpf"`
+	Nome      string   `json:"nome"`
+	DtNasc    string   `json:"dt_nasc"`
+	Telefones []string `json:"telefones"`
 }
-
-/* type Request struct {
-	Pessoa    *Pessoa     `json:"pessoa"`
-	Telefones []*Telefone `json:"telefones"`
-} */
 
 type Request struct {
-	Pessoa    *Pessoa   `json:"pessoa"`
-	Telefones []*string `json:"telefones"`
+	//Pessoa *Pessoa `json:"pessoa"`
+	//Telefones []*string `json:"telefones"`
+	CPF       string   `json:"cpf"`
+	Nome      string   `json:"nome"`
+	DtNasc    string   `json:"dt_nasc"`
+	Telefones []string `json:"telefones"`
 }
-
-/* type Response struct {
-	Pessoa    *Pessoa     `json:"pessoa"`
-	Telefones []*Telefone `json:"telefones"`
-} */
 
 // Response - Output Data
 type Response struct {

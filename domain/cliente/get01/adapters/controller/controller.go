@@ -1,27 +1,16 @@
 package controller
 
 import (
-	"log"
-
+	"github.com/valdinei-santos/api-modelo-clean-arch/config/logger"
 	"github.com/valdinei-santos/api-modelo-clean-arch/domain/cliente/get01/usecase"
+	"go.uber.org/zap"
 
 	"github.com/gin-gonic/gin"
 )
 
 // Execute - ...
-// @BasePath /api/modelo
-
-// PingExample godoc
-// @Summary ping example
-// @Schemes
-// @Description do ping
-// @Tags example
-// @Accept json
-// @Produce json
-// @Success 200 {string} Helloworld
-// @Router /example/helloworld [get]
 func Execute(stamp string, c *gin.Context, useCase usecase.IUsecase) error {
-	log.Printf("%v - cliente/get01 - Controller - Execute", stamp)
+	logger.Info("Entrou...", zap.String("id", stamp), zap.String("mtd", "cliente/post01 - Controller - Execute"))
 
 	// Exemplo conversão String para Inteiro
 	/* cpfInt, err := strconv.Atoi(c.Param("cpf"))
@@ -30,10 +19,10 @@ func Execute(stamp string, c *gin.Context, useCase usecase.IUsecase) error {
 	} */
 
 	cpf := c.Param("cpf")
-	log.Printf("%v - cliente/get01 - Controller - Execute - CPF:%v", stamp, cpf)
+	logger.Info("CPF: "+cpf, zap.String("id", stamp), zap.String("mtd", "cliente/post01 - Controller - Execute"))
 	err := useCase.Execute(stamp, cpf)
 	if err != nil {
-		log.Printf("%v - Error: %v", stamp, err.Error())
+		logger.Error("Erro...", err, zap.String("id", stamp), zap.String("mtd", "cliente/post01 - Controller - Execute"))
 		return err
 	}
 	return nil
