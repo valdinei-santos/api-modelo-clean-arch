@@ -1654,3 +1654,87 @@ poolSessionTimeout=5m0s poolWaitTimeout=30s extAuth=0: ORA-01017: senha/nome do 
 {"level":"info","time":"2024-09-27 17:50:36.807","message":"Entrou...","id":"20240927175036","mtd":"cliente/get02 - Controller - Execute"}
 {"level":"info","time":"2024-09-27 17:50:36.809","message":"Entrou...","id":"20240927175036","mtd":"cliente/get02 - UseCase - Execute"}
 {"level":"info","time":"2024-09-27 17:50:36.810","message":"Entrou...","id":"20240927175036","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"fatal","time":"2025-02-11 10:39:42.078","message":"Erro Fatal","mtd":"config.InitDB","error":"ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: \"/usr/lib/oracle/19.15/client64/lib/libclntsh.so: cannot open shared object file: No such file or directory\". See https://oracle.github.io/odpi/doc/installation.html#linux for help"}
+{"level":"fatal","time":"2025-02-11 10:44:28.247","message":"Erro Fatal","mtd":"config.InitDB","error":"ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: \"/usr/lib/oracle/19.15/client64/lib/libclntsh.so: cannot open shared object file: No such file or directory\". See https://oracle.github.io/odpi/doc/installation.html#linux for help"}
+{"level":"fatal","time":"2025-02-11 10:47:27.051","message":"Erro Fatal","mtd":"config.InitDB","error":"ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: \"/usr/lib/oracle/19.15/client64/lib/libclntsh.so: cannot open shared object file: No such file or directory\". See https://oracle.github.io/odpi/doc/installation.html#linux for help"}
+{"level":"fatal","time":"2025-02-11 10:50:00.610","message":"Erro Fatal","mtd":"config.InitDB","error":"ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: \"/opt/oracle/instantclient_19//libclntsh.so: cannot open shared object file: No such file or directory\". See https://oracle.github.io/odpi/doc/installation.html#linux for help"}
+{"level":"fatal","time":"2025-02-11 10:50:39.409","message":"Erro Fatal","mtd":"config.InitDB","error":"ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: \"/opt/oracle/instantclient_19//libclntsh.so: cannot open shared object file: No such file or directory\". See https://oracle.github.io/odpi/doc/installation.html#linux for help"}
+{"level":"fatal","time":"2025-02-11 11:55:57.071","message":"Erro Fatal","mtd":"config.InitDB","error":"ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: \"/opt/oracle/instantclient_19//libclntsh.so: cannot open shared object file: No such file or directory\". See https://oracle.github.io/odpi/doc/installation.html#linux for help"}
+{"level":"fatal","time":"2025-02-11 11:57:18.713","message":"Erro Fatal","mtd":"config.InitDB","error":"ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: \"libnsl.so.1: cannot open shared object file: No such file or directory\". See https://oracle.github.io/odpi/doc/installation.html#linux for help"}
+{"level":"fatal","time":"2025-02-11 11:57:28.023","message":"Erro Fatal","mtd":"config.InitDB","error":"ORA-00000: DPI-1047: Cannot locate a 64-bit Oracle Client library: \"libnsl.so.1: cannot open shared object file: No such file or directory\". See https://oracle.github.io/odpi/doc/installation.html#linux for help"}
+{"level":"info","time":"2025-02-11 12:19:28.910","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-02-11 12:20:58.501","message":"/cliente/get01/:cpf"}
+{"level":"info","time":"2025-02-11 12:20:58.503","message":"Entrou...","id":"20250211122058","mtd":"cliente.get01.Start"}
+{"level":"info","time":"2025-02-11 12:20:58.504","message":"Entrou...","id":"20250211122058","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2025-02-11 12:20:58.505","message":"CPF: 1","id":"20250211122058","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2025-02-11 12:20:58.506","message":"Entrou... CPF:1","id":"20250211122058","mtd":"cliente/get01 - Repository - QueryLoadDataCliente"}
+{"level":"info","time":"2025-02-11 12:20:58.632","message":"Entrou... CPF:1","id":"20250211122058","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 12:20:58.664","message":"4832215526","id":"20250211122058","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 12:20:58.665","message":"48999448383","id":"20250211122058","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 12:20:58.666","message":"Counts Telefone:2","id":"20250211122058","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 12:20:58.667","message":"Entrou...","id":"20250211122058","mtd":"cliente/get01 - Presenter - Show"}
+{"level":"info","time":"2025-02-11 12:20:58.668","message":"Response:Cliente 1","id":"","mtd":"cliente/get01 - Presenter - GetViewModelFromResponse"}
+{"level":"info","time":"2025-02-11 12:52:54.333","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-02-11 12:55:28.470","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-02-11 12:56:53.332","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-02-11 14:14:29.187","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-02-11 14:14:45.510","message":"/cliente/get01/:cpf"}
+{"level":"info","time":"2025-02-11 14:14:45.519","message":"Entrou...","id":"20250211141445","mtd":"cliente.get01.Start"}
+{"level":"info","time":"2025-02-11 14:14:45.523","message":"Entrou...","id":"20250211141445","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2025-02-11 14:14:45.531","message":"CPF: 1","id":"20250211141445","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2025-02-11 14:14:45.532","message":"Entrou... CPF:1","id":"20250211141445","mtd":"cliente/get01 - Repository - QueryLoadDataCliente"}
+{"level":"info","time":"2025-02-11 14:14:45.576","message":"Entrou... CPF:1","id":"20250211141445","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 14:14:45.578","message":"4832215526","id":"20250211141445","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 14:14:45.580","message":"48999448383","id":"20250211141445","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 14:14:45.581","message":"Counts Telefone:2","id":"20250211141445","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 14:14:52.435","message":"/cliente/get02"}
+{"level":"info","time":"2025-02-11 14:14:52.437","message":"Entrou...","id":"20250211141452","mtd":"cliente/get02 - Controller - Execute"}
+{"level":"info","time":"2025-02-11 14:14:52.439","message":"Entrou...","id":"20250211141452","mtd":"cliente/get02 - UseCase - Execute"}
+{"level":"info","time":"2025-02-11 14:14:52.440","message":"Entrou...","id":"20250211141452","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2025-02-11 14:29:32.355","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-02-11 14:29:57.168","message":"/cliente/get01/:cpf"}
+{"level":"info","time":"2025-02-11 14:29:57.172","message":"Entrou...","id":"20250211142957","mtd":"cliente.get01.Start"}
+{"level":"info","time":"2025-02-11 14:29:57.179","message":"Entrou...","id":"20250211142957","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2025-02-11 14:29:57.181","message":"CPF: 1","id":"20250211142957","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2025-02-11 14:29:57.183","message":"Entrou... CPF:1","id":"20250211142957","mtd":"cliente/get01 - Repository - QueryLoadDataCliente"}
+{"level":"info","time":"2025-02-11 14:29:57.272","message":"Entrou... CPF:1","id":"20250211142957","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 14:29:57.275","message":"4832215526","id":"20250211142957","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 14:29:57.276","message":"48999448383","id":"20250211142957","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 14:29:57.277","message":"Counts Telefone:2","id":"20250211142957","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 14:30:00.336","message":"/cliente/get02"}
+{"level":"info","time":"2025-02-11 14:30:00.338","message":"Entrou...","id":"20250211143000","mtd":"cliente/get02 - Controller - Execute"}
+{"level":"info","time":"2025-02-11 14:30:00.339","message":"Entrou...","id":"20250211143000","mtd":"cliente/get02 - UseCase - Execute"}
+{"level":"info","time":"2025-02-11 14:30:00.340","message":"Entrou...","id":"20250211143000","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2025-02-11 14:30:06.425","message":"/cliente/get02"}
+{"level":"info","time":"2025-02-11 14:30:06.427","message":"Entrou...","id":"20250211143006","mtd":"cliente/get02 - Controller - Execute"}
+{"level":"info","time":"2025-02-11 14:30:06.428","message":"Entrou...","id":"20250211143006","mtd":"cliente/get02 - UseCase - Execute"}
+{"level":"info","time":"2025-02-11 14:30:06.429","message":"Entrou...","id":"20250211143006","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2025-02-11 14:30:35.490","message":"/cliente/post01"}
+{"level":"info","time":"2025-02-11 14:30:35.499","message":"Entrou...","id":"20250211143035","mtd":"cliente/post01 - Start"}
+{"level":"info","time":"2025-02-11 14:30:35.506","message":"Entrou...","id":"20250211143035","mtd":"Controller - cliente/post01 - Execute"}
+{"level":"info","time":"2025-02-11 14:30:35.513","message":"5"}
+{"level":"info","time":"2025-02-11 14:30:35.520","message":"Entrou...","id":"20250211143035","mtd":"cliente/post01 - UseCase - Execute"}
+{"level":"info","time":"2025-02-11 14:30:35.528","message":"Entrou... CPF:5","id":"20250211143035","mtd":"cliente/post01 - Repository - InsertCliente"}
+{"level":"info","time":"2025-02-11 14:30:35.588","message":"Número de linhas inseridas: 1","id":"20250211143035","mtd":"cliente/post01 - Repository - InsertCliente"}
+{"level":"info","time":"2025-02-11 14:30:50.289","message":"/cliente/get02"}
+{"level":"info","time":"2025-02-11 14:30:50.291","message":"Entrou...","id":"20250211143050","mtd":"cliente/get02 - Controller - Execute"}
+{"level":"info","time":"2025-02-11 14:30:50.292","message":"Entrou...","id":"20250211143050","mtd":"cliente/get02 - UseCase - Execute"}
+{"level":"info","time":"2025-02-11 14:30:50.293","message":"Entrou...","id":"20250211143050","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2025-02-11 14:42:57.966","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-02-11 15:09:07.856","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-02-11 15:24:40.694","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-02-11 15:26:31.123","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-02-11 15:26:48.070","message":"/cliente/get01/:cpf"}
+{"level":"info","time":"2025-02-11 15:26:48.072","message":"Entrou...","id":"20250211152648","mtd":"cliente.get01.Start"}
+{"level":"info","time":"2025-02-11 15:26:48.073","message":"Entrou...","id":"20250211152648","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2025-02-11 15:26:48.074","message":"CPF: 1","id":"20250211152648","mtd":"cliente/post01 - Controller - Execute"}
+{"level":"info","time":"2025-02-11 15:26:48.075","message":"Entrou... CPF:1","id":"20250211152648","mtd":"cliente/get01 - Repository - QueryLoadDataCliente"}
+{"level":"info","time":"2025-02-11 15:26:48.126","message":"Entrou... CPF:1","id":"20250211152648","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 15:26:48.128","message":"4832215526","id":"20250211152648","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 15:26:48.129","message":"48999448383","id":"20250211152648","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 15:26:48.131","message":"Counts Telefone:2","id":"20250211152648","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-02-11 15:26:52.665","message":"/cliente/get02"}
+{"level":"info","time":"2025-02-11 15:26:52.667","message":"Entrou...","id":"20250211152652","mtd":"cliente/get02 - Controller - Execute"}
+{"level":"info","time":"2025-02-11 15:26:52.669","message":"Entrou...","id":"20250211152652","mtd":"cliente/get02 - UseCase - Execute"}
+{"level":"info","time":"2025-02-11 15:26:52.670","message":"Entrou...","id":"20250211152652","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2025-02-11 15:36:07.534","message":"start api-modelo-clean-arch PORT:8888"}

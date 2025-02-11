@@ -1,0 +1,80 @@
+# Stage 1: Build the Go application
+#FROM golang:1.23-alpine AS builder
+FROM golang:1.23.0-bullseye AS builder
+
+# Install system dependencies if needed (for cgo or other dependencies)
+# If you don't need cgo, you can skip this part
+RUN apk add --no-cache libaio-dev
+
+# Create appuser.
+ENV USER=apimodelo
+ENV UID=10001 
+# See https://stackoverflow.com/a/55757473/12429735RUN 
+RUN adduser \    
+    --disabled-password \    
+    --gecos "" \    
+    --home "/nonexistent" \    
+    --shell "/sbin/nologin" \    
+    --no-create-home \    
+    --uid "${UID}" \    
+    "${USER}"
+
+WORKDIR /app
+COPY go.mod go.sum ./
+RUN go mod download
+COPY . .
+
+# Build the binary.
+# RUN CGO_ENABLED=0 GOOS=linux go build -o apirest .
+# Por causa do Kafka/Oracle/Etc tem que usar CGO_ENABLED=1 e -tags musl
+RUN CGO_ENABLED=1 GOOS=linux go build -ldflags="-w -s" -o apimodelo api/server.go
+
+
+######################################################
+# Stage 2: Create the final image with Instant Client
+######################################################
+FROM alpine:latest
+ENV TZ="America/Sao_Paulo"
+
+# Install dependencies if needed (for cgo or other dependencies)
+# If you didn't install dependencies in the builder stage, you might need them here
+# RUN apk add --no-cache libaio-dev
+
+# Copy Instant Client files (you need to download these files and place them in the same directory as the Dockerfile)
+COPY instantclient-basic-linux.x64-19.25.0.0.0dbru.zip /tmp/
+COPY instantclient-sdk-linux.x64-19.25.0.0.0dbru.zip /tmp/
+COPY instantclient-sqlplus-linux.x64-19.25.0.0.0dbru.zip /tmp/
+
+# Unzip and configure Instant Client
+RUN cd /tmp && \
+    unzip instantclient-basic-linux.x64-19.25.0.0.0dbru.zip && \
+    unzip instantclient-sdk-linux.x64-19.25.0.0.0dbru.zip && \
+    unzip instantclient-sqlplus-linux.x64-19.25.0.0.0dbru.zip && \
+    rm *.zip && \
+    mkdir -p /opt/oracle/instantclient_19 && \
+    mv instantclient* /opt/oracle/instantclient_19 && \
+    ln -s /opt/oracle/instantclient_19/libclntsh.so.* /usr/lib/ && \
+    echo "/opt/oracle/instantclient_19" > /etc/ld.so.conf.d/oracle.conf && \
+    ldconfig
+
+# Set environment variables
+ENV ORACLE_HOME=/opt/oracle/instantclient_19
+ENV LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
+
+# Definição da variável de ambiente para o cliente Oracle
+#ENV LD_LIBRARY_PATH=/usr/lib/oracle/19.15/client64/lib
+#ENV ORACLE_LIB_DIR=/usr/lib/oracle/19.15/client64/lib
+
+WORKDIR /app
+COPY --from=builder /app/apimodelo .
+#COPY --from=builder /app/templates /app/templates
+COPY --from=builder /etc/passwd /etc/passwd
+COPY --from=builder /etc/group /etc/group
+
+# Use an unprivileged user.
+USER apimodelo:apimodelo
+
+WORKDIR /app
+
+CMD ["./apimodelo"]  
+EXPOSE 8800

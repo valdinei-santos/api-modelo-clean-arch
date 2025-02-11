@@ -26,12 +26,12 @@ COPY . .
 # Build the binary.
 # RUN CGO_ENABLED=0 GOOS=linux go build -o apirest
 # Por causa do Kafka/Oracle/Etc tem que usar CGO_ENABLED=1 e -tags musl
-RUN CGO_ENABLED=1 GOOS=linux go build -ldflags="-w -s" -o apimodelo api/server.go
+RUN CGO_ENABLED=1 GOOS=linux go build -ldflags="-w -s" -o apimodelo src/api/server.go
 
 #####################################
 #   STEP 2 build a small image      #
 #####################################
-FROM oracle/instantclient:19
+FROM instantclient:19.25
 ENV TZ="America/Sao_Paulo"
 WORKDIR /app
 COPY --from=builder /app/apimodelo .
@@ -44,7 +44,8 @@ USER apimodelo:apimodelo
 
 # Definição da variável de ambiente para o cliente Oracle
 #ENV LD_LIBRARY_PATH=/usr/lib/oracle/19.15/client64/lib
-ENV ORACLE_LIB_DIR=/usr/lib/oracle/19.15/client64/lib
+#ENV ORACLE_LIB_DIR=/usr/lib/oracle/19.15/client64/lib
+ENV ORACLE_LIB_DIR=/opt/oracle/instantclient_19/
 
 CMD ["./apimodelo"]  
 EXPOSE 8800
