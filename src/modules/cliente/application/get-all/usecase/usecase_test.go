@@ -6,7 +6,6 @@ import (
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/get-all/usecase"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/get-all/usecase/mocks"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/domain/entities"
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
 	"go.uber.org/mock/gomock"
 
 	//"api-modelo-clean-arch/application/extrato/getdados/mock"
@@ -17,12 +16,11 @@ import (
 	//"github.com/golang/mock/gomock"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/mock"
 )
 
 // Com Mock Testify
 
-// PRESENTER
+/* // PRESENTER
 type PresenterMock struct {
 	mock.Mock
 }
@@ -35,7 +33,7 @@ func (p *PresenterMock) Show(stamp string, out *dto.Response) error {
 func (p *PresenterMock) ShowError(stamp string, msgErro string) error {
 	args := p.Called(stamp, msgErro)
 	return args.Error(0)
-}
+} */
 
 // REPOSITORY
 /* type RepositoryMock struct {
@@ -75,7 +73,7 @@ func Test_Execute(t *testing.T) {
 
 	t.Run("Caso de Sucesso", func(t *testing.T) {
 		r := mocks.NewMockIRepository(control)
-		r.EXPECT().QueryLoadDataTelefone(gomock.Any(), gomock.Any()).Return(telefonesOK, nil)
+		r.EXPECT().FindAllTelefone(gomock.Any(), gomock.Any()).Return(telefonesOK, nil)
 
 		uc := usecase.NewUseCase(r)
 		//err := uc.Execute("", tarifasOK_UC)
@@ -87,7 +85,7 @@ func Test_Execute(t *testing.T) {
 	t.Run("Caso de Erro", func(t *testing.T) {
 		errExpect := errors.New("dummy error")
 		r := mocks.NewMockIRepository(control)
-		r.EXPECT().QueryLoadAllClientes(gomock.Any()).Return(nil, errExpect)
+		r.EXPECT().FindAll(gomock.Any()).Return(nil, errExpect)
 		// Quando da erro não chama o QueryLoadDataTelefone
 		//r.EXPECT().QueryLoadDataTelefone(gomock.Any(), gomock.Any()).Return(telefonesOK, errExpect)
 

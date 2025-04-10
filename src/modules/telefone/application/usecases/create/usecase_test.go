@@ -1,11 +1,11 @@
-package usecase_test
+package create_test
 
 import (
 	"errors"
 
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/create/usecase"
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/create/usecase/mocks"
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
+	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/application/usecases/create"
+	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/dto"
+	mockRepo "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/infra/repository/mocks"
 
 	//"api-modelo-clean-arch/application/extrato/getdados/mock"
 	"testing"
@@ -34,32 +34,30 @@ func Test_Execute(t *testing.T) {
 	control := gomock.NewController(t)
 	defer control.Finish()
 
-	clienteOK := &dto.Request{
-		CPF:       "1",
-		Nome:      "Cliente 1",
-		DtNasc:    "02/07/1975",
-		Telefones: []string{"4832453548", "48999884455"},
+	telefoneOK := &dto.Request{
+		CPF:    "1",
+		Numero: "48 999448383",
 	}
 
 	t.Run("Caso de Sucesso", func(t *testing.T) {
-		r := mocks.NewMockIRepository(control)
+		r := mockRepo.NewMockIRepository(control)
 		r.EXPECT().Save(gomock.Any(), gomock.Any()).Return(nil)
 
-		uc := usecase.NewUseCase(r)
+		uc := create.NewUseCase(r)
 		//err := uc.Execute("", tarifasOK_UC)
-		resp, err := uc.Execute("", clienteOK)
+		resp, err := uc.Execute("", telefoneOK)
 		assert.Nil(t, err)
 		assert.NotNil(t, resp)
 	})
 
 	t.Run("Caso de Erro", func(t *testing.T) {
 		errExpect := errors.New("dummy error")
-		r := mocks.NewMockIRepository(control)
+		r := mockRepo.NewMockIRepository(control)
 		r.EXPECT().Save(gomock.Any(), gomock.Any()).Return(errExpect)
 
-		uc := usecase.NewUseCase(r)
+		uc := create.NewUseCase(r)
 		//err := uc.Execute("", tarifasOK_UC)
-		resp, err := uc.Execute("", clienteOK)
+		resp, err := uc.Execute("", telefoneOK)
 		assert.NotNil(t, err)
 		assert.Nil(t, resp)
 	})

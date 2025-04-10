@@ -30,7 +30,7 @@ func (u *UseCase) Execute(stamp string, in *dto.Request) (*dto.OutputDefault, er
 		DtNasc:    in.DtNasc,
 		Telefones: telefones,
 	}
-	err := u.Repo.InsertCliente(stamp, p)
+	err := u.Repo.Save(stamp, p)
 	if err != nil {
 		logger.Error("Erro", err, zap.String("id", stamp), zap.String("mtd", "cliente/post01 - UseCase - Execute"))
 		return nil, err

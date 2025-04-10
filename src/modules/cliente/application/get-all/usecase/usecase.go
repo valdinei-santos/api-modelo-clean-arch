@@ -20,7 +20,7 @@ func NewUseCase(r IRepository) *UseCase {
 // Execute - ...
 func (u *UseCase) Execute(stamp string) (*dto.ResponseClientes, error) {
 	logger.Info("Entrou...", zap.String("id", stamp), zap.String("mtd", "cliente/get-clientes - UseCase - Execute"))
-	clientes, err := u.Repo.QueryLoadAllClientes(stamp)
+	clientes, err := u.Repo.FindAll(stamp)
 	if err != nil {
 		logger.Error("Erro...", err, zap.String("id", stamp), zap.String("mtd", "cliente/get-clientes - UseCase - Execute"))
 		return nil, err

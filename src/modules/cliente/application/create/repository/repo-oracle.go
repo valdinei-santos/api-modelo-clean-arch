@@ -3,10 +3,8 @@ package repository
 import (
 	"database/sql"
 	"fmt"
-	"strconv"
 
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/domain/entities"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
 	"go.uber.org/zap"
 	//. "api-trust/infra/pkg/log"
@@ -24,7 +22,7 @@ func NewRepoOracle(db *sql.DB) *RepoOracle {
 	}
 }
 
-// QueryLoadDataCliente ...
+/* // QueryLoadDataCliente ...
 func (r *RepoOracle) QueryLoadDataCliente(stamp, cpf string) (*entities.Cliente, error) {
 	logger.Info("Entrou... CPF:"+cpf, zap.String("id", stamp), zap.String("mtd", "cliente/get01 - Repository - QueryLoadDataCliente"))
 	var stmt *sql.Stmt
@@ -35,9 +33,9 @@ func (r *RepoOracle) QueryLoadDataCliente(stamp, cpf string) (*entities.Cliente,
 	     WHERE cpf = :1
 	`)
 	if err != nil {
-		/* if err == sql.ErrNoRows {
-			// Handle the case of no rows returned.
-		} */
+		// if err == sql.ErrNoRows {
+		// 	// Handle the case of no rows returned.
+		// }
 		return nil, err
 	}
 	defer stmt.Close()
@@ -45,9 +43,9 @@ func (r *RepoOracle) QueryLoadDataCliente(stamp, cpf string) (*entities.Cliente,
 	var c entities.Cliente
 	err = stmt.QueryRow(cpf).Scan(&c.Cpf, &c.Nome, &c.DtNasc)
 	if err != nil {
-		/* if err == sql.ErrNoRows {
-			// Handle the case of no rows returned.
-		} */
+		// if err == sql.ErrNoRows {
+		// 	// Handle the case of no rows returned.
+		// }
 		return &c, err
 	}
 	return &c, nil
@@ -105,9 +103,9 @@ func (r *RepoOracle) QueryLoadAllClientes(stamp string) (*[]entities.ClienteComT
 	defer rows1.Close()
 
 	queryTel := `SELECT t.numero FROM telefone t WHERE t.cpf = :1`
-	/*var rows2 *sql.Rows
-	defer rows2.Close()
-	*/
+	// var rows2 *sql.Rows
+	// defer rows2.Close()
+
 	//clientes := make([]entities.ClienteComTel, 3)
 	c := entities.ClienteComTel{
 		Cpf:       "5",
@@ -183,10 +181,10 @@ func (r *RepoOracle) QueryLoadDataTelefone2(stamp, cpf string) ([]entities.Telef
 		tels = append(tels, t)
 	}
 	return tels, nil
-}
+} */
 
-// InsertCliente ...
-func (r *RepoOracle) InsertCliente(stamp string, p *dto.Cliente) error {
+// SaveCliente ...
+func (r *RepoOracle) Save(stamp string, p *dto.Cliente) error {
 	logger.Info("Entrou... CPF:"+p.CPF, zap.String("id", stamp), zap.String("mtd", "cliente/post01 - Repository - InsertCliente"))
 
 	tx, err := r.db.Begin()
@@ -229,7 +227,7 @@ func (r *RepoOracle) InsertCliente(stamp string, p *dto.Cliente) error {
 }
 
 // InsertTelefone ...
-func (r *RepoOracle) InsertTelefone(stamp string, t *dto.Telefone) error {
+func (r *RepoOracle) SaveTelefone(stamp string, t *dto.Telefone) error {
 	logger.Info("Entrou... CPF:"+t.Numero, zap.String("id", stamp), zap.String("mtd", "cliente/post01 - Repository - InsertTelefone"))
 
 	query := `insert into pessoa(cpf, numero) VALUES(:1, :2)`

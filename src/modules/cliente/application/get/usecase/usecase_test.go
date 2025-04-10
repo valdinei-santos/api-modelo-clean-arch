@@ -46,8 +46,8 @@ func TestExecute(t *testing.T) {
 
 	t.Run("Caso de Sucesso", func(t *testing.T) {
 		r := mocks.NewMockIRepository(control)
-		r.EXPECT().QueryLoadDataCliente(gomock.Any(), gomock.Any()).Return(clienteOK, nil)
-		r.EXPECT().QueryLoadDataTelefone(gomock.Any(), gomock.Any()).Return(telefonesOK, nil)
+		r.EXPECT().FindById(gomock.Any(), gomock.Any()).Return(clienteOK, nil)
+		r.EXPECT().FindByIdTelefone(gomock.Any(), gomock.Any()).Return(telefonesOK, nil)
 
 		uc := usecase.NewUseCase(r)
 		//err := uc.Execute("", tarifasOK_UC)
@@ -59,7 +59,7 @@ func TestExecute(t *testing.T) {
 	t.Run("Caso de Erro", func(t *testing.T) {
 		errExpect := errors.New("dummy error")
 		r := mocks.NewMockIRepository(control)
-		r.EXPECT().QueryLoadDataCliente(gomock.Any(), gomock.Any()).Return(nil, errExpect)
+		r.EXPECT().FindById(gomock.Any(), gomock.Any()).Return(nil, errExpect)
 		// Quando da erro não chama o QueryLoadDataTelefone
 		//r.EXPECT().QueryLoadDataTelefone(gomock.Any(), gomock.Any()).Return(telefonesOK, errExpect)
 

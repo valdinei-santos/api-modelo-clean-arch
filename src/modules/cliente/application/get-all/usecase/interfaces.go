@@ -11,6 +11,6 @@ type IUsecase interface {
 }
 
 type IRepository interface {
-	QueryLoadAllClientes(stamp string) (*[]entities.ClienteComTel, error)
-	QueryLoadDataTelefone(stamp, cpf string) ([]entities.Telefone, error)
+	FindAll(stamp string) (*[]entities.ClienteComTel, error)
+	FindAllTelefone(stamp, cpf string) ([]entities.Telefone, error)
 }

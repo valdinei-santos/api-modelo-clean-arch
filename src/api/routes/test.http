@@ -51,24 +51,38 @@ Content-Type: application/json
   ]
 }
 
+### TELEFONE
 
-### CLIENTE 03
-
-### Listar 1 cliente
-GET {{apiurl}}/cliente03/1
+### Listar todos os telefones de um CPF
+GET {{apiurl}}/telefone/1
 Accept: application/json
 
-### Listar todos os clientes
-GET {{apiurl}}/cliente03
-Accept: application/json
-
-### Adicionar um cliente
-POST {{apiurl}}/cliente03
+### Adicionar um telefone ao CPF x
+POST {{apiurl}}/telefone
 Content-Type: application/json
 
 {
-  "nome": "Cliente 7",
-  "cpf": "7",
+  "cpf": "1",
+  "numero": "4832453504"
+}
+
+### CLIENTE
+
+### Listar 1 cliente
+GET {{apiurl}}/cliente/1
+Accept: application/json
+
+### Listar todos os clientes
+GET {{apiurl}}/cliente
+Accept: application/json
+
+### Adicionar um cliente
+POST {{apiurl}}/cliente
+Content-Type: application/json
+
+{
+  "nome": "Cliente 1",
+  "cpf": "1",
   "dt_nasc": "13/08/1978",
   "telefones": [
     "4832453504",

@@ -19,13 +19,13 @@ func NewUseCase(r IRepository) *UseCase {
 
 // Execute - ...
 func (u *UseCase) Execute(stamp, cpf string) (*dto.Response, error) {
-	c, err := u.Repo.QueryLoadDataCliente(stamp, cpf)
+	c, err := u.Repo.FindById(stamp, cpf)
 	if err != nil {
 		logger.Error("Erro Cliente...", err, zap.String("id", stamp), zap.String("mtd", "cliente/get-cliente - UseCase - Execute"))
 		return nil, err
 	}
 
-	tels, err := u.Repo.QueryLoadDataTelefone(stamp, cpf)
+	tels, err := u.Repo.FindByIdTelefone(stamp, cpf)
 	if err != nil {
 		logger.Error("Erro Telefone...", err, zap.String("id", stamp), zap.String("mtd", "cliente/get-cliente - UseCase - Execute"))
 		return nil, err

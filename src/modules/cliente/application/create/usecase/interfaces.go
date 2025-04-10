@@ -8,6 +8,6 @@ type IUsecase interface {
 }
 
 type IRepository interface {
-	InsertCliente(stamp string, p *dto.Cliente) error
-	InsertTelefone(stamp string, t *dto.Telefone) error
+	Save(stamp string, p *dto.Cliente) error
+	SaveTelefone(stamp string, t *dto.Telefone) error
 }
