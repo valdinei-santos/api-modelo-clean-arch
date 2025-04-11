@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/application/usecases/create"
+	usecase "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/application/usecases/create"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/infra/controller"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/infra/repository"
 
@@ -19,7 +19,7 @@ func StartCreate(ctx *gin.Context, dbOra *sql.DB) {
 	stamp := time.Now().Format(("20060102150405"))
 	logger.Info("Entrou...", zap.String("id", stamp), zap.String("mtd", "start-create - telefone - StartCreate"))
 	oraRepo := repository.NewRepoOracle(dbOra)
-	u := create.NewUseCase(oraRepo)
+	u := usecase.NewUseCase(oraRepo)
 	err := controller.ExecuteCreate(stamp, ctx, u)
 	if err != nil {
 		logger.Error("Error", err, zap.String("id", stamp), zap.String("mtd", "start-create - telefone - StartCreate"))

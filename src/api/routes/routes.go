@@ -5,9 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
-	clienteCreate "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/create"
-	clienteGet "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/get"
-	clienteGetAll "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/get-all"
+	cliente "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases"
 	telefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/application/usecases"
 )
 
@@ -35,22 +33,40 @@ func InitRoutes(r *gin.RouterGroup, db *sql.DB) {
 	api := r.Group("/api/modelo")
 
 	// CLIENTES
+	// Cria 1 cliente
+	api.POST("/cliente", func(c *gin.Context) {
+		logger.Info("POST /cliente")
+		cliente.StartCreate(c, db)
+	})
+
+	// Cria 1 cliente específico com telefones
+	api.POST("/cliente/telefones", func(c *gin.Context) {
+		logger.Info("POST /cliente/telefones")
+		cliente.StartCreateComTelefone(c, db)
+	})
+
 	//Lista 1 cliente específico
 	api.GET("/cliente/:cpf", func(c *gin.Context) {
-		logger.Info("/cliente/get/:cpf")
-		clienteGet.Start(c, db)
+		logger.Info("GET /cliente/:cpf")
+		cliente.StartGet(c, db)
 	})
 
 	//Lista todos os clientes
 	api.GET("/cliente", func(c *gin.Context) {
-		logger.Info("/cliente/get")
-		clienteGetAll.Start(c, db)
+		logger.Info("GET /cliente")
+		cliente.StartGetAll(c, db)
 	})
 
-	// Cria 1 cliente
-	api.POST("/cliente", func(c *gin.Context) {
-		logger.Info("/cliente/post")
-		clienteCreate.Start(c, db)
+	// Lista 1 cliente específico com telefones
+	api.GET("/cliente/:cpf/telefones", func(c *gin.Context) {
+		logger.Info("/cliente/:cpf/telefones")
+		cliente.StartGetComTelefone(c, db)
+	})
+
+	// Lista todos os clientes com telefones
+	api.GET("/cliente/telefones", func(c *gin.Context) {
+		logger.Info("/cliente/telefones")
+		cliente.StartGetAllComTelefone(c, db)
 	})
 
 	// TELEFONES

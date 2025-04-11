@@ -7,5 +7,6 @@ import (
 
 type IRepository interface {
 	Save(stamp string, p *dto.Telefone) error
+	SaveAll(stamp string, p []*dto.Telefone) error
 	FindAll(stamp, cpf string) ([]entities.Telefone, error)
 }

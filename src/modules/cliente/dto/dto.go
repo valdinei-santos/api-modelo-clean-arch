@@ -1,6 +1,12 @@
 package dto
 
 type Cliente struct {
+	Nome   string `json:"nome"`
+	DtNasc string `json:"dt_nasc"`
+	CPF    string `json:"cpf"`
+}
+
+type ClienteComTelefone struct {
 	Nome      string   `json:"nome"`
 	DtNasc    string   `json:"dt_nasc"`
 	CPF       string   `json:"cpf"`
@@ -14,6 +20,12 @@ type Telefone struct {
 }
 
 type Request struct {
+	CPF    string `json:"cpf"`
+	Nome   string `json:"nome"`
+	DtNasc string `json:"dt_nasc"`
+}
+
+type RequestComTelefone struct {
 	CPF       string   `json:"cpf"`
 	Nome      string   `json:"nome"`
 	DtNasc    string   `json:"dt_nasc"`
@@ -22,6 +34,13 @@ type Request struct {
 
 type Response struct {
 	Cliente Cliente `json:"clientes"`
+}
+
+type ResponseComTelefone struct {
+	CPF       string   `json:"cpf"`
+	Nome      string   `json:"nome"`
+	DtNasc    string   `json:"dt_nasc"`
+	Telefones []string `json:"telefones"`
 }
 
 type ResponseClientes struct {

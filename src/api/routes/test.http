@@ -13,6 +13,14 @@ Accept: application/json
 GET {{apiurl}}/cliente
 Accept: application/json
 
+### Listar 1 cliente com telefones
+GET {{apiurl}}/cliente/1/telefones
+Accept: application/json
+
+### Listar todos os clientes com telefones
+GET {{apiurl}}/cliente/telefones
+Accept: application/json
+
 ### Adicionar um cliente
 POST {{apiurl}}/cliente
 Content-Type: application/json

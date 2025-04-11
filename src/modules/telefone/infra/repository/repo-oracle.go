@@ -61,6 +61,43 @@ func (r *RepoOracle) Save(stamp string, t *dto.Telefone) error {
 	return nil
 }
 
+func (r *RepoOracle) SaveAll(stamp string, p []*dto.Telefone) error {
+	logger.Info("Entrou...", zap.String("id", stamp), zap.String("mtd", "Repository - telefone - SaveAll"))
+	tx, err := r.db.Begin()
+	if err != nil {
+		tx.Rollback()
+		logger.Error("Erro ao criar a transação", err, zap.String("id", stamp), zap.String("mtd", "Repository - telefone - SaveAll"))
+		return err
+	}
+	defer tx.Rollback()
+
+	stmt, err := tx.Prepare("INSERT INTO telefone (cpf, numero) VALUES (:1, :2)")
+	if err != nil {
+		tx.Rollback()
+		logger.Error("Erro ao preparar a inserção", err, zap.String("id", stamp), zap.String("mtd", "Repository - telefone - SaveAll"))
+		return err
+	}
+	defer stmt.Close()
+
+	for _, t := range p {
+		_, err = stmt.Exec(t.CPF, t.Numero)
+		if err != nil {
+			tx.Rollback()
+			logger.Error("Erro ao executar a inserção", err, zap.String("id", stamp), zap.String("mtd", "Repository - telefone - SaveAll"))
+			return err
+		}
+	}
+
+	err = tx.Commit()
+	if err != nil {
+		tx.Rollback()
+		logger.Error("Erro ao commitar a inserção", err, zap.String("id", stamp), zap.String("mtd", "Repository - telefone - SaveAll"))
+		return err
+	}
+
+	return nil
+}
+
 // FindAll ...
 func (r *RepoOracle) FindAll(stamp, cpf string) ([]entities.Telefone, error) {
 	logger.Info("Entrou...", zap.String("id", stamp), zap.String("mtd", "Repository - telefone - FindAll"))

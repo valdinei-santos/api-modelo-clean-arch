@@ -68,3 +68,17 @@ func (mr *MockIRepositoryMockRecorder) Save(stamp, p any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Save", reflect.TypeOf((*MockIRepository)(nil).Save), stamp, p)
 }
+
+// SaveAll mocks base method.
+func (m *MockIRepository) SaveAll(stamp string, p []*dto.Telefone) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SaveAll", stamp, p)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// SaveAll indicates an expected call of SaveAll.
+func (mr *MockIRepositoryMockRecorder) SaveAll(stamp, p any) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SaveAll", reflect.TypeOf((*MockIRepository)(nil).SaveAll), stamp, p)
+}

@@ -105,3 +105,143 @@
 {"level":"info","time":"2025-04-10 16:41:22.739","message":"Entrou...","id":"20250410164122","mtd":"Controller - telefone - ExecuteGetAll"}
 {"level":"info","time":"2025-04-10 16:41:22.740","message":"Entrou...","id":"20250410164122","mtd":"Usecase - telefone - Execute"}
 {"level":"info","time":"2025-04-10 16:41:22.742","message":"Entrou...","id":"20250410164122","mtd":"Repository - telefone - FindAll"}
+{"level":"info","time":"2025-04-11 10:25:28.111","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-04-11 10:29:56.872","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-04-11 11:29:04.971","message":"routes.go - /telefone/:cpf"}
+{"level":"info","time":"2025-04-11 11:29:04.972","message":"start-get-all.go - StartGetAll"}
+{"level":"info","time":"2025-04-11 11:29:04.973","message":"Entrou...","id":"20250411112904","mtd":"Controller - telefone - ExecuteGetAll"}
+{"level":"info","time":"2025-04-11 11:29:04.974","message":"Entrou...","id":"20250411112904","mtd":"Usecase - telefone - Execute"}
+{"level":"info","time":"2025-04-11 11:29:04.975","message":"Entrou...","id":"20250411112904","mtd":"Repository - telefone - FindAll"}
+{"level":"info","time":"2025-04-11 11:29:07.972","message":"routes.go - /telefone"}
+{"level":"info","time":"2025-04-11 11:29:07.973","message":"Entrou...","id":"20250411112907","mtd":"start-create - telefone - StartCreate"}
+{"level":"info","time":"2025-04-11 11:29:07.974","message":"Entrou...","id":"20250411112907","mtd":"Controller - telefone/create - ExecuteCreate"}
+{"level":"info","time":"2025-04-11 11:29:07.976","message":"Entrou...","id":"20250411112907","mtd":"telefone/create - UseCase - Execute"}
+{"level":"info","time":"2025-04-11 11:29:07.977","message":"Entrou... CPF: 1","id":"20250411112907","mtd":"Repository - telefone - Save"}
+{"level":"error","time":"2025-04-11 11:29:08.046","message":"Erro ao executar a inserção","id":"20250411112907","mtd":"Repository - telefone - Save","error":"ORA-00001: restrição exclusiva (API_ORACLE_HOM.TELEFONE_PK) violada"}
+{"level":"error","time":"2025-04-11 11:29:08.047","message":"Erro","id":"20250411112907","mtd":"telefone/create - UseCase - Execute","error":"ORA-00001: restrição exclusiva (API_ORACLE_HOM.TELEFONE_PK) violada"}
+{"level":"error","time":"2025-04-11 11:29:08.049","message":"Erro Execute useCase","id":"20250411112907","mtd":"Controller - telefone/create - ExecuteCreate","error":"ORA-00001: restrição exclusiva (API_ORACLE_HOM.TELEFONE_PK) violada"}
+{"level":"error","time":"2025-04-11 11:29:08.050","message":"Error","id":"20250411112907","mtd":"start-create - telefone - StartCreate","error":"ORA-00001: restrição exclusiva (API_ORACLE_HOM.TELEFONE_PK) violada"}
+{"level":"info","time":"2025-04-11 11:29:14.516","message":"/cliente/get/:cpf"}
+{"level":"info","time":"2025-04-11 11:29:14.517","message":"Entrou...","id":"20250411112914","mtd":"cliente.StartGet"}
+{"level":"info","time":"2025-04-11 11:29:14.519","message":"Entrou...","id":"20250411112914","mtd":"cliente/get01 - Controller - ExecuteGet01"}
+{"level":"info","time":"2025-04-11 11:29:14.520","message":"CPF: 1","id":"20250411112914","mtd":"cliente/get01 - Controller - ExecuteGet01"}
+{"level":"info","time":"2025-04-11 11:29:14.522","message":"Entrou... CPF:1","id":"20250411112914","mtd":"cliente - Repository - FindById"}
+{"level":"info","time":"2025-04-11 11:29:14.555","message":"Entrou... CPF:1","id":"20250411112914","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-04-11 11:29:14.558","message":"4832215526","id":"20250411112914","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-04-11 11:29:14.559","message":"4832453504","id":"20250411112914","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-04-11 11:29:14.561","message":"48999448383","id":"20250411112914","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-04-11 11:29:14.562","message":"Counts Telefone:3","id":"20250411112914","mtd":"cliente/get01 - Repository - QueryLoadDataTelefone"}
+{"level":"info","time":"2025-04-11 11:29:16.753","message":"/cliente/get"}
+{"level":"info","time":"2025-04-11 11:29:16.755","message":"Entrou...","id":"20250411112916","mtd":"cliente.StartGetAll"}
+{"level":"info","time":"2025-04-11 11:29:16.756","message":"Entrou...","id":"20250411112916","mtd":"cliente/get02 - Controller - ExecuteGet02"}
+{"level":"info","time":"2025-04-11 11:29:16.757","message":"Entrou...","id":"20250411112916","mtd":"cliente/get-clientes - UseCase - Execute"}
+{"level":"info","time":"2025-04-11 11:29:16.758","message":"Entrou...","id":"20250411112916","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2025-04-11 13:00:49.288","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-04-11 17:07:05.416","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-04-11 17:08:03.479","message":"GET /cliente/:cpf"}
+{"level":"info","time":"2025-04-11 17:08:03.486","message":"Entrou...","id":"20250411170803","mtd":"cliente.StartGet"}
+{"level":"info","time":"2025-04-11 17:08:03.487","message":"Entrou...","id":"20250411170803","mtd":"cliente/get01 - Controller - ExecuteGet01"}
+{"level":"info","time":"2025-04-11 17:08:03.489","message":"CPF: 1","id":"20250411170803","mtd":"cliente/get01 - Controller - ExecuteGet01"}
+{"level":"info","time":"2025-04-11 17:08:03.494","message":"Entrou... CPF:1","id":"20250411170803","mtd":"cliente - Repository - FindById"}
+{"level":"info","time":"2025-04-11 17:27:15.646","message":"GET /cliente/:cpf"}
+{"level":"info","time":"2025-04-11 17:27:15.648","message":"Entrou...","id":"20250411172715","mtd":"cliente.StartGet"}
+{"level":"info","time":"2025-04-11 17:27:15.649","message":"Entrou...","id":"20250411172715","mtd":"cliente/get01 - Controller - ExecuteGet01"}
+{"level":"info","time":"2025-04-11 17:27:15.650","message":"CPF: 1","id":"20250411172715","mtd":"cliente/get01 - Controller - ExecuteGet01"}
+{"level":"info","time":"2025-04-11 17:27:15.651","message":"Entrou... CPF:1","id":"20250411172715","mtd":"cliente - Repository - FindById"}
+{"level":"info","time":"2025-04-11 17:27:19.781","message":"GET /cliente"}
+{"level":"info","time":"2025-04-11 17:27:19.783","message":"Entrou...","id":"20250411172719","mtd":"cliente.StartGetAll"}
+{"level":"info","time":"2025-04-11 17:27:19.784","message":"Entrou...","id":"20250411172719","mtd":"cliente/get02 - Controller - ExecuteGet02"}
+{"level":"info","time":"2025-04-11 17:27:19.785","message":"Entrou...","id":"20250411172719","mtd":"cliente/get-clientes - UseCase - Execute"}
+{"level":"info","time":"2025-04-11 17:27:19.786","message":"Entrou...","id":"20250411172719","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2025-04-11 17:29:50.630","message":"/cliente/:cpf/telefones"}
+{"level":"info","time":"2025-04-11 17:29:50.632","message":"Entrou...","id":"20250411172950","mtd":"cliente.StartGet"}
+{"level":"info","time":"2025-04-11 17:29:50.633","message":"Entrou...","id":"20250411172950","mtd":"cliente - get-com-telefone - Controller - ExecuteGetComTelefone"}
+{"level":"info","time":"2025-04-11 17:29:50.635","message":"CPF: 1","id":"20250411172950","mtd":"cliente - get-com-telefone - Controller - ExecuteGetComTelefone"}
+{"level":"info","time":"2025-04-11 17:29:50.636","message":"Entrou... CPF:1","id":"20250411172950","mtd":"cliente - Repository - FindById"}
+{"level":"info","time":"2025-04-11 17:29:50.640","message":"Entrou...","id":"20250411172950","mtd":"Repository - telefone - FindAll"}
+{"level":"info","time":"2025-04-11 17:30:09.446","message":"GET /cliente"}
+{"level":"info","time":"2025-04-11 17:30:09.447","message":"Entrou...","id":"20250411173009","mtd":"cliente.StartGetAll"}
+{"level":"info","time":"2025-04-11 17:30:09.448","message":"Entrou...","id":"20250411173009","mtd":"cliente/get02 - Controller - ExecuteGet02"}
+{"level":"info","time":"2025-04-11 17:30:09.450","message":"Entrou...","id":"20250411173009","mtd":"cliente/get-clientes - UseCase - Execute"}
+{"level":"info","time":"2025-04-11 17:30:09.451","message":"Entrou...","id":"20250411173009","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2025-04-11 17:30:23.725","message":"GET /cliente/:cpf"}
+{"level":"info","time":"2025-04-11 17:30:23.745","message":"Entrou...","id":"20250411173023","mtd":"cliente.StartGet"}
+{"level":"info","time":"2025-04-11 17:30:23.784","message":"Entrou...","id":"20250411173023","mtd":"cliente/get01 - Controller - ExecuteGet01"}
+{"level":"info","time":"2025-04-11 17:30:23.792","message":"CPF: telefones","id":"20250411173023","mtd":"cliente/get01 - Controller - ExecuteGet01"}
+{"level":"info","time":"2025-04-11 17:30:23.808","message":"Entrou... CPF:telefones","id":"20250411173023","mtd":"cliente - Repository - FindById"}
+{"level":"error","time":"2025-04-11 17:30:23.815","message":"Erro Cliente...","id":"20250411173023","mtd":"cliente/get-cliente - UseCase - Execute","error":"sql: no rows in result set"}
+{"level":"error","time":"2025-04-11 17:30:23.818","message":"Erro...","id":"20250411173023","mtd":"cliente/get01 - Controller - ExecuteGet01","error":"sql: no rows in result set"}
+{"level":"error","time":"2025-04-11 17:30:23.829","message":"Error ","id":"20250411173023","mtd":"cliente02.get-cliente.Start","error":"sql: no rows in result set"}
+{"level":"info","time":"2025-04-11 17:38:50.923","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-04-11 17:39:56.462","message":"GET /cliente/:cpf"}
+{"level":"info","time":"2025-04-11 17:39:56.464","message":"Entrou...","id":"20250411173956","mtd":"cliente.StartGet"}
+{"level":"info","time":"2025-04-11 17:39:56.465","message":"Entrou...","id":"20250411173956","mtd":"cliente/get01 - Controller - ExecuteGet01"}
+{"level":"info","time":"2025-04-11 17:39:56.466","message":"CPF: 1","id":"20250411173956","mtd":"cliente/get01 - Controller - ExecuteGet01"}
+{"level":"info","time":"2025-04-11 17:39:56.467","message":"Entrou... CPF:1","id":"20250411173956","mtd":"cliente - Repository - FindById"}
+{"level":"info","time":"2025-04-11 17:40:01.012","message":"GET /cliente"}
+{"level":"info","time":"2025-04-11 17:40:01.014","message":"Entrou...","id":"20250411174001","mtd":"cliente.StartGetAll"}
+{"level":"info","time":"2025-04-11 17:40:01.015","message":"Entrou...","id":"20250411174001","mtd":"cliente/get02 - Controller - ExecuteGet02"}
+{"level":"info","time":"2025-04-11 17:40:01.016","message":"Entrou...","id":"20250411174001","mtd":"cliente/get-clientes - UseCase - Execute"}
+{"level":"info","time":"2025-04-11 17:40:01.017","message":"Entrou...","id":"20250411174001","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2025-04-11 17:40:10.006","message":"/cliente/:cpf/telefones"}
+{"level":"info","time":"2025-04-11 17:40:10.008","message":"Entrou...","id":"20250411174010","mtd":"cliente.StartGet"}
+{"level":"info","time":"2025-04-11 17:40:10.009","message":"Entrou...","id":"20250411174010","mtd":"cliente - get-com-telefone - Controller - ExecuteGetComTelefone"}
+{"level":"info","time":"2025-04-11 17:40:10.010","message":"CPF: 1","id":"20250411174010","mtd":"cliente - get-com-telefone - Controller - ExecuteGetComTelefone"}
+{"level":"info","time":"2025-04-11 17:40:10.011","message":"Entrou... CPF:1","id":"20250411174010","mtd":"cliente - Repository - FindById"}
+{"level":"info","time":"2025-04-11 17:40:10.014","message":"Entrou...","id":"20250411174010","mtd":"Repository - telefone - FindAll"}
+{"level":"info","time":"2025-04-11 17:40:14.902","message":"/cliente/telefones"}
+{"level":"info","time":"2025-04-11 17:40:14.903","message":"Entrou...","id":"20250411174014","mtd":"cliente.StartGet"}
+{"level":"info","time":"2025-04-11 17:40:14.904","message":"Entrou...","id":"20250411174014","mtd":"cliente - get-com-telefone - Controller - ExecuteGetComTelefone"}
+{"level":"info","time":"2025-04-11 17:40:14.906","message":"CPF: ","id":"20250411174014","mtd":"cliente - get-com-telefone - Controller - ExecuteGetComTelefone"}
+{"level":"info","time":"2025-04-11 17:40:14.907","message":"Entrou... CPF:","id":"20250411174014","mtd":"cliente - Repository - FindById"}
+{"level":"error","time":"2025-04-11 17:40:14.909","message":"Erro Cliente...","id":"20250411174014","mtd":"cliente - UseCase - Execute","error":"sql: no rows in result set"}
+{"level":"error","time":"2025-04-11 17:40:14.910","message":"Erro...","id":"20250411174014","mtd":"cliente - get-com-telefone - Controller - ExecuteGetComTelefone","error":"sql: no rows in result set"}
+{"level":"error","time":"2025-04-11 17:40:14.912","message":"Error ","id":"20250411174014","mtd":"cliente02.get-cliente.Start","error":"sql: no rows in result set"}
+
+
+
+{"level":"info","time":"2025-04-11 18:13:44.737","message":"/cliente/telefones"}
+{"level":"info","time":"2025-04-11 18:13:44.742","message":"Entrou...","id":"20250411181344","mtd":"cliente.StartGet"}
+{"level":"info","time":"2025-04-11 18:13:44.750","message":"Entrou...","id":"20250411181344","mtd":"cliente - get-com-telefone - Controller - ExecuteGetComTelefone"}
+{"level":"info","time":"2025-04-11 18:13:44.755","message":"CPF: ","id":"20250411181344","mtd":"cliente - get-com-telefone - Controller - ExecuteGetComTelefone"}
+{"level":"info","time":"2025-04-11 18:13:44.763","message":"Entrou... CPF:","id":"20250411181344","mtd":"cliente - Repository - FindById"}
+{"level":"error","time":"2025-04-11 18:13:44.796","message":"Erro Cliente...","id":"20250411181344","mtd":"cliente - UseCase - Execute","error":"sql: no rows in result set"}
+{"level":"error","time":"2025-04-11 18:13:44.802","message":"Erro...","id":"20250411181344","mtd":"cliente - get-com-telefone - Controller - ExecuteGetComTelefone","error":"sql: no rows in result set"}
+{"level":"error","time":"2025-04-11 18:13:44.810","message":"Error ","id":"20250411181344","mtd":"cliente02.get-cliente.Start","error":"sql: no rows in result set"}
+{"level":"info","time":"2025-04-11 18:56:56.662","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-04-11 18:59:11.054","message":"GET /cliente/:cpf"}
+{"level":"info","time":"2025-04-11 18:59:11.056","message":"Entrou...","id":"20250411185911","mtd":"cliente.StartGet"}
+{"level":"info","time":"2025-04-11 18:59:11.057","message":"Entrou...","id":"20250411185911","mtd":"cliente - get - Controller"}
+{"level":"info","time":"2025-04-11 18:59:11.059","message":"CPF: 1","id":"20250411185911","mtd":"cliente - get - Controller"}
+{"level":"info","time":"2025-04-11 18:59:11.060","message":"Entrou... CPF:1","id":"20250411185911","mtd":"cliente - Repository - FindById"}
+{"level":"info","time":"2025-04-11 18:59:13.879","message":"GET /cliente"}
+{"level":"info","time":"2025-04-11 18:59:13.881","message":"Entrou...","id":"20250411185913","mtd":"cliente.StartGetAll"}
+{"level":"info","time":"2025-04-11 18:59:13.882","message":"Entrou...","id":"20250411185913","mtd":"cliente - get-all - Controller"}
+{"level":"info","time":"2025-04-11 18:59:13.883","message":"Entrou...","id":"20250411185913","mtd":"cliente/get-clientes - UseCase - Execute"}
+{"level":"info","time":"2025-04-11 18:59:13.884","message":"Entrou...","id":"20250411185913","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2025-04-11 18:59:17.168","message":"/cliente/:cpf/telefones"}
+{"level":"info","time":"2025-04-11 18:59:17.170","message":"Entrou...","id":"20250411185917","mtd":"cliente.StartGetComTelefone"}
+{"level":"info","time":"2025-04-11 18:59:17.171","message":"Entrou...","id":"20250411185917","mtd":"cliente - get-com-telefone - Controller"}
+{"level":"info","time":"2025-04-11 18:59:17.172","message":"CPF: 1","id":"20250411185917","mtd":"cliente - get-com-telefone - Controller"}
+{"level":"info","time":"2025-04-11 18:59:17.173","message":"Entrou... CPF:1","id":"20250411185917","mtd":"cliente - Repository - FindById"}
+{"level":"info","time":"2025-04-11 18:59:17.176","message":"Entrou...","id":"20250411185917","mtd":"Repository - telefone - FindAll"}
+{"level":"info","time":"2025-04-11 18:59:20.730","message":"/cliente/telefones"}
+{"level":"info","time":"2025-04-11 18:59:20.732","message":"Entrou...","id":"20250411185920","mtd":"cliente.StartGetComTelefone"}
+{"level":"info","time":"2025-04-11 18:59:20.733","message":"Entrou...","id":"20250411185920","mtd":"cliente - get-com-telefone - Controller"}
+{"level":"info","time":"2025-04-11 18:59:20.734","message":"CPF: ","id":"20250411185920","mtd":"cliente - get-com-telefone - Controller"}
+{"level":"info","time":"2025-04-11 18:59:20.735","message":"Entrou... CPF:","id":"20250411185920","mtd":"cliente - Repository - FindById"}
+{"level":"error","time":"2025-04-11 18:59:20.738","message":"Erro Cliente...","id":"20250411185920","mtd":"cliente - UseCase - Execute","error":"sql: no rows in result set"}
+{"level":"error","time":"2025-04-11 18:59:20.739","message":"Erro...","id":"20250411185920","mtd":"cliente - get-com-telefone - Controller","error":"sql: no rows in result set"}
+{"level":"error","time":"2025-04-11 18:59:20.740","message":"Error ","id":"20250411185920","mtd":"cliente02.get-cliente.Start","error":"sql: no rows in result set"}
+{"level":"info","time":"2025-04-11 19:01:39.508","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-04-11 19:08:27.645","message":"/cliente/telefones"}
+{"level":"info","time":"2025-04-11 19:08:27.646","message":"Entrou...","id":"20250411190827","mtd":"cliente - get-all-com-telefone - StartGetAllComTelefone"}
+{"level":"info","time":"2025-04-11 19:08:27.648","message":"Entrou...","id":"20250411190827","mtd":"cliente - get-all-com-telefone - Controller"}
+{"level":"info","time":"2025-04-11 19:08:27.649","message":"Entrou...","id":"20250411190827","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2025-04-11 19:08:27.679","message":"Entrou...","id":"20250411190827","mtd":"Repository - telefone - FindAll"}
+{"level":"info","time":"2025-04-11 19:08:27.738","message":"Entrou...","id":"20250411190827","mtd":"Repository - telefone - FindAll"}
+{"level":"info","time":"2025-04-11 19:08:27.740","message":"Entrou...","id":"20250411190827","mtd":"Repository - telefone - FindAll"}
+{"level":"info","time":"2025-04-11 19:08:27.742","message":"Entrou...","id":"20250411190827","mtd":"Repository - telefone - FindAll"}
+{"level":"info","time":"2025-04-11 19:08:27.744","message":"Entrou...","id":"20250411190827","mtd":"Repository - telefone - FindAll"}
+{"level":"info","time":"2025-04-11 19:08:27.746","message":"Entrou...","id":"20250411190827","mtd":"Repository - telefone - FindAll"}
+{"level":"info","time":"2025-04-11 19:08:27.748","message":"Entrou...","id":"20250411190827","mtd":"Repository - telefone - FindAll"}
