@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
 	cliente "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases"
+	produto "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/application/usecases"
 	telefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/application/usecases"
 )
 
@@ -35,51 +36,70 @@ func InitRoutes(r *gin.RouterGroup, db *sql.DB) {
 	// CLIENTES
 	// Cria 1 cliente
 	api.POST("/cliente", func(c *gin.Context) {
-		logger.Info("POST /cliente")
+		logger.Info("routes.go - POST /cliente")
 		cliente.StartCreate(c, db)
 	})
 
 	// Cria 1 cliente específico com telefones
 	api.POST("/cliente/telefones", func(c *gin.Context) {
-		logger.Info("POST /cliente/telefones")
+		logger.Info("routes.go - POST /cliente/telefones")
 		cliente.StartCreateComTelefone(c, db)
 	})
 
 	//Lista 1 cliente específico
 	api.GET("/cliente/:cpf", func(c *gin.Context) {
-		logger.Info("GET /cliente/:cpf")
+		logger.Info("routes.go - GET /cliente/:cpf")
 		cliente.StartGet(c, db)
 	})
 
 	//Lista todos os clientes
 	api.GET("/cliente", func(c *gin.Context) {
-		logger.Info("GET /cliente")
+		logger.Info("routes.go - GET /cliente")
 		cliente.StartGetAll(c, db)
 	})
 
 	// Lista 1 cliente específico com telefones
 	api.GET("/cliente/:cpf/telefones", func(c *gin.Context) {
-		logger.Info("/cliente/:cpf/telefones")
+		logger.Info("routes.go - GET /cliente/:cpf/telefones")
 		cliente.StartGetComTelefone(c, db)
 	})
 
 	// Lista todos os clientes com telefones
 	api.GET("/cliente/telefones", func(c *gin.Context) {
-		logger.Info("/cliente/telefones")
+		logger.Info("routes.go - GET /cliente/telefones")
 		cliente.StartGetAllComTelefone(c, db)
 	})
 
 	// TELEFONES
 	//Lista todos os telefones de um cliente
 	api.GET("/telefone/:cpf", func(c *gin.Context) {
-		logger.Info("routes.go - /telefone/:cpf")
+		logger.Info("routes.go - GET /telefone/:cpf")
 		telefone.StartGetAll(c, db)
 	})
 
 	// Cria 1 telefone
 	api.POST("/telefone", func(c *gin.Context) {
-		logger.Info("routes.go - /telefone")
+		logger.Info("routes.go - POST /telefone")
 		telefone.StartCreate(c, db)
+	})
+
+	// PRODUTOS
+	//Lista todos os produtos
+	api.GET("/produto", func(c *gin.Context) {
+		logger.Info("routes.go - GET /produto")
+		produto.StartGetAll(c, db)
+	})
+
+	//Lista 1 produto
+	api.GET("/produto/:id", func(c *gin.Context) {
+		logger.Info("routes.go - GET /produto/:id")
+		produto.StartGet(c, db)
+	})
+
+	// Cria 1 produto
+	api.POST("/produto", func(c *gin.Context) {
+		logger.Info("routes.go - POST /produto")
+		produto.StartCreate(c, db)
 	})
 
 }

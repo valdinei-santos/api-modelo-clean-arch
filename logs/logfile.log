@@ -245,3 +245,106 @@
 {"level":"info","time":"2025-04-11 19:08:27.744","message":"Entrou...","id":"20250411190827","mtd":"Repository - telefone - FindAll"}
 {"level":"info","time":"2025-04-11 19:08:27.746","message":"Entrou...","id":"20250411190827","mtd":"Repository - telefone - FindAll"}
 {"level":"info","time":"2025-04-11 19:08:27.748","message":"Entrou...","id":"20250411190827","mtd":"Repository - telefone - FindAll"}
+{"level":"info","time":"2025-04-14 15:31:47.553","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-04-14 15:33:13.906","message":"routes.go - POST /produto"}
+{"level":"info","time":"2025-04-14 15:33:13.908","message":"Entrou...","id":"20250414153313","mtd":"produto - create - StartCreate"}
+{"level":"info","time":"2025-04-14 15:33:13.911","message":"Entrou...","id":"20250414153313","mtd":"produto - create - Controller"}
+{"level":"info","time":"2025-04-14 15:33:13.920","message":"Entrou...","id":"20250414153313","mtd":"produto - create - UseCase - Execute"}
+{"level":"info","time":"2025-04-14 15:33:13.924","message":"Entrou... Nome:Produto 1","id":"20250414153313","mtd":"produto - Repository - Save"}
+{"level":"error","time":"2025-04-14 15:33:13.995","message":"Erro ao inserir produto","id":"20250414153313","mtd":"produto - Repository - Save","error":"ORA-03115: tipo de dados ou representação de rede não aceita(o)"}
+{"level":"error","time":"2025-04-14 15:33:14.001","message":"Erro ao salvar produto","id":"20250414153313","mtd":"produto - create - UseCase - Execute","error":"ORA-03115: tipo de dados ou representação de rede não aceita(o)"}
+{"level":"error","time":"2025-04-14 15:33:14.004","message":"Erro Execute useCase","id":"20250414153313","mtd":"produto - create - Controller","error":"ORA-03115: tipo de dados ou representação de rede não aceita(o)"}
+{"level":"error","time":"2025-04-14 15:33:14.008","message":"Error","id":"20250414153313","mtd":"produto - create - Start","error":"ORA-03115: tipo de dados ou representação de rede não aceita(o)"}
+{"level":"info","time":"2025-04-14 15:39:35.142","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-04-14 15:41:06.279","message":"routes.go - POST /produto"}
+{"level":"info","time":"2025-04-14 15:41:06.283","message":"Entrou...","id":"20250414154106","mtd":"produto - create - StartCreate"}
+{"level":"info","time":"2025-04-14 15:41:06.284","message":"Entrou...","id":"20250414154106","mtd":"produto - create - Controller"}
+{"level":"info","time":"2025-04-14 15:41:06.285","message":"Entrou...","id":"20250414154106","mtd":"produto - create - UseCase - Execute"}
+{"level":"info","time":"2025-04-14 15:41:06.286","message":"Entrou... Nome:Produto 1","id":"20250414154106","mtd":"produto - Repository - Save"}
+{"level":"info","time":"2025-04-14 15:41:06.299","message":"Número de linhas inseridas: 1","id":"20250414154106","mtd":"produto - Repository - Save"}
+{"level":"info","time":"2025-04-14 15:41:58.116","message":"routes.go - POST /produto"}
+{"level":"info","time":"2025-04-14 15:41:58.117","message":"Entrou...","id":"20250414154158","mtd":"produto - create - StartCreate"}
+{"level":"info","time":"2025-04-14 15:41:58.118","message":"Entrou...","id":"20250414154158","mtd":"produto - create - Controller"}
+{"level":"info","time":"2025-04-14 15:41:58.120","message":"Entrou...","id":"20250414154158","mtd":"produto - create - UseCase - Execute"}
+{"level":"info","time":"2025-04-14 15:41:58.121","message":"Entrou... Nome:Produto 2","id":"20250414154158","mtd":"produto - Repository - Save"}
+{"level":"info","time":"2025-04-14 15:41:58.125","message":"Número de linhas inseridas: 1","id":"20250414154158","mtd":"produto - Repository - Save"}
+{"level":"info","time":"2025-04-14 15:42:38.931","message":"routes.go - POST /produto"}
+{"level":"info","time":"2025-04-14 15:42:38.933","message":"Entrou...","id":"20250414154238","mtd":"produto - create - StartCreate"}
+{"level":"info","time":"2025-04-14 15:42:38.934","message":"Entrou...","id":"20250414154238","mtd":"produto - create - Controller"}
+{"level":"info","time":"2025-04-14 15:42:38.935","message":"Entrou...","id":"20250414154238","mtd":"produto - create - UseCase - Execute"}
+{"level":"info","time":"2025-04-14 15:42:38.936","message":"Entrou... Nome:Produto 3","id":"20250414154238","mtd":"produto - Repository - Save"}
+{"level":"info","time":"2025-04-14 15:42:38.942","message":"Número de linhas inseridas: 1","id":"20250414154238","mtd":"produto - Repository - Save"}
+{"level":"info","time":"2025-04-14 15:42:42.157","message":"routes.go - GET /produto"}
+{"level":"info","time":"2025-04-14 15:42:42.162","message":"Entrou...","id":"20250414154242","mtd":"cliente.StartGetAll"}
+{"level":"info","time":"2025-04-14 15:42:42.167","message":"Entrou...","id":"20250414154242","mtd":"cliente - get-all - Controller"}
+{"level":"info","time":"2025-04-14 15:42:42.175","message":"Entrou...","id":"20250414154242","mtd":"cliente/get-clientes - UseCase - Execute"}
+{"level":"info","time":"2025-04-14 15:42:42.179","message":"Entrou...","id":"20250414154242","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2025-04-14 15:42:56.493","message":"routes.go - GET /produto"}
+{"level":"info","time":"2025-04-14 15:42:56.494","message":"Entrou...","id":"20250414154256","mtd":"cliente.StartGetAll"}
+{"level":"info","time":"2025-04-14 15:42:56.495","message":"Entrou...","id":"20250414154256","mtd":"cliente - get-all - Controller"}
+{"level":"info","time":"2025-04-14 15:42:56.496","message":"Entrou...","id":"20250414154256","mtd":"cliente/get-clientes - UseCase - Execute"}
+{"level":"info","time":"2025-04-14 15:42:56.498","message":"Entrou...","id":"20250414154256","mtd":"cliente/get02 - Repository - QueryLoadAllClientes"}
+{"level":"info","time":"2025-04-14 15:42:58.298","message":"routes.go - GET /produto/:id"}
+{"level":"info","time":"2025-04-14 15:42:58.300","message":"Entrou...","id":"20250414154258","mtd":"cliente.StartGet"}
+{"level":"info","time":"2025-04-14 15:42:58.301","message":"Entrou...","id":"20250414154258","mtd":"cliente - get - Controller"}
+{"level":"info","time":"2025-04-14 15:42:58.302","message":"CPF: ","id":"20250414154258","mtd":"cliente - get - Controller"}
+{"level":"info","time":"2025-04-14 15:42:58.303","message":"Entrou... CPF:","id":"20250414154258","mtd":"cliente - Repository - FindById"}
+{"level":"error","time":"2025-04-14 15:42:58.329","message":"Erro Cliente...","id":"20250414154258","mtd":"cliente/get-cliente - UseCase - Execute","error":"sql: no rows in result set"}
+{"level":"error","time":"2025-04-14 15:42:58.330","message":"Erro...","id":"20250414154258","mtd":"cliente - get - Controller","error":"sql: no rows in result set"}
+{"level":"error","time":"2025-04-14 15:42:58.331","message":"Error ","id":"20250414154258","mtd":"cliente02.get-cliente.Start","error":"sql: no rows in result set"}
+{"level":"info","time":"2025-04-14 15:51:32.567","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-04-14 15:52:13.804","message":"routes.go - GET /produto/:id"}
+{"level":"info","time":"2025-04-14 15:52:13.806","message":"Entrou...","id":"20250414155213","mtd":"produto.StartGet"}
+{"level":"info","time":"2025-04-14 15:52:13.807","message":"Entrou...","id":"20250414155213","mtd":"produto - get - Controller"}
+{"level":"info","time":"2025-04-14 15:52:13.808","message":"ID: 1","id":"20250414155213","mtd":"produto - get - Controller"}
+{"level":"info","time":"2025-04-14 15:52:13.809","message":"Entrou... ID:1","id":"20250414155213","mtd":"produto - Repository - FindById"}
+{"level":"error","time":"2025-04-14 15:52:13.838","message":"Erro ao buscar produto","id":"20250414155213","mtd":"produto/get-produto - UseCase - Execute","error":"sql: Scan error on column index 6, name \"FL_ATIVO\": sql/driver: couldn't convert \"S\" into type bool"}
+{"level":"error","time":"2025-04-14 15:52:13.840","message":"Erro ao obter produto","id":"20250414155213","mtd":"produto - get - Controller","error":"sql: Scan error on column index 6, name \"FL_ATIVO\": sql/driver: couldn't convert \"S\" into type bool"}
+{"level":"error","time":"2025-04-14 15:52:13.841","message":"Error ","id":"20250414155213","mtd":"produto.StartGet","error":"sql: Scan error on column index 6, name \"FL_ATIVO\": sql/driver: couldn't convert \"S\" into type bool"}
+{"level":"info","time":"2025-04-14 15:52:22.588","message":"routes.go - GET /produto"}
+{"level":"info","time":"2025-04-14 15:52:22.589","message":"Entrou...","id":"20250414155222","mtd":"produto.StartGetAll"}
+{"level":"info","time":"2025-04-14 15:52:22.590","message":"Entrou...","id":"20250414155222","mtd":"produto - get-all - Controller"}
+{"level":"info","time":"2025-04-14 15:52:22.592","message":"Entrou no caso de uso para obter todos os produtos","id":"20250414155222","mtd":"produto/get-produtos - UseCase - Execute"}
+{"level":"info","time":"2025-04-14 15:52:22.593","message":"Entrou...","id":"20250414155222","mtd":"produto - Repository - FindAll"}
+{"level":"error","time":"2025-04-14 15:52:22.598","message":"Erro ao buscar produtos","id":"20250414155222","mtd":"produto/get-produtos - UseCase - Execute","error":"sql: Scan error on column index 6, name \"FL_ATIVO\": sql/driver: couldn't convert \"S\" into type bool"}
+{"level":"error","time":"2025-04-14 15:52:22.600","message":"Erro ao obter produtos","id":"20250414155222","mtd":"produto - get-all - Controller","error":"sql: Scan error on column index 6, name \"FL_ATIVO\": sql/driver: couldn't convert \"S\" into type bool"}
+{"level":"error","time":"2025-04-14 15:52:22.601","message":"Erro...","id":"20250414155222","mtd":"produto.StartGetAll","error":"sql: Scan error on column index 6, name \"FL_ATIVO\": sql/driver: couldn't convert \"S\" into type bool"}
+{"level":"info","time":"2025-04-14 15:52:25.007","message":"routes.go - GET /produto/:id"}
+{"level":"info","time":"2025-04-14 15:52:25.009","message":"Entrou...","id":"20250414155225","mtd":"produto.StartGet"}
+{"level":"info","time":"2025-04-14 15:52:25.011","message":"Entrou...","id":"20250414155225","mtd":"produto - get - Controller"}
+{"level":"info","time":"2025-04-14 15:52:25.013","message":"ID: 1","id":"20250414155225","mtd":"produto - get - Controller"}
+{"level":"info","time":"2025-04-14 15:52:25.014","message":"Entrou... ID:1","id":"20250414155225","mtd":"produto - Repository - FindById"}
+{"level":"error","time":"2025-04-14 15:52:25.017","message":"Erro ao buscar produto","id":"20250414155225","mtd":"produto/get-produto - UseCase - Execute","error":"sql: Scan error on column index 6, name \"FL_ATIVO\": sql/driver: couldn't convert \"S\" into type bool"}
+{"level":"error","time":"2025-04-14 15:52:25.019","message":"Erro ao obter produto","id":"20250414155225","mtd":"produto - get - Controller","error":"sql: Scan error on column index 6, name \"FL_ATIVO\": sql/driver: couldn't convert \"S\" into type bool"}
+{"level":"error","time":"2025-04-14 15:52:25.020","message":"Error ","id":"20250414155225","mtd":"produto.StartGet","error":"sql: Scan error on column index 6, name \"FL_ATIVO\": sql/driver: couldn't convert \"S\" into type bool"}
+{"level":"info","time":"2025-04-14 15:52:28.440","message":"routes.go - POST /produto"}
+{"level":"info","time":"2025-04-14 15:52:28.441","message":"Entrou...","id":"20250414155228","mtd":"produto - create - StartCreate"}
+{"level":"info","time":"2025-04-14 15:52:28.443","message":"Entrou...","id":"20250414155228","mtd":"produto - create - Controller"}
+{"level":"info","time":"2025-04-14 15:52:28.444","message":"Entrou...","id":"20250414155228","mtd":"produto - create - UseCase - Execute"}
+{"level":"info","time":"2025-04-14 15:52:28.445","message":"Entrou... Nome:Produto 3","id":"20250414155228","mtd":"produto - Repository - Save"}
+{"level":"info","time":"2025-04-14 15:52:28.451","message":"Número de linhas inseridas: 1","id":"20250414155228","mtd":"produto - Repository - Save"}
+{"level":"info","time":"2025-04-14 15:52:40.087","message":"routes.go - GET /produto/:id"}
+{"level":"info","time":"2025-04-14 15:52:40.088","message":"Entrou...","id":"20250414155240","mtd":"produto.StartGet"}
+{"level":"info","time":"2025-04-14 15:52:40.090","message":"Entrou...","id":"20250414155240","mtd":"produto - get - Controller"}
+{"level":"info","time":"2025-04-14 15:52:40.091","message":"ID: 1","id":"20250414155240","mtd":"produto - get - Controller"}
+{"level":"info","time":"2025-04-14 15:52:40.092","message":"Entrou... ID:1","id":"20250414155240","mtd":"produto - Repository - FindById"}
+{"level":"error","time":"2025-04-14 15:52:40.095","message":"Erro ao buscar produto","id":"20250414155240","mtd":"produto/get-produto - UseCase - Execute","error":"sql: Scan error on column index 6, name \"FL_ATIVO\": sql/driver: couldn't convert \"S\" into type bool"}
+{"level":"error","time":"2025-04-14 15:52:40.096","message":"Erro ao obter produto","id":"20250414155240","mtd":"produto - get - Controller","error":"sql: Scan error on column index 6, name \"FL_ATIVO\": sql/driver: couldn't convert \"S\" into type bool"}
+{"level":"error","time":"2025-04-14 15:52:40.097","message":"Error ","id":"20250414155240","mtd":"produto.StartGet","error":"sql: Scan error on column index 6, name \"FL_ATIVO\": sql/driver: couldn't convert \"S\" into type bool"}
+{"level":"info","time":"2025-04-14 15:57:01.509","message":"start api-modelo-clean-arch PORT:8888"}
+{"level":"info","time":"2025-04-14 15:57:05.217","message":"routes.go - GET /produto/:id"}
+{"level":"info","time":"2025-04-14 15:57:05.219","message":"Entrou...","id":"20250414155705","mtd":"produto.StartGet"}
+{"level":"info","time":"2025-04-14 15:57:05.220","message":"Entrou...","id":"20250414155705","mtd":"produto - get - Controller"}
+{"level":"info","time":"2025-04-14 15:57:05.221","message":"ID: 1","id":"20250414155705","mtd":"produto - get - Controller"}
+{"level":"info","time":"2025-04-14 15:57:05.222","message":"Entrou... ID:1","id":"20250414155705","mtd":"produto - Repository - FindById"}
+{"level":"info","time":"2025-04-14 15:57:14.654","message":"routes.go - GET /produto"}
+{"level":"info","time":"2025-04-14 15:57:14.655","message":"Entrou...","id":"20250414155714","mtd":"produto.StartGetAll"}
+{"level":"info","time":"2025-04-14 15:57:14.657","message":"Entrou...","id":"20250414155714","mtd":"produto - get-all - Controller"}
+{"level":"info","time":"2025-04-14 15:57:14.658","message":"Entrou no caso de uso para obter todos os produtos","id":"20250414155714","mtd":"produto/get-produtos - UseCase - Execute"}
+{"level":"info","time":"2025-04-14 15:57:14.660","message":"Entrou...","id":"20250414155714","mtd":"produto - Repository - FindAll"}
+{"level":"info","time":"2025-04-14 15:57:53.083","message":"routes.go - POST /produto"}
+{"level":"info","time":"2025-04-14 15:57:53.084","message":"Entrou...","id":"20250414155753","mtd":"produto - create - StartCreate"}
+{"level":"info","time":"2025-04-14 15:57:53.086","message":"Entrou...","id":"20250414155753","mtd":"produto - create - Controller"}
+{"level":"info","time":"2025-04-14 15:57:53.087","message":"Entrou...","id":"20250414155753","mtd":"produto - create - UseCase - Execute"}
+{"level":"info","time":"2025-04-14 15:57:53.088","message":"Entrou... Nome:Produto 4","id":"20250414155753","mtd":"produto - Repository - Save"}
+{"level":"info","time":"2025-04-14 15:57:53.095","message":"Número de linhas inseridas: 1","id":"20250414155753","mtd":"produto - Repository - Save"}

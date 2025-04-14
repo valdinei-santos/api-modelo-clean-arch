@@ -5,60 +5,6 @@
 GET {{url}}/ping
 Accept: application/json
 
-### Listar 1 cliente
-GET {{apiurl}}/cliente/1
-Accept: application/json
-
-### Listar todos os clientes
-GET {{apiurl}}/cliente
-Accept: application/json
-
-### Listar 1 cliente com telefones
-GET {{apiurl}}/cliente/1/telefones
-Accept: application/json
-
-### Listar todos os clientes com telefones
-GET {{apiurl}}/cliente/telefones
-Accept: application/json
-
-### Adicionar um cliente
-POST {{apiurl}}/cliente
-Content-Type: application/json
-
-{
-  "nome": "Cliente 4",
-  "cpf": "4",
-  "dt_nasc": "13/08/1969",
-  "telefones": [
-    "4832453548",
-    "4832215526"
-  ]
-}
-
-### CLIENTE 02
-
-### Listar 1 cliente
-GET {{apiurl}}/cliente02/1
-Accept: application/json
-
-### Listar todos os clientes
-GET {{apiurl}}/cliente02
-Accept: application/json
-
-### Adicionar um cliente
-POST {{apiurl}}/cliente02
-Content-Type: application/json
-
-{
-  "nome": "Cliente 6",
-  "cpf": "6",
-  "dt_nasc": "13/08/1959",
-  "telefones": [
-    "4832453500",
-    "4832215500"
-  ]
-}
-
 ### TELEFONE
 
 ### Listar todos os telefones de um CPF
@@ -96,4 +42,27 @@ Content-Type: application/json
     "4832453504",
     "4832215504"
   ]
+}
+
+### PRODUTO
+
+### Listar 1 produto
+GET {{apiurl}}/produto/1
+Accept: application/json
+
+### Listar todos os produtos
+GET {{apiurl}}/produto
+Accept: application/json
+
+### Adicionar um prpoduto
+POST {{apiurl}}/produto
+Content-Type: application/json
+
+{
+  "nome": "Produto 4",
+  "descricao": "Descrição detalhada do Produto 4",
+  "preco": 12.45,
+  "qtd_estoque": 20,
+  "categoria": "Eletrodomésticos",
+  "fl_ativo": "S"
 }

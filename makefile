@@ -18,6 +18,11 @@ mock:
 	mockgen -source=src/modules/telefone/infra/repository/interfaces.go -destination=src/modules/telefone/infra/repository/mocks/mocks.go -package=mocks
 	mockgen -source=src/modules/telefone/application/usecases/create/interfaces.go -destination=src/modules/telefone/application/usecases/create/mocks/mocks.go -package=mocks
 	mockgen -source=src/modules/telefone/application/usecases/get-all/interfaces.go -destination=src/modules/telefone/application/usecases/get-all/mocks/mocks.go -package=mocks
+	
+	mockgen -source=src/modules/produto/infra/repository/interfaces.go -destination=src/modules/produto/infra/repository/mocks/mocks.go -package=mocks
+	mockgen -source=src/modules/produto/application/usecases/create/interfaces.go -destination=src/modules/produto/application/usecases/create/mocks/mocks.go -package=mocks
+	mockgen -source=src/modules/produto/application/usecases/get/interfaces.go -destination=src/modules/produto/application/usecases/get/mocks/mocks.go -package=mocks
+	mockgen -source=src/modules/produto/application/usecases/get-all/interfaces.go -destination=src/modules/produto/application/usecases/get-all/mocks/mocks.go -package=mocks
 	go mod tidy
 test:
 	@go test ./ ...
