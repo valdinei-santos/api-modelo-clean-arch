@@ -1,10 +1,10 @@
 package create
 
 import (
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
+	"log/slog"
+
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/infra/repository"
-	"go.uber.org/zap"
 )
 
 // UseCase - Estrutura para o caso de uso de criação de produto
@@ -21,7 +21,7 @@ func NewUseCase(r repository.IRepository) *UseCase {
 
 // Execute - Executa a lógica de criação de um produto
 func (u *UseCase) Execute(stamp string, in *dto.Request) (*dto.OutputDefault, error) {
-	logger.Info("Entrou...", zap.String("id", stamp), zap.String("mtd", "produto - create - UseCase - Execute"))
+	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", "produto - create - UseCase - Execute"))
 
 	// Cria o objeto Produto a partir do DTO de entrada
 	p := &dto.ProdutoDTO{
@@ -36,7 +36,7 @@ func (u *UseCase) Execute(stamp string, in *dto.Request) (*dto.OutputDefault, er
 	// Salva o produto no repositório
 	err := u.Repo.Save(stamp, p)
 	if err != nil {
-		logger.Error("Erro ao salvar produto", err, zap.String("id", stamp), zap.String("mtd", "produto - create - UseCase - Execute"))
+		slog.Error("Erro ao salvar produto", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "produto - create - UseCase - Execute"))
 		return nil, err
 	}
 

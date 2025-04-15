@@ -1,10 +1,10 @@
 package getall
 
 import (
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
+	"log/slog"
+
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository"
-	"go.uber.org/zap"
 )
 
 // UseCase - ...
@@ -20,10 +20,10 @@ func NewUseCase(r repository.IRepository) *UseCase {
 
 // Execute - ...
 func (u *UseCase) Execute(stamp string) (*dto.ResponseClientes, error) {
-	logger.Info("Entrou...", zap.String("id", stamp), zap.String("mtd", "cliente/get-clientes - UseCase - Execute"))
+	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", "cliente/get-clientes - UseCase - Execute"))
 	clientes, err := u.Repo.FindAll(stamp)
 	if err != nil {
-		logger.Error("Erro...", err, zap.String("id", stamp), zap.String("mtd", "cliente/get-clientes - UseCase - Execute"))
+		slog.Error("Erro...", err, slog.String("id", stamp), slog.String("mtd", "cliente/get-clientes - UseCase - Execute"))
 		return nil, err
 	}
 	var cli dto.Cliente

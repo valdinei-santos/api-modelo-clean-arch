@@ -1,10 +1,10 @@
 package getall
 
 import (
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
+	"log/slog"
+
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/infra/repository"
-	"go.uber.org/zap"
 )
 
 // UseCase - ...
@@ -20,10 +20,10 @@ func NewUseCase(r repository.IRepository) *UseCase {
 
 // Execute - ...
 func (u *UseCase) Execute(stamp, cpf string) (*dto.ResponseAll, error) {
-	logger.Info("Entrou...", zap.String("id", stamp), zap.String("mtd", "Usecase - telefone - Execute"))
+	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", "Usecase - telefone - Execute"))
 	telefones, err := u.Repo.FindAll(stamp, cpf)
 	if err != nil {
-		logger.Error("Erro...", err, zap.String("id", stamp), zap.String("mtd", "Usecase - telefone - Execute"))
+		slog.Error("Erro...", err, slog.String("id", stamp), slog.String("mtd", "Usecase - telefone - Execute"))
 		return nil, err
 	}
 	// Transforma a lista de entities.ClienteComTel para uma lista de DTO Cliente com respectivos telefones

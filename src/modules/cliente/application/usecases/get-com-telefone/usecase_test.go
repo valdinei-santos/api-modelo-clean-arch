@@ -4,7 +4,6 @@ import (
 	"errors"
 
 	usecase "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases/get-com-telefone"
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/domain/entities"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository/mocks"
 	dtoTelefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/dto"
@@ -39,9 +38,9 @@ func TestExecute(t *testing.T) {
 	}
 	telefones = append(telefones, tel)
 
-	telefonesOK := make([]entities.Telefone, 2)
-	telefonesOK[0] = entities.Telefone{Cpf: "1", Numero: "48999448383"}
-	telefonesOK[1] = entities.Telefone{Cpf: "2", Numero: "4832453548"}
+	telefonesOK := make([]dto.Telefone, 2)
+	telefonesOK[0] = dto.Telefone{CPF: "1", Numero: "48999448383"}
+	telefonesOK[1] = dto.Telefone{CPF: "2", Numero: "4832453548"}
 
 	t.Run("Caso de Sucesso", func(t *testing.T) {
 		repoCli := mocks.NewMockIRepository(control)

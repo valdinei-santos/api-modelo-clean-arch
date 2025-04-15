@@ -1,11 +1,11 @@
 package get_com_telefone
 
 import (
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
+	"log/slog"
+
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository"
 	repoTelefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/infra/repository"
-	"go.uber.org/zap"
 )
 
 // UseCase - ...
@@ -25,13 +25,13 @@ func NewUseCase(repoCli repository.IRepository, repoTel repoTelefone.IRepository
 func (u *UseCase) Execute(stamp, cpf string) (*dto.ResponseComTelefone, error) {
 	c, err := u.RepoCliente.FindById(stamp, cpf)
 	if err != nil {
-		logger.Error("Erro Cliente...", err, zap.String("id", stamp), zap.String("mtd", "cliente - UseCase - Execute"))
+		slog.Error("Erro Cliente...", err, slog.String("id", stamp), slog.String("mtd", "cliente - UseCase - Execute"))
 		return nil, err
 	}
 
 	tels, err := u.RepoTelefone.FindAll(stamp, cpf)
 	if err != nil {
-		logger.Error("Erro Telefone...", err, zap.String("id", stamp), zap.String("mtd", "cliente/get-cliente - UseCase - Execute"))
+		slog.Error("Erro Telefone...", err, slog.String("id", stamp), slog.String("mtd", "cliente/get-cliente - UseCase - Execute"))
 		return nil, err
 	}
 

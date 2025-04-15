@@ -1,10 +1,10 @@
 package get
 
 import (
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
+	"log/slog"
+
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/infra/repository"
-	"go.uber.org/zap"
 )
 
 // UseCase - Estrutura para o caso de uso de obtenção de produto
@@ -23,7 +23,7 @@ func NewUseCase(r repository.IRepository) *UseCase {
 func (u *UseCase) Execute(stamp string, id int) (*dto.Response, error) {
 	p, err := u.Repo.FindById(stamp, id)
 	if err != nil {
-		logger.Error("Erro ao buscar produto", err, zap.String("id", stamp), zap.String("mtd", "produto/get-produto - UseCase - Execute"))
+		slog.Error("Erro ao buscar produto", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "produto/get-produto - UseCase - Execute"))
 		return nil, err
 	}
 

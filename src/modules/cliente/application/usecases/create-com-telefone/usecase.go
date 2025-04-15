@@ -1,12 +1,12 @@
 package create_com_telefone
 
 import (
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
+	"log/slog"
+
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository"
 	dtoTelefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/dto"
 	repoTelefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/infra/repository"
-	"go.uber.org/zap"
 )
 
 // UseCase - ...
@@ -24,7 +24,7 @@ func NewUseCase(repoCli repository.IRepository, repoTel repoTelefone.IRepository
 
 // Execute - ...
 func (u *UseCase) Execute(stamp string, in *dto.RequestComTelefone) (*dto.OutputDefault, error) {
-	logger.Info("Entrou...", zap.String("id", stamp), zap.String("mtd", "cliente - create-com-telefone - UseCase - Execute"))
+	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", "cliente - create-com-telefone - UseCase - Execute"))
 
 	// Cria um DTO Cliente
 	c := &dto.Cliente{
@@ -46,7 +46,7 @@ func (u *UseCase) Execute(stamp string, in *dto.RequestComTelefone) (*dto.Output
 	// Inicia a transação para salvar o cliente e telefones na mesma transação
 	tx, err := u.RepoCliente.BeginTransaction(stamp)
 	if err != nil {
-		logger.Error("Erro", err, zap.String("id", stamp), zap.String("mtd", "cliente - create-com-telefone - UseCase - BefginTransaction"))
+		slog.Error("Erro", err, slog.String("id", stamp), slog.String("mtd", "cliente - create-com-telefone - UseCase - BefginTransaction"))
 		return nil, err
 	}
 	defer tx.Rollback()
@@ -55,7 +55,7 @@ func (u *UseCase) Execute(stamp string, in *dto.RequestComTelefone) (*dto.Output
 	err = u.RepoCliente.Save(stamp, c)
 	if err != nil {
 		tx.Rollback()
-		logger.Error("Erro", err, zap.String("id", stamp), zap.String("mtd", "cliente - create-com-telefone - UseCase - Execute"))
+		slog.Error("Erro", err, slog.String("id", stamp), slog.String("mtd", "cliente - create-com-telefone - UseCase - Execute"))
 		return nil, err
 	}
 
@@ -63,7 +63,7 @@ func (u *UseCase) Execute(stamp string, in *dto.RequestComTelefone) (*dto.Output
 	err = u.RepoTelefone.SaveAll(stamp, telefones)
 	if err != nil {
 		tx.Rollback()
-		logger.Error("Erro", err, zap.String("id", stamp), zap.String("mtd", "cliente - create-com-telefone - UseCase - Execute"))
+		slog.Error("Erro", err, slog.String("id", stamp), slog.String("mtd", "cliente - create-com-telefone - UseCase - Execute"))
 		return nil, err
 	}
 
@@ -71,7 +71,7 @@ func (u *UseCase) Execute(stamp string, in *dto.RequestComTelefone) (*dto.Output
 	err = tx.Commit()
 	if err != nil {
 		tx.Rollback()
-		logger.Error("Erro ao fazer commit", err, zap.String("id", stamp), zap.String("mtd", "cliente - create-com-telefone - Usecase - Execute"))
+		slog.Error("Erro ao fazer commit", err, slog.String("id", stamp), slog.String("mtd", "cliente - create-com-telefone - Usecase - Execute"))
 		return nil, err
 	}
 

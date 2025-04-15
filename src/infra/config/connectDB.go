@@ -3,10 +3,9 @@ package config
 import (
 	"database/sql"
 	"fmt"
+	"log/slog"
 
 	_ "github.com/godror/godror"
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
-	"go.uber.org/zap"
 )
 
 var db *sql.DB
@@ -22,11 +21,11 @@ func InitDB() *sql.DB {
 	db, err := sql.Open("godror", dataURL)
 	if err != nil {
 		fmt.Println(err.Error())
-		logger.Fatal("Erro Fatal", err, zap.String("mtd", "config.InitDB"))
+		slog.Error("Erro Fatal", slog.Any("error", err), slog.String("method", "config.InitDB"))
 	}
 	if err = db.Ping(); err != nil {
 		fmt.Println(err.Error())
-		logger.Fatal("Erro Fatal", err, zap.String("mtd", "config.InitDB"))
+		slog.Error("Erro Fatal", slog.Any("error", err), slog.String("method", "config.InitDB"))
 	}
 	db.SetMaxOpenConns(2)
 	db.SetMaxIdleConns(1)
@@ -48,11 +47,11 @@ func InitDBTest() *sql.DB {
 	dbTest, err := sql.Open("godror", dataURL)
 	if err != nil {
 		fmt.Println("ERRO-DB: " + err.Error())
-		logger.Fatal("Erro Fatal", err, zap.String("mtd", "config.InitDB"))
+		slog.Error("Erro Fatal", slog.Any("error", err), slog.String("mtd", "config.InitDB"))
 	}
 	if err = dbTest.Ping(); err != nil {
 		fmt.Println("ERRO-DB: " + err.Error())
-		logger.Fatal("Erro Fatal", err, zap.String("mtd", "config.InitDB"))
+		slog.Error("Erro Fatal", slog.Any("error", err), slog.String("mtd", "config.InitDB"))
 	}
 	dbTest.SetMaxOpenConns(2)
 	dbTest.SetMaxIdleConns(1)

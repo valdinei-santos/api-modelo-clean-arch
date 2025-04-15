@@ -1,16 +1,34 @@
 package logger
 
 import (
-	"fmt"
+	"log/slog"
 	"os"
-	"strings"
-	"time"
-
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
 )
 
-var (
+// InitLogger configura o logger slog padrão.
+// Você pode adicionar parâmetros aqui para configurar o nível, formato, etc.
+func InitLogger(format string, level slog.Level) {
+	var handler slog.Handler
+
+	switch format {
+	case "json":
+		handler = slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{Level: level})
+	case "text":
+		handler = slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{Level: level})
+	default:
+		// Configuração padrão para texto se o formato for inválido
+		handler = slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{Level: slog.LevelInfo})
+	}
+	logger := slog.New(handler)
+	slog.SetDefault(logger)
+}
+
+/* func InitLogz() {
+	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
+	slog.SetDefault(logger)
+} */
+
+/* var (
 	//log        *zap.SugaredLogger
 	log        *zap.Logger
 	LOG_OUTPUT = "LOG_OUTPUT"
@@ -85,4 +103,4 @@ func getLevelLogs() zapcore.Level {
 
 func ourTimeEncoder(t time.Time, enc zapcore.PrimitiveArrayEncoder) {
 	enc.AppendString(t.Format("2006-01-02 15:04:05.000"))
-}
+} */

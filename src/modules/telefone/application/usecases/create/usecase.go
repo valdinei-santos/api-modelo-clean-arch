@@ -1,10 +1,10 @@
 package create
 
 import (
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
+	"log/slog"
+
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/infra/repository"
-	"go.uber.org/zap"
 )
 
 // UseCase - ...
@@ -20,7 +20,7 @@ func NewUseCase(r repository.IRepository) *UseCase {
 
 // Execute - ...
 func (u *UseCase) Execute(stamp string, in *dto.Request) (*dto.OutputDefault, error) {
-	logger.Info("Entrou...", zap.String("id", stamp), zap.String("mtd", "telefone/create - UseCase - Execute"))
+	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", "telefone/create - UseCase - Execute"))
 	//var telefones []string
 	//for _, v := range in.Telefones {
 	//telefones = append(telefones, in.Telefones...)
@@ -31,7 +31,7 @@ func (u *UseCase) Execute(stamp string, in *dto.Request) (*dto.OutputDefault, er
 	}
 	err := u.Repo.Save(stamp, t)
 	if err != nil {
-		logger.Error("Erro", err, zap.String("id", stamp), zap.String("mtd", "telefone/create - UseCase - Execute"))
+		slog.Error("Erro", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "telefone/create - UseCase - Execute"))
 		return nil, err
 	}
 
