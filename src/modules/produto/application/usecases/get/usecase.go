@@ -1,29 +1,31 @@
 package get
 
 import (
-	"log/slog"
-
+	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/infra/repository"
 )
 
 // UseCase - Estrutura para o caso de uso de obtenção de produto
 type UseCase struct {
-	Repo repository.IRepository // Interface do repositório para Produto
+	repo repository.IRepository // Interface do repositório para Produto
+	log  logger.Logger
 }
 
 // NewUseCase - Construtor do caso de uso
-func NewUseCase(r repository.IRepository) *UseCase {
+func NewUseCase(r repository.IRepository, l logger.Logger) *UseCase {
 	return &UseCase{
-		Repo: r,
+		repo: r,
+		log:  l,
 	}
 }
 
 // Execute - Executa a lógica para obter um produto por ID
-func (u *UseCase) Execute(stamp string, id int) (*dto.Response, error) {
-	p, err := u.Repo.FindById(stamp, id)
+func (u *UseCase) Execute(id int) (*dto.Response, error) {
+	u.log.Debug("Entrou get.Execute")
+	p, err := u.repo.FindById(id)
 	if err != nil {
-		slog.Error("Erro ao buscar produto", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "produto/get-produto - UseCase - Execute"))
+		u.log.Error(err.Error(), "mtd", "repo.FindById")
 		return nil, err
 	}
 

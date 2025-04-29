@@ -8,8 +8,8 @@ import (
 )
 
 type IRepository interface {
-	BeginTransaction(stamp string) (*sql.Tx, error)
-	Save(stamp string, p *dto.ProdutoDTO) error
-	FindById(stamp string, id int) (*entities.Produto, error)
-	FindAll(stamp string) (*[]entities.Produto, error)
+	BeginTransaction() (*sql.Tx, error)
+	Save(p *dto.ProdutoDTO) error
+	FindById(id int) (*entities.Produto, error)
+	FindAll() (*[]entities.Produto, error)
 }

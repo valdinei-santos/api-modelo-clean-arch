@@ -1,34 +1,36 @@
 package create
 
 import (
-	"log/slog"
-
+	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository"
 )
 
 // UseCase - ...
 type UseCase struct {
-	Repo repository.IRepository // aqui referencia a interface Repository do pg-repo dessa entity
+	repo repository.IRepository // aqui referencia a interface Repository do pg-repo dessa entity
+	log  logger.Logger
 }
 
-func NewUseCase(r repository.IRepository) *UseCase {
+func NewUseCase(r repository.IRepository, log logger.Logger) *UseCase {
 	return &UseCase{
-		Repo: r,
+		repo: r,
+		log:  log,
 	}
 }
 
 // Execute - ...
-func (u *UseCase) Execute(stamp string, in *dto.Request) (*dto.OutputDefault, error) {
-	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", "cliente - create - UseCase - Execute"))
+func (u *UseCase) Execute(in *dto.Request) (*dto.OutputDefault, error) {
+	u.log.Debug("Entrou create.Execute")
 	p := &dto.Cliente{
 		CPF:    in.CPF,
 		Nome:   in.Nome,
 		DtNasc: in.DtNasc,
 	}
-	err := u.Repo.Save(stamp, p)
+	err := u.repo.Save(p)
 	if err != nil {
-		slog.Error("Erro - cliente - create - UseCase - Execute", slog.String("id", stamp), slog.Any("error", err))
+		//u.log.Error(err.Error())
+		u.log.Error(err.Error(), "mtd", "repo.Save")
 		return nil, err
 	}
 
@@ -37,6 +39,5 @@ func (u *UseCase) Execute(stamp string, in *dto.Request) (*dto.OutputDefault, er
 		StatusCode: 1,
 		Message:    "Insert OK",
 	}
-	//u.Presenter.Show(stamp, result)
 	return result, nil
 }

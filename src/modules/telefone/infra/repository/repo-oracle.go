@@ -2,33 +2,34 @@ package repository
 
 import (
 	"database/sql"
-	"log/slog"
 
+	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/domain/entities"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/dto"
 )
 
-// RepoOracle implements Repository
 type RepoOracle struct {
-	db *sql.DB
+	db  *sql.DB
+	log logger.Logger
 }
 
 // NewOraRepo create new repository
-func NewRepoOracle(db *sql.DB) *RepoOracle {
+func NewRepoOracle(db *sql.DB, l logger.Logger) *RepoOracle {
 	return &RepoOracle{
-		db: db,
+		db:  db,
+		log: l,
 	}
 }
 
 // Save ...
-func (r *RepoOracle) Save(stamp string, t *dto.Telefone) error {
-	slog.Info("Entrou... CPF: "+t.CPF, slog.String("id", stamp), slog.String("mtd", "Repository - telefone - Save"))
+func (r *RepoOracle) Save(t *dto.Telefone) error {
+	r.log.Debug("Entrou repository.Save - CPF: " + t.CPF)
 
 	// Inicia a transação
 	tx, err := r.db.Begin()
 	if err != nil {
 		tx.Rollback()
-		slog.Error("Erro ao criar a transação", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "Repository - telefone - Save"))
+		r.log.Error(err.Error(), "mtd", "db.Begin")
 		return err
 	}
 
@@ -36,7 +37,7 @@ func (r *RepoOracle) Save(stamp string, t *dto.Telefone) error {
 	stmt, err := tx.Prepare("INSERT INTO telefone (cpf, numero) VALUES (:1, :2)")
 	if err != nil {
 		tx.Rollback()
-		slog.Error("Erro ao preparar a inserção", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "Repository - telefone - Save"))
+		r.log.Error(err.Error(), "mtd", "tx.Prepare")
 		return err
 	}
 	defer stmt.Close()
@@ -45,26 +46,26 @@ func (r *RepoOracle) Save(stamp string, t *dto.Telefone) error {
 	_, err = stmt.Exec(t.CPF, t.Numero)
 	if err != nil {
 		tx.Rollback()
-		slog.Error("Erro ao executar a inserção", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "Repository - telefone - Save"))
+		r.log.Error(err.Error(), "mtd", "stmt.Exec")
 		return err
 	}
 
 	err = tx.Commit()
 	if err != nil {
 		tx.Rollback()
-		slog.Error("Erro ao commitar a inserção", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "Repository - telefone - Save"))
+		r.log.Error(err.Error(), "mtd", "tx.commit")
 		return err
 	}
 
 	return nil
 }
 
-func (r *RepoOracle) SaveAll(stamp string, p []*dto.Telefone) error {
-	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", "Repository - telefone - SaveAll"))
+func (r *RepoOracle) SaveAll(p []*dto.Telefone) error {
+	r.log.Debug("Entrou repository.SaveAll")
 	tx, err := r.db.Begin()
 	if err != nil {
 		tx.Rollback()
-		slog.Error("Erro ao criar a transação", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "Repository - telefone - SaveAll"))
+		r.log.Error(err.Error(), "mtd", "db.Begin")
 		return err
 	}
 	defer tx.Rollback()
@@ -72,7 +73,7 @@ func (r *RepoOracle) SaveAll(stamp string, p []*dto.Telefone) error {
 	stmt, err := tx.Prepare("INSERT INTO telefone (cpf, numero) VALUES (:1, :2)")
 	if err != nil {
 		tx.Rollback()
-		slog.Error("Erro ao preparar a inserção", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "Repository - telefone - SaveAll"))
+		r.log.Error(err.Error(), "mtd", "tx.Prepare")
 		return err
 	}
 	defer stmt.Close()
@@ -81,7 +82,7 @@ func (r *RepoOracle) SaveAll(stamp string, p []*dto.Telefone) error {
 		_, err = stmt.Exec(t.CPF, t.Numero)
 		if err != nil {
 			tx.Rollback()
-			slog.Error("Erro ao executar a inserção", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "Repository - telefone - SaveAll"))
+			r.log.Error(err.Error(), "mtd", "stmt.Exec")
 			return err
 		}
 	}
@@ -89,7 +90,7 @@ func (r *RepoOracle) SaveAll(stamp string, p []*dto.Telefone) error {
 	err = tx.Commit()
 	if err != nil {
 		tx.Rollback()
-		slog.Error("Erro ao commitar a inserção", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "Repository - telefone - SaveAll"))
+		r.log.Error(err.Error(), "mtd", "tx.Commit")
 		return err
 	}
 
@@ -97,17 +98,19 @@ func (r *RepoOracle) SaveAll(stamp string, p []*dto.Telefone) error {
 }
 
 // FindAll ...
-func (r *RepoOracle) FindAll(stamp, cpf string) ([]entities.Telefone, error) {
-	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", "Repository - telefone - FindAll"))
+func (r *RepoOracle) FindAll(cpf string) ([]entities.Telefone, error) {
+	r.log.Debug("Entrou repository.FindAll")
 	var stmt *sql.Stmt
 	var rows *sql.Rows
 	var err error
 	stmt, err = r.db.Prepare(`SELECT cpf, numero FROM telefone WHERE cpf = :1`)
 	if err != nil {
+		r.log.Error(err.Error(), "mtd", "db.Prepare")
 		return nil, err
 	}
 	rows, err = stmt.Query(cpf)
 	if err != nil {
+		r.log.Error(err.Error(), "mtd", "stmt.Query")
 		return nil, err
 	}
 	defer rows.Close()
@@ -118,6 +121,7 @@ func (r *RepoOracle) FindAll(stamp, cpf string) ([]entities.Telefone, error) {
 	for rows.Next() {
 		err = rows.Scan(&t.Cpf, &t.Numero)
 		if err != nil {
+			r.log.Error(err.Error(), "mtd", "rows.Scan")
 			return nil, err
 		}
 		tels = append(tels, t)

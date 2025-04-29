@@ -3,9 +3,10 @@ package create_test
 import (
 	"errors"
 
+	mockLog "github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger/mocks"
 	usecase "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases/create"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository/mocks"
+	mockRepo "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository/mocks"
 
 	//"api-modelo-clean-arch/application/extrato/getdados/mock"
 	"testing"
@@ -41,24 +42,30 @@ func Test_Execute(t *testing.T) {
 	}
 
 	t.Run("Caso de Sucesso", func(t *testing.T) {
-		r := mocks.NewMockIRepository(control)
-		r.EXPECT().Save(gomock.Any(), gomock.Any()).Return(nil)
+		r := mockRepo.NewMockIRepository(control)
+		r.EXPECT().Save(gomock.Any()).Return(nil)
 
-		uc := usecase.NewUseCase(r)
+		l := mockLog.NewMockLogger(control)
+		l.EXPECT().Info(gomock.Any(), gomock.Any(), gomock.Any()).Return(nil)
+
+		uc := usecase.NewUseCase(r, l)
 		//err := uc.Execute("", tarifasOK_UC)
-		resp, err := uc.Execute("", clienteOK)
+		resp, err := uc.Execute(clienteOK)
 		assert.Nil(t, err)
 		assert.NotNil(t, resp)
 	})
 
 	t.Run("Caso de Erro", func(t *testing.T) {
 		errExpect := errors.New("dummy error")
-		r := mocks.NewMockIRepository(control)
-		r.EXPECT().Save(gomock.Any(), gomock.Any()).Return(errExpect)
+		r := mockRepo.NewMockIRepository(control)
+		r.EXPECT().Save(gomock.Any()).Return(errExpect)
 
-		uc := usecase.NewUseCase(r)
+		l := mockLog.NewMockLogger(control)
+		l.EXPECT().Info(gomock.Any(), gomock.Any(), gomock.Any()).Return(nil)
+
+		uc := usecase.NewUseCase(r, l)
 		//err := uc.Execute("", tarifasOK_UC)
-		resp, err := uc.Execute("", clienteOK)
+		resp, err := uc.Execute(clienteOK)
 		assert.NotNil(t, err)
 		assert.Nil(t, resp)
 	})

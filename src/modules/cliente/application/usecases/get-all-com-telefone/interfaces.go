@@ -1,4 +1,4 @@
-package get_all_com_telefone
+package getallcomtelefone
 
 import (
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
@@ -6,5 +6,5 @@ import (
 
 // IUsecase - ...
 type IUsecase interface {
-	Execute(stamp string) ([]*dto.ResponseComTelefone, error)
+	Execute() ([]*dto.ResponseComTelefone, error)
 }

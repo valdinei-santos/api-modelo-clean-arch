@@ -3,79 +3,72 @@ package repository
 import (
 	"database/sql"
 	"fmt"
-	"log/slog"
 
+	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/domain/entities"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
 )
 
 // RepoOracle implements Repository
 type RepoOracle struct {
-	db *sql.DB
+	db  *sql.DB
+	log logger.Logger
 }
 
 // NewOraRepo create new repository
-func NewRepoOracle(db *sql.DB) *RepoOracle {
+func NewRepoOracle(db *sql.DB, l logger.Logger) *RepoOracle {
 	return &RepoOracle{
-		db: db,
+		db:  db,
+		log: l,
 	}
 }
 
-func (r *RepoOracle) BeginTransaction(stamp string) (*sql.Tx, error) {
+func (r *RepoOracle) BeginTransaction() (*sql.Tx, error) {
+	r.log.Debug("Entrou repository.BeginTransaction")
 	tx, err := r.db.Begin()
 	if err != nil {
-		slog.Error("Erro ao iniciar transação", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "cliente - Repository - BeginTransaction"))
+		r.log.Error(err.Error(), "mtd", "db.Begin")
 		return nil, err
 	}
 	return tx, nil
 }
 
 // Save ...
-func (r *RepoOracle) Save(stamp string, p *dto.Cliente) error {
-	slog.Info("Entrou... CPF:"+p.CPF, slog.String("id", stamp), slog.String("mtd", "cliente - Repository - Save"))
-
+func (r *RepoOracle) Save(p *dto.Cliente) error {
+	r.log.Debug("Entrou repository.Save - CPF:" + p.CPF)
 	tx, err := r.db.Begin()
 	if err != nil {
-		slog.Error("Erro Fatal", slog.Any("error", err))
+		r.log.Error(err.Error(), "mtd", "db.Begin")
 	}
 
 	query1 := `insert into cliente(cpf, nm_cliente, dt_nasc) VALUES(:1, :2, :3)`
 	res1, err := tx.Exec(query1, p.CPF, p.Nome, p.DtNasc)
 	if err != nil {
 		tx.Rollback()
-		slog.Error("Erro ao inserir cliente", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "cliente - Repository - Save"))
+		r.log.Error(err.Error(), "mtd", "tx.Exec")
 		return err
 	}
 
-	/* query2 := `insert into telefone(cpf, numero) VALUES(:1, :2)`
-	for _, tel := range p.Telefones {
-		_, err = tx.Exec(query2, p.CPF, tel)
-		if err != nil {
-			tx.Rollback()
-			slog.Error("Erro ao inserir telefone", err, slog.String("id", stamp), slog.String("mtd", "cliente - Repository - Save"))
-			return err
-		}
-	} */
 	err = tx.Commit()
 	if err != nil {
 		tx.Rollback()
-		slog.Error("Erro ao fazer commit", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "cliente - Repository - Save"))
+		r.log.Error(err.Error(), "mtd", "tx.Commit")
 		return err
 	}
 
 	// Exemplo para verificar o número de linhas inseridas
 	rowsAffected, err := res1.RowsAffected()
 	if err != nil {
-		slog.Error("Erro ao obter o número de linhas afetadas", slog.Any("error", err), slog.String("id", stamp), slog.String("mtd", "cliente - Repository - Save"))
+		r.log.Error(err.Error(), "mtd", "res1.RowsAffected")
 		return err
 	}
-	slog.Info("Número de linhas inseridas: "+fmt.Sprintf("%d", rowsAffected), slog.String("id", stamp), slog.String("mtd", "cliente - Repository - Save"))
+	r.log.Debug("Número de linhas inseridas: " + fmt.Sprintf("%d", rowsAffected))
 	return nil
 }
 
 // FindById ...
-func (r *RepoOracle) FindById(stamp, cpf string) (*entities.Cliente, error) {
-	slog.Info("Entrou... CPF:"+cpf, slog.String("id", stamp), slog.String("mtd", "cliente - Repository - FindById"))
+func (r *RepoOracle) FindById(cpf string) (*entities.Cliente, error) {
+	r.log.Debug("Entrou repository.FindById - CPF:" + cpf)
 	var stmt *sql.Stmt
 	var err error
 	stmt, err = r.db.Prepare(`
@@ -84,9 +77,7 @@ func (r *RepoOracle) FindById(stamp, cpf string) (*entities.Cliente, error) {
 	     WHERE cpf = :1
 	`)
 	if err != nil {
-		/* if err == sql.ErrNoRows {
-			// Handle the case of no rows returned.
-		} */
+		r.log.Error(err.Error(), "mtd", "db.Prepare")
 		return nil, err
 	}
 	defer stmt.Close()
@@ -94,20 +85,19 @@ func (r *RepoOracle) FindById(stamp, cpf string) (*entities.Cliente, error) {
 	var c entities.Cliente
 	err = stmt.QueryRow(cpf).Scan(&c.Cpf, &c.Nome, &c.DtNasc)
 	if err != nil {
-		/* if err == sql.ErrNoRows {
-			// Handle the case of no rows returned.
-		} */
+		r.log.Error(err.Error(), "mtd", "stmt.QueryRow")
 		return &c, err
 	}
 	return &c, nil
 }
 
 // FindAll
-func (r *RepoOracle) FindAll(stamp string) (*[]entities.Cliente, error) {
-	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", "cliente/get02 - Repository - QueryLoadAllClientes"))
+func (r *RepoOracle) FindAll() (*[]entities.Cliente, error) {
+	r.log.Debug("Entrou repository.FindAll")
 	queryCliente := `SELECT c.cpf, c.nm_cliente, c.dt_nasc FROM cliente c`
 	rows1, err := r.db.Query(queryCliente)
 	if err != nil {
+		r.log.Error(err.Error(), "mtd", "db.Query")
 		return nil, err
 	}
 	defer rows1.Close()
@@ -118,11 +108,10 @@ func (r *RepoOracle) FindAll(stamp string) (*[]entities.Cliente, error) {
 		//fmt.Println("Entrou rows1")
 		var c entities.Cliente
 		if err := rows1.Scan(&c.Cpf, &c.Nome, &c.DtNasc); err != nil {
+			r.log.Error(err.Error(), "mtd", "rows1.Scan")
 			return nil, err
 		}
 		clientes = append(clientes, c)
 	}
-	fmt.Println(clientes)
 	return &clientes, nil
-	//return cs, nil
 }

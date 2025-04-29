@@ -4,9 +4,10 @@ import (
 	"errors"
 	"testing"
 
+	mockLog "github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger/mocks"
 	usecase "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/application/usecases/create"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/dto"
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/infra/repository/mocks"
+	mockRepo "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/infra/repository/mocks"
 
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/mock/gomock"
@@ -26,11 +27,14 @@ func Test_Execute(t *testing.T) {
 	}
 
 	t.Run("Caso de Sucesso", func(t *testing.T) {
-		r := mocks.NewMockIRepository(control)
-		r.EXPECT().Save(gomock.Any(), gomock.Any()).Return(nil)
+		r := mockRepo.NewMockIRepository(control)
+		r.EXPECT().Save(gomock.Any()).Return(nil)
 
-		uc := usecase.NewUseCase(r)
-		resp, err := uc.Execute("", produtoOK)
+		l := mockLog.NewMockLogger(control)
+		l.EXPECT().Info(gomock.Any(), gomock.Any(), gomock.Any()).Return(nil)
+
+		uc := usecase.NewUseCase(r, l)
+		resp, err := uc.Execute(produtoOK)
 		assert.Nil(t, err)
 		assert.NotNil(t, resp)
 		assert.Equal(t, "Produto inserido com sucesso", resp.Message)
@@ -38,11 +42,14 @@ func Test_Execute(t *testing.T) {
 
 	t.Run("Caso de Erro", func(t *testing.T) {
 		errExpect := errors.New("dummy error")
-		r := mocks.NewMockIRepository(control)
-		r.EXPECT().Save(gomock.Any(), gomock.Any()).Return(errExpect)
+		r := mockRepo.NewMockIRepository(control)
+		r.EXPECT().Save(gomock.Any()).Return(errExpect)
 
-		uc := usecase.NewUseCase(r)
-		resp, err := uc.Execute("", produtoOK)
+		l := mockLog.NewMockLogger(control)
+		l.EXPECT().Info(gomock.Any(), gomock.Any(), gomock.Any()).Return(nil)
+
+		uc := usecase.NewUseCase(r, l)
+		resp, err := uc.Execute(produtoOK)
 		assert.NotNil(t, err)
 		assert.Nil(t, resp)
 	})

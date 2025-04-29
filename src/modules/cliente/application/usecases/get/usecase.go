@@ -1,28 +1,31 @@
 package get
 
 import (
-	"log/slog"
-
+	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository"
 )
 
 // UseCase - ...
 type UseCase struct {
-	Repo repository.IRepository // aqui referencia a interface Repository do pg-repo dessa entity
+	repo repository.IRepository // aqui referencia a interface Repository do pg-repo dessa entity
+	log  logger.Logger
 }
 
-func NewUseCase(r repository.IRepository) *UseCase {
+func NewUseCase(r repository.IRepository, log logger.Logger) *UseCase {
 	return &UseCase{
-		Repo: r,
+		repo: r,
+		log:  log,
 	}
 }
 
 // Execute - ...
-func (u *UseCase) Execute(stamp, cpf string) (*dto.Response, error) {
-	c, err := u.Repo.FindById(stamp, cpf)
+func (u *UseCase) Execute(cpf string) (*dto.Response, error) {
+	u.log.Debug("Entrou get.Execute")
+	c, err := u.repo.FindById(cpf)
 	if err != nil {
-		slog.Error("Erro Cliente...", err, slog.String("id", stamp), slog.String("mtd", "cliente/get-cliente - UseCase - Execute"))
+		//u.log.Error(err.Error())
+		u.log.Error(err.Error(), "mtd", "repo.FindById")
 		return nil, err
 	}
 

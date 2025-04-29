@@ -10,6 +10,8 @@ run:
 build:
 	@go build -o $(APP_NAME) api/server.go
 mock:
+	mockgen -source=src/infra/logger/interfaces.go -destination=src/infra/logger/mocks/mocks.go -package=mocks
+
 	mockgen -source=src/modules/cliente/infra/repository/interfaces.go -destination=src/modules/cliente/infra/repository/mocks/mocks.go -package=mocks
 	mockgen -source=src/modules/cliente/application/usecases/create/interfaces.go -destination=src/modules/cliente/application/usecases/create/mocks/mocks.go -package=mocks
 	mockgen -source=src/modules/cliente/application/usecases/get/interfaces.go -destination=src/modules/cliente/application/usecases/get/mocks/mocks.go -package=mocks

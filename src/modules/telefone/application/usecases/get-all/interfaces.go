@@ -7,7 +7,7 @@ import (
 // IUsecase - ...
 type IUsecase interface {
 	//Execute(stamp string) (*dto.Response, error)
-	Execute(stamp, cpf string) (*dto.ResponseAll, error)
+	Execute(cpf string) (*dto.ResponseAll, error)
 }
 
 /* type IRepository interface {

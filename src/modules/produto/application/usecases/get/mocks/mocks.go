@@ -40,16 +40,16 @@ func (m *MockIUsecase) EXPECT() *MockIUsecaseMockRecorder {
 }
 
 // Execute mocks base method.
-func (m *MockIUsecase) Execute(stamp string, id int) (*dto.Response, error) {
+func (m *MockIUsecase) Execute(id int) (*dto.Response, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Execute", stamp, id)
+	ret := m.ctrl.Call(m, "Execute", id)
 	ret0, _ := ret[0].(*dto.Response)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
 
 // Execute indicates an expected call of Execute.
-func (mr *MockIUsecaseMockRecorder) Execute(stamp, id any) *gomock.Call {
+func (mr *MockIUsecaseMockRecorder) Execute(id any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Execute", reflect.TypeOf((*MockIUsecase)(nil).Execute), stamp, id)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Execute", reflect.TypeOf((*MockIUsecase)(nil).Execute), id)
 }

@@ -6,5 +6,5 @@ import (
 
 // IUsecase - ...
 type IUsecase interface {
-	Execute(stamp string) (*dto.ProdutosResponse, error)
+	Execute() (*dto.ProdutosResponse, error)
 }

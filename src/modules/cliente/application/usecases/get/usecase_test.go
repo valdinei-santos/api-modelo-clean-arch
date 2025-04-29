@@ -3,9 +3,10 @@ package get_test
 import (
 	"errors"
 
+	mockLog "github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger/mocks"
 	usecase "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases/get"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/domain/entities"
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository/mocks"
+	mockRepo "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository/mocks"
 	"go.uber.org/mock/gomock"
 
 	//"api-modelo-clean-arch/application/extrato/getdados/mock"
@@ -28,6 +29,8 @@ func TestExecute(t *testing.T) {
 		DtNasc: "02/07/1975",
 	}
 
+	//log := logger.NewMockLogger()
+
 	/* telefonesOK := make([]entities.Telefone, 2)
 	telefonesOK[0] = entities.Telefone{Cpf: "1", Numero: "48999448383"}
 	telefonesOK[1] = entities.Telefone{Cpf: "2", Numero: "4832453548"} */
@@ -45,27 +48,33 @@ func TestExecute(t *testing.T) {
 	} */
 
 	t.Run("Caso de Sucesso", func(t *testing.T) {
-		r := mocks.NewMockIRepository(control)
-		r.EXPECT().FindById(gomock.Any(), gomock.Any()).Return(clienteOK, nil)
+		r := mockRepo.NewMockIRepository(control)
+		r.EXPECT().FindById(gomock.Any()).Return(clienteOK, nil)
 		//r.EXPECT().FindByIdTelefone(gomock.Any(), gomock.Any()).Return(telefonesOK, nil)
 
-		uc := usecase.NewUseCase(r)
+		l := mockLog.NewMockLogger(control)
+		l.EXPECT().Info(gomock.Any(), gomock.Any(), gomock.Any()).Return(nil)
+
+		uc := usecase.NewUseCase(r, l)
 		//err := uc.Execute("", tarifasOK_UC)
-		err, resp := uc.Execute("", clienteOK.Cpf)
+		err, resp := uc.Execute(clienteOK.Cpf)
 		assert.Nil(t, err)
 		assert.NotNil(t, resp)
 	})
 
 	t.Run("Caso de Erro", func(t *testing.T) {
 		errExpect := errors.New("dummy error")
-		r := mocks.NewMockIRepository(control)
-		r.EXPECT().FindById(gomock.Any(), gomock.Any()).Return(nil, errExpect)
+		r := mockRepo.NewMockIRepository(control)
+		r.EXPECT().FindById(gomock.Any()).Return(nil, errExpect)
 		// Quando da erro não chama o QueryLoadDataTelefone
 		//r.EXPECT().QueryLoadDataTelefone(gomock.Any(), gomock.Any()).Return(telefonesOK, errExpect)
 
-		uc := usecase.NewUseCase(r)
+		l := mockLog.NewMockLogger(control)
+		l.EXPECT().Info(gomock.Any(), gomock.Any(), gomock.Any()).Return(nil)
+
+		uc := usecase.NewUseCase(r, l)
 		//err := uc.Execute("", tarifasOK_UC)
-		err, resp := uc.Execute("", clienteOK.Cpf)
+		err, resp := uc.Execute(clienteOK.Cpf)
 		assert.NotNil(t, err)
 		assert.NotNil(t, resp)
 	})

@@ -1,8 +1,9 @@
-package create_com_telefone_test
+package createcomtelefone_test
 
 import (
 	"errors"
 
+	mockLog "github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger/mocks"
 	usecase "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases/create-com-telefone"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository/mocks"
@@ -61,14 +62,17 @@ func Test_Execute(t *testing.T) {
 
 	t.Run("Caso de Sucesso", func(t *testing.T) {
 		repoCli := mocks.NewMockIRepository(control)
-		repoCli.EXPECT().Save(gomock.Any(), gomock.Any()).Return(nil)
+		repoCli.EXPECT().Save(gomock.Any()).Return(nil)
 
 		repoTel := mockRepoTel.NewMockIRepository(control)
-		repoTel.EXPECT().Save(gomock.Any(), gomock.Any()).Return(nil)
+		repoTel.EXPECT().Save(gomock.Any()).Return(nil)
 
-		uc := usecase.NewUseCase(repoCli, repoTel)
+		l := mockLog.NewMockLogger(control)
+		l.EXPECT().Info(gomock.Any(), gomock.Any(), gomock.Any()).Return(nil)
+
+		uc := usecase.NewUseCase(repoCli, repoTel, l)
 		//err := uc.Execute("", tarifasOK_UC)
-		resp, err := uc.Execute("", clienteComTel)
+		resp, err := uc.Execute(clienteComTel)
 		assert.Nil(t, err)
 		assert.NotNil(t, resp)
 	})
@@ -76,14 +80,17 @@ func Test_Execute(t *testing.T) {
 	t.Run("Caso de Erro", func(t *testing.T) {
 		errExpect := errors.New("dummy error")
 		repoCli := mocks.NewMockIRepository(control)
-		repoCli.EXPECT().Save(gomock.Any(), gomock.Any()).Return(errExpect)
+		repoCli.EXPECT().Save(gomock.Any()).Return(errExpect)
 
 		repoTel := mockRepoTel.NewMockIRepository(control)
-		repoTel.EXPECT().Save(gomock.Any(), gomock.Any()).Return(nil)
+		repoTel.EXPECT().Save(gomock.Any()).Return(nil)
 
-		uc := usecase.NewUseCase(repoCli, repoTel)
+		l := mockLog.NewMockLogger(control)
+		l.EXPECT().Info(gomock.Any(), gomock.Any(), gomock.Any()).Return(nil)
+
+		uc := usecase.NewUseCase(repoCli, repoTel, l)
 		//err := uc.Execute("", tarifasOK_UC)
-		resp, err := uc.Execute("", clienteComTel)
+		resp, err := uc.Execute(clienteComTel)
 		assert.NotNil(t, err)
 		assert.Nil(t, resp)
 	})

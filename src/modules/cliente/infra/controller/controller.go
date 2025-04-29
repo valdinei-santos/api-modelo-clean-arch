@@ -2,9 +2,9 @@ package controller
 
 import (
 	"encoding/json"
-	"log/slog"
 	"net/http"
 
+	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
 	create "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases/create"
 	createComTelefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases/create-com-telefone"
 	get "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases/get"
@@ -16,142 +16,147 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// ExecuteCreate - ...
-func ExecuteCreate(stamp string, c *gin.Context, useCase create.IUsecase) error {
-	var dadosLog = "cliente - create - Controller"
-	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", dadosLog))
+// Create - ...
+func Create(log logger.Logger, ctx *gin.Context, useCase create.IUsecase) {
+	log.Debug("Entrou controller.Create")
 	var input *dto.Request
-	//var input interface{}
-	err := json.NewDecoder(c.Request.Body).Decode(&input)
+	err := json.NewDecoder(ctx.Request.Body).Decode(&input)
 	if err != nil {
-		slog.Error("Erro Decode input", err, slog.String("id", stamp), slog.String("mtd", dadosLog))
+		log.Error(err.Error(), "mtd", "json.NewDecoder")
 		dataJErro := dto.OutputDefault{
 			StatusCode: -1,
 			Message:    err.Error(),
 		}
-		c.JSON(http.StatusInternalServerError, dataJErro)
-		return err
+		ctx.JSON(http.StatusInternalServerError, dataJErro)
+		log.Info("### Finished ERROR", "status_code", http.StatusInternalServerError)
+		return
 	}
-	slog.Info(input.CPF)
+	log.Debug("CPF:" + input.CPF)
 
-	resp, err := useCase.Execute(stamp, input)
+	resp, err := useCase.Execute(input)
 	if err != nil {
-		slog.Error("Erro Execute useCase", err, slog.String("id", stamp), slog.String("mtd", dadosLog))
+		log.Error(err.Error(), "mtd", "useCase.Execute")
 		dataJErro := dto.OutputDefault{
 			StatusCode: -1,
 			Message:    err.Error(),
 		}
-		c.JSON(http.StatusInternalServerError, dataJErro)
-		return err
+		ctx.JSON(http.StatusInternalServerError, dataJErro)
+		log.Info("### Finished ERROR", "status_code", http.StatusInternalServerError)
+		return
 	}
-	c.JSON(http.StatusOK, resp)
-	return nil
+	ctx.JSON(http.StatusOK, resp)
+	log.Info("### Finished OK", "status_code", http.StatusOK)
+	return
 }
 
-// ExecuteCreateComTelefone - ...
-func ExecuteCreateComTelefone(stamp string, c *gin.Context, useCase createComTelefone.IUsecase) error {
-	var dadosLog = "cliente - create-com-telefone - Controller"
-	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", dadosLog))
+// CreateComTelefone - ...
+func CreateComTelefone(log logger.Logger, ctx *gin.Context, useCase createComTelefone.IUsecase) {
+	log.Debug("Entrou controller.CreateComTelefone")
 	var input *dto.RequestComTelefone
-	//var input interface{}
-	err := json.NewDecoder(c.Request.Body).Decode(&input)
+	err := json.NewDecoder(ctx.Request.Body).Decode(&input)
 	if err != nil {
-		slog.Error("Erro Decode input", err, slog.String("id", stamp), slog.String("mtd", dadosLog))
+		log.Error(err.Error(), "mtd", "json.NewDecoder")
 		dataJErro := dto.OutputDefault{
 			StatusCode: -1,
 			Message:    err.Error(),
 		}
-		c.JSON(http.StatusInternalServerError, dataJErro)
-		return err
+		ctx.JSON(http.StatusInternalServerError, dataJErro)
+		log.Info("### Finished ERROR", "status_code", http.StatusInternalServerError)
+		return
 	}
 
-	resp, err := useCase.Execute(stamp, input)
+	resp, err := useCase.Execute(input)
 	if err != nil {
-		slog.Error("Erro Execute useCase", err, slog.String("id", stamp), slog.String("mtd", dadosLog))
+		log.Error(err.Error(), "mtd", "useCase.Execute")
 		dataJErro := dto.OutputDefault{
 			StatusCode: -1,
 			Message:    err.Error(),
 		}
-		c.JSON(http.StatusInternalServerError, dataJErro)
-		return err
+		ctx.JSON(http.StatusInternalServerError, dataJErro)
+		log.Info("### Finished ERROR", "status_code", http.StatusInternalServerError)
+		return
 	}
-	c.JSON(http.StatusOK, resp)
-	return nil
+	ctx.JSON(http.StatusOK, resp)
+	log.Info("### Finished OK", "status_code", http.StatusOK)
+	return
 }
 
-// ExecuteGet - ...
-func ExecuteGet(stamp string, c *gin.Context, useCase get.IUsecase) error {
-	var dadosLog = "cliente - get - Controller"
-	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", dadosLog))
-	cpf := c.Param("cpf")
-	slog.Info("CPF: "+cpf, slog.String("id", stamp), slog.String("mtd", dadosLog))
-	resp, err := useCase.Execute(stamp, cpf)
+// Get - ...
+func Get(log logger.Logger, ctx *gin.Context, useCase get.IUsecase) {
+	log.Debug("Entrou controller.Get")
+	cpf := ctx.Param("cpf")
+	log.Debug("CPF: " + cpf)
+	resp, err := useCase.Execute(cpf)
 	if err != nil {
-		slog.Error("Erro...", err, slog.String("id", stamp), slog.String("mtd", dadosLog))
+		log.Error(err.Error(), "mtd", "useCase.Execute")
 		dataJErro := dto.OutputDefault{
 			StatusCode: -1,
 			Message:    err.Error(),
 		}
-		c.JSON(http.StatusInternalServerError, dataJErro)
-		return err
+		ctx.JSON(http.StatusInternalServerError, dataJErro)
+		log.Info("### Finished ERROR", "status_code", http.StatusInternalServerError)
+		return
 	}
-	c.JSON(http.StatusOK, resp)
-	return nil
+	ctx.JSON(http.StatusOK, resp)
+	log.Info("### Finished OK", "status_code", http.StatusOK)
+	return
 }
 
-// ExecuteGetComTelefone - ...
-func ExecuteGetComTelefone(stamp string, c *gin.Context, useCase getComTelefone.IUsecase) error {
-	var dadosLog = "cliente - get-com-telefone - Controller"
-	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", dadosLog))
-
-	cpf := c.Param("cpf")
-	slog.Info("CPF: "+cpf, slog.String("id", stamp), slog.String("mtd", dadosLog))
-	resp, err := useCase.Execute(stamp, cpf)
+// GetComTelefone - ...
+func GetComTelefone(log logger.Logger, ctx *gin.Context, useCase getComTelefone.IUsecase) {
+	log.Debug("Entrou controller.GetComTelefone")
+	cpf := ctx.Param("cpf")
+	log.Debug("CPF: " + cpf)
+	resp, err := useCase.Execute(cpf)
 	if err != nil {
-		slog.Error("Erro...", err, slog.String("id", stamp), slog.String("mtd", dadosLog))
+		log.Error(err.Error(), "mtd", "useCase.Execute")
 		dataJErro := dto.OutputDefault{
 			StatusCode: -1,
 			Message:    err.Error(),
 		}
-		c.JSON(http.StatusInternalServerError, dataJErro)
-		return err
+		ctx.JSON(http.StatusInternalServerError, dataJErro)
+		log.Info("### Finished ERROR", "status_code", http.StatusInternalServerError)
+		return
 	}
-	c.JSON(http.StatusOK, resp)
-	return nil
+	ctx.JSON(http.StatusOK, resp)
+	log.Info("### Finished OK", "status_code", http.StatusOK)
+	return
 }
 
-// ExecuteGetAll - ...
-func ExecuteGetAll(stamp string, c *gin.Context, useCase getAll.IUsecase) error {
-	var dadosLog = "cliente - get-all - Controller"
-	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", dadosLog))
-	resp, err := useCase.Execute(stamp)
+// GetAll - ...
+func GetAll(log logger.Logger, ctx *gin.Context, useCase getAll.IUsecase) {
+	log.Debug("Entrou controller.GetAll")
+	resp, err := useCase.Execute()
 	if err != nil {
-		slog.Error("Erro...", err, slog.String("id", stamp), slog.String("mtd", dadosLog))
+		log.Error(err.Error(), "mtd", "useCase.Execute")
 		dataJErro := dto.OutputDefault{
 			StatusCode: -1,
 			Message:    err.Error(),
 		}
-		c.JSON(http.StatusInternalServerError, dataJErro)
-		return err
+		ctx.JSON(http.StatusInternalServerError, dataJErro)
+		log.Info("### Finished ERROR", "status_code", http.StatusInternalServerError)
+		return
 	}
-	c.JSON(http.StatusOK, resp)
-	return nil
+	ctx.JSON(http.StatusOK, resp)
+	log.Info("### Finished OK", "status_code", http.StatusOK)
+	return
 }
 
-// ExecuteGetComTelefone - ...
-func ExecuteGetAllComTelefone(stamp string, c *gin.Context, useCase getAllComTelefone.IUsecase) error {
-	var dadosLog = "cliente - get-all-com-telefone - Controller"
-	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", dadosLog))
-	resp, err := useCase.Execute(stamp)
+// GetAllComTelefone - ...
+func GetAllComTelefone(log logger.Logger, ctx *gin.Context, useCase getAllComTelefone.IUsecase) {
+	log.Debug("Entrou controller.GetAllComTelefone")
+	resp, err := useCase.Execute()
 	if err != nil {
-		slog.Error("Erro...", err, slog.String("id", stamp), slog.String("mtd", dadosLog))
+		log.Error(err.Error(), "mtd", "useCase.Execute")
 		dataJErro := dto.OutputDefault{
 			StatusCode: -1,
 			Message:    err.Error(),
 		}
-		c.JSON(http.StatusInternalServerError, dataJErro)
-		return err
+		ctx.JSON(http.StatusInternalServerError, dataJErro)
+		log.Info("### Finished ERROR", "status_code", http.StatusInternalServerError)
+		return
 	}
-	c.JSON(http.StatusOK, resp)
-	return nil
+	ctx.JSON(http.StatusOK, resp)
+	log.Info("### Finished OK", "status_code", http.StatusOK)
+	return
 }

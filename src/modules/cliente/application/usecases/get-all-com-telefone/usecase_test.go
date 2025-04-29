@@ -1,8 +1,9 @@
-package get_all_com_telefone_test
+package getallcomtelefone_test
 
 import (
 	"errors"
 
+	mockLog "github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger/mocks"
 	usecase "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases/get-com-telefone"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository/mocks"
@@ -44,14 +45,17 @@ func TestExecute(t *testing.T) {
 
 	t.Run("Caso de Sucesso", func(t *testing.T) {
 		repoCli := mocks.NewMockIRepository(control)
-		repoCli.EXPECT().FindById(gomock.Any(), gomock.Any()).Return(clienteOK, nil)
+		repoCli.EXPECT().FindById(gomock.Any()).Return(clienteOK, nil)
 
 		repoTel := mockRepoTel.NewMockIRepository(control)
-		repoTel.EXPECT().FindAll(gomock.Any(), gomock.Any()).Return(telefonesOK, nil)
+		repoTel.EXPECT().FindAll(gomock.Any()).Return(telefonesOK, nil)
 
-		uc := usecase.NewUseCase(repoCli, repoTel)
+		l := mockLog.NewMockLogger(control)
+		l.EXPECT().Info(gomock.Any(), gomock.Any(), gomock.Any()).Return(nil)
+
+		uc := usecase.NewUseCase(repoCli, repoTel, l)
 		//err := uc.Execute("", tarifasOK_UC)
-		err, resp := uc.Execute("", clienteOK.CPF)
+		err, resp := uc.Execute(clienteOK.CPF)
 		assert.Nil(t, err)
 		assert.NotNil(t, resp)
 	})
@@ -60,15 +64,18 @@ func TestExecute(t *testing.T) {
 		errExpect := errors.New("dummy error")
 
 		repoCli := mocks.NewMockIRepository(control)
-		repoCli.EXPECT().FindById(gomock.Any(), gomock.Any()).Return(nil, errExpect)
+		repoCli.EXPECT().FindById(gomock.Any()).Return(nil, errExpect)
 
 		// Quando da erro não chama o FindAll do Telefone
 		repoTel := mockRepoTel.NewMockIRepository(control)
 		//repoTel.EXPECT().FindAll(gomock.Any(), gomock.Any()).Return(nil, errExpect)
 
-		uc := usecase.NewUseCase(repoCli, repoTel)
+		l := mockLog.NewMockLogger(control)
+		l.EXPECT().Info(gomock.Any(), gomock.Any(), gomock.Any()).Return(nil)
+
+		uc := usecase.NewUseCase(repoCli, repoTel, l)
 		//err := uc.Execute("", tarifasOK_UC)
-		err, resp := uc.Execute("", clienteOK.CPF)
+		err, resp := uc.Execute(clienteOK.CPF)
 		assert.NotNil(t, err)
 		assert.NotNil(t, resp)
 	})

@@ -2,16 +2,17 @@ package routes
 
 import (
 	"database/sql"
-	"log/slog"
+	"time"
 
 	"github.com/gin-gonic/gin"
 	//"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/slog"
-	cliente "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases"
-	produto "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/application/usecases"
-	telefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/application/usecases"
+	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
+	cliente "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente"
+	produto "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto"
+	telefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone"
 )
 
-func InitRoutes(r *gin.RouterGroup, db *sql.DB) {
+func InitRoutes(r *gin.RouterGroup, db *sql.DB, l logger.Logger) {
 
 	//router.Use(cors.Default())
 	r.Use(func(c *gin.Context) {
@@ -29,6 +30,8 @@ func InitRoutes(r *gin.RouterGroup, db *sql.DB) {
 	})
 
 	r.GET("/ping", func(c *gin.Context) {
+		log := initIdReqInLog(l, "ping")
+		log.Info("### " + c.Request.Method + " " + c.Request.URL.Path)
 		c.String(200, "pong")
 	})
 
@@ -37,70 +40,86 @@ func InitRoutes(r *gin.RouterGroup, db *sql.DB) {
 	// CLIENTES
 	// Cria 1 cliente
 	api.POST("/cliente", func(c *gin.Context) {
-		slog.Info("routes.go - POST /cliente")
-		cliente.StartCreate(c, db)
+		log := initIdReqInLog(l, "cliente")
+		log.Info("### " + c.Request.Method + " " + c.Request.URL.Path)
+		cliente.Create(log, c, db)
 	})
 
 	// Cria 1 cliente específico com telefones
 	api.POST("/cliente/telefones", func(c *gin.Context) {
-		slog.Info("routes.go - POST /cliente/telefones")
-		cliente.StartCreateComTelefone(c, db)
+		log := initIdReqInLog(l, "cliente")
+		log.Info("### " + c.Request.Method + " " + c.Request.URL.Path)
+		cliente.CreateComTelefone(log, c, db)
 	})
 
 	//Lista 1 cliente específico
 	api.GET("/cliente/:cpf", func(c *gin.Context) {
-		slog.Info("routes.go - GET /cliente/:cpf")
-		cliente.StartGet(c, db)
+		log := initIdReqInLog(l, "cliente")
+		log.Info("### " + c.Request.Method + " " + c.Request.URL.Path)
+		cliente.Get(log, c, db)
 	})
 
 	//Lista todos os clientes
 	api.GET("/cliente", func(c *gin.Context) {
-		slog.Info("routes.go - GET /cliente")
-		cliente.StartGetAll(c, db)
+		log := initIdReqInLog(l, "cliente")
+		log.Info("### " + c.Request.Method + " " + c.Request.URL.Path)
+		cliente.GetAll(log, c, db)
 	})
 
 	// Lista 1 cliente específico com telefones
 	api.GET("/cliente/:cpf/telefones", func(c *gin.Context) {
-		slog.Info("routes.go - GET /cliente/:cpf/telefones")
-		cliente.StartGetComTelefone(c, db)
+		log := initIdReqInLog(l, "cliente")
+		log.Info("### " + c.Request.Method + " " + c.Request.URL.Path)
+		cliente.GetComTelefone(log, c, db)
 	})
 
 	// Lista todos os clientes com telefones
 	api.GET("/cliente/telefones", func(c *gin.Context) {
-		slog.Info("routes.go - GET /cliente/telefones")
-		cliente.StartGetAllComTelefone(c, db)
+		log := initIdReqInLog(l, "cliente")
+		log.Info("### " + c.Request.Method + " " + c.Request.URL.Path)
+		cliente.GetAllComTelefone(log, c, db)
 	})
 
 	// TELEFONES
 	//Lista todos os telefones de um cliente
 	api.GET("/telefone/:cpf", func(c *gin.Context) {
-		slog.Info("routes.go - GET /telefone/:cpf")
-		telefone.StartGetAll(c, db)
+		log := initIdReqInLog(l, "telefone")
+		log.Info("### " + c.Request.Method + " " + c.Request.URL.Path)
+		telefone.GetAll(log, c, db)
 	})
 
 	// Cria 1 telefone
 	api.POST("/telefone", func(c *gin.Context) {
-		slog.Info("routes.go - POST /telefone")
-		telefone.StartCreate(c, db)
+		log := initIdReqInLog(l, "telefone")
+		log.Info("### " + c.Request.Method + " " + c.Request.URL.Path)
+		telefone.Create(log, c, db)
 	})
 
 	// PRODUTOS
 	//Lista todos os produtos
 	api.GET("/produto", func(c *gin.Context) {
-		slog.Info("routes.go - GET /produto")
-		produto.StartGetAll(c, db)
+		log := initIdReqInLog(l, "produto")
+		log.Info("### " + c.Request.Method + " " + c.Request.URL.Path)
+		produto.GetAll(log, c, db)
 	})
 
 	//Lista 1 produto
 	api.GET("/produto/:id", func(c *gin.Context) {
-		slog.Info("routes.go - GET /produto/:id")
-		produto.StartGet(c, db)
+		log := initIdReqInLog(l, "produto")
+		log.Info("### " + c.Request.Method + " " + c.Request.URL.Path)
+		produto.Get(log, c, db)
 	})
 
 	// Cria 1 produto
 	api.POST("/produto", func(c *gin.Context) {
-		slog.Info("routes.go - POST /produto")
-		produto.StartCreate(c, db)
+		log := initIdReqInLog(l, "produto")
+		log.Info("### " + c.Request.Method + " " + c.Request.URL.Path)
+		produto.Create(log, c, db)
 	})
+}
 
+func initIdReqInLog(log logger.Logger, nameResource string) logger.Logger {
+	stamp := time.Now().Format(("20060102150405"))
+	logNewParams := log.With("req_id", stamp, "resource", nameResource)
+	return logNewParams
 }

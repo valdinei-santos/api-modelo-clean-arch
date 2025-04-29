@@ -42,60 +42,60 @@ func (m *MockIRepository) EXPECT() *MockIRepositoryMockRecorder {
 }
 
 // BeginTransaction mocks base method.
-func (m *MockIRepository) BeginTransaction(stamp string) (*sql.Tx, error) {
+func (m *MockIRepository) BeginTransaction() (*sql.Tx, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "BeginTransaction", stamp)
+	ret := m.ctrl.Call(m, "BeginTransaction")
 	ret0, _ := ret[0].(*sql.Tx)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
 
 // BeginTransaction indicates an expected call of BeginTransaction.
-func (mr *MockIRepositoryMockRecorder) BeginTransaction(stamp any) *gomock.Call {
+func (mr *MockIRepositoryMockRecorder) BeginTransaction() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BeginTransaction", reflect.TypeOf((*MockIRepository)(nil).BeginTransaction), stamp)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BeginTransaction", reflect.TypeOf((*MockIRepository)(nil).BeginTransaction))
 }
 
 // FindAll mocks base method.
-func (m *MockIRepository) FindAll(stamp string) (*[]entities.Produto, error) {
+func (m *MockIRepository) FindAll() (*[]entities.Produto, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "FindAll", stamp)
+	ret := m.ctrl.Call(m, "FindAll")
 	ret0, _ := ret[0].(*[]entities.Produto)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
 
 // FindAll indicates an expected call of FindAll.
-func (mr *MockIRepositoryMockRecorder) FindAll(stamp any) *gomock.Call {
+func (mr *MockIRepositoryMockRecorder) FindAll() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "FindAll", reflect.TypeOf((*MockIRepository)(nil).FindAll), stamp)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "FindAll", reflect.TypeOf((*MockIRepository)(nil).FindAll))
 }
 
 // FindById mocks base method.
-func (m *MockIRepository) FindById(stamp string, id int) (*entities.Produto, error) {
+func (m *MockIRepository) FindById(id int) (*entities.Produto, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "FindById", stamp, id)
+	ret := m.ctrl.Call(m, "FindById", id)
 	ret0, _ := ret[0].(*entities.Produto)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
 
 // FindById indicates an expected call of FindById.
-func (mr *MockIRepositoryMockRecorder) FindById(stamp, id any) *gomock.Call {
+func (mr *MockIRepositoryMockRecorder) FindById(id any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "FindById", reflect.TypeOf((*MockIRepository)(nil).FindById), stamp, id)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "FindById", reflect.TypeOf((*MockIRepository)(nil).FindById), id)
 }
 
 // Save mocks base method.
-func (m *MockIRepository) Save(stamp string, p *dto.ProdutoDTO) error {
+func (m *MockIRepository) Save(p *dto.ProdutoDTO) error {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Save", stamp, p)
+	ret := m.ctrl.Call(m, "Save", p)
 	ret0, _ := ret[0].(error)
 	return ret0
 }
 
 // Save indicates an expected call of Save.
-func (mr *MockIRepositoryMockRecorder) Save(stamp, p any) *gomock.Call {
+func (mr *MockIRepositoryMockRecorder) Save(p any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Save", reflect.TypeOf((*MockIRepository)(nil).Save), stamp, p)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Save", reflect.TypeOf((*MockIRepository)(nil).Save), p)
 }

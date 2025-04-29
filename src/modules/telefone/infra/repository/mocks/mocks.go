@@ -41,44 +41,44 @@ func (m *MockIRepository) EXPECT() *MockIRepositoryMockRecorder {
 }
 
 // FindAll mocks base method.
-func (m *MockIRepository) FindAll(stamp, cpf string) ([]entities.Telefone, error) {
+func (m *MockIRepository) FindAll(cpf string) ([]entities.Telefone, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "FindAll", stamp, cpf)
+	ret := m.ctrl.Call(m, "FindAll", cpf)
 	ret0, _ := ret[0].([]entities.Telefone)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
 
 // FindAll indicates an expected call of FindAll.
-func (mr *MockIRepositoryMockRecorder) FindAll(stamp, cpf any) *gomock.Call {
+func (mr *MockIRepositoryMockRecorder) FindAll(cpf any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "FindAll", reflect.TypeOf((*MockIRepository)(nil).FindAll), stamp, cpf)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "FindAll", reflect.TypeOf((*MockIRepository)(nil).FindAll), cpf)
 }
 
 // Save mocks base method.
-func (m *MockIRepository) Save(stamp string, p *dto.Telefone) error {
+func (m *MockIRepository) Save(t *dto.Telefone) error {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Save", stamp, p)
+	ret := m.ctrl.Call(m, "Save", t)
 	ret0, _ := ret[0].(error)
 	return ret0
 }
 
 // Save indicates an expected call of Save.
-func (mr *MockIRepositoryMockRecorder) Save(stamp, p any) *gomock.Call {
+func (mr *MockIRepositoryMockRecorder) Save(t any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Save", reflect.TypeOf((*MockIRepository)(nil).Save), stamp, p)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Save", reflect.TypeOf((*MockIRepository)(nil).Save), t)
 }
 
 // SaveAll mocks base method.
-func (m *MockIRepository) SaveAll(stamp string, p []*dto.Telefone) error {
+func (m *MockIRepository) SaveAll(t []*dto.Telefone) error {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "SaveAll", stamp, p)
+	ret := m.ctrl.Call(m, "SaveAll", t)
 	ret0, _ := ret[0].(error)
 	return ret0
 }
 
 // SaveAll indicates an expected call of SaveAll.
-func (mr *MockIRepositoryMockRecorder) SaveAll(stamp, p any) *gomock.Call {
+func (mr *MockIRepositoryMockRecorder) SaveAll(t any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SaveAll", reflect.TypeOf((*MockIRepository)(nil).SaveAll), stamp, p)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SaveAll", reflect.TypeOf((*MockIRepository)(nil).SaveAll), t)
 }

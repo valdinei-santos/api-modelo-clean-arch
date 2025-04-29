@@ -3,9 +3,10 @@ package getall_test
 import (
 	"errors"
 
+	mockLog "github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger/mocks"
 	getall "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/application/usecases/get-all"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/domain/entities"
-	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/infra/repository/mocks"
+	mockRepo "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/infra/repository/mocks"
 	"go.uber.org/mock/gomock"
 
 	//"api-modelo-clean-arch/application/extrato/getdados/mock"
@@ -39,26 +40,32 @@ func Test_Execute(t *testing.T) {
 	} */
 
 	t.Run("Caso de Sucesso", func(t *testing.T) {
-		r := mocks.NewMockIRepository(control)
-		r.EXPECT().FindAll(gomock.Any(), gomock.Any()).Return(telefonesOK, nil)
+		r := mockRepo.NewMockIRepository(control)
+		r.EXPECT().FindAll(gomock.Any()).Return(telefonesOK, nil)
 
-		uc := getall.NewUseCase(r)
+		l := mockLog.NewMockLogger(control)
+		l.EXPECT().Info(gomock.Any(), gomock.Any(), gomock.Any()).Return(nil)
+
+		uc := getall.NewUseCase(r, l)
 		//err := uc.Execute("", tarifasOK_UC)
-		resp, err := uc.Execute("", "1")
+		resp, err := uc.Execute("1")
 		assert.Nil(t, err)
 		assert.NotNil(t, resp)
 	})
 
 	t.Run("Caso de Erro", func(t *testing.T) {
 		errExpect := errors.New("dummy error")
-		r := mocks.NewMockIRepository(control)
-		r.EXPECT().FindAll(gomock.Any(), gomock.Any()).Return(nil, errExpect)
+		r := mockRepo.NewMockIRepository(control)
+		r.EXPECT().FindAll(gomock.Any()).Return(nil, errExpect)
 		// Quando da erro não chama o QueryLoadDataTelefone
 		//r.EXPECT().QueryLoadDataTelefone(gomock.Any(), gomock.Any()).Return(telefonesOK, errExpect)
 
-		uc := getall.NewUseCase(r)
+		l := mockLog.NewMockLogger(control)
+		l.EXPECT().Info(gomock.Any(), gomock.Any(), gomock.Any()).Return(nil)
+
+		uc := getall.NewUseCase(r, l)
 		//err := uc.Execute("", tarifasOK_UC)
-		resp, err := uc.Execute("", "")
+		resp, err := uc.Execute("")
 		assert.NotNil(t, err)
 		assert.Nil(t, resp)
 	})

@@ -6,6 +6,7 @@ require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-playground/validator/v10 v10.20.0
 	github.com/godror/godror v0.32.0
+	github.com/mdobak/go-xerrors v0.3.1
 	github.com/stretchr/testify v1.9.0
 	go.uber.org/mock v0.4.0
 )

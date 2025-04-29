@@ -1,29 +1,30 @@
 package getall
 
 import (
-	"log/slog"
-
+	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/infra/repository"
 )
 
 // UseCase - ...
 type UseCase struct {
-	Repo repository.IRepository // aqui referencia a interface Repository do pg-repo dessa entity
+	repo repository.IRepository // aqui referencia a interface Repository do pg-repo dessa entity
+	log  logger.Logger
 }
 
-func NewUseCase(r repository.IRepository) *UseCase {
+func NewUseCase(r repository.IRepository, l logger.Logger) *UseCase {
 	return &UseCase{
-		Repo: r,
+		repo: r,
+		log:  l,
 	}
 }
 
 // Execute - ...
-func (u *UseCase) Execute(stamp, cpf string) (*dto.ResponseAll, error) {
-	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", "Usecase - telefone - Execute"))
-	telefones, err := u.Repo.FindAll(stamp, cpf)
+func (u *UseCase) Execute(cpf string) (*dto.ResponseAll, error) {
+	u.log.Debug("Entrou getall.Execute")
+	telefones, err := u.repo.FindAll(cpf)
 	if err != nil {
-		slog.Error("Erro...", err, slog.String("id", stamp), slog.String("mtd", "Usecase - telefone - Execute"))
+		u.log.Error(err.Error(), "mtd", "repo.FindAll")
 		return nil, err
 	}
 	// Transforma a lista de entities.ClienteComTel para uma lista de DTO Cliente com respectivos telefones

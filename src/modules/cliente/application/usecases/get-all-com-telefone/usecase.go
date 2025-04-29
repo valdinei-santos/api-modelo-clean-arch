@@ -1,8 +1,7 @@
-package get_all_com_telefone
+package getallcomtelefone
 
 import (
-	"log/slog"
-
+	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository"
 	repoTelefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/infra/repository"
@@ -10,30 +9,35 @@ import (
 
 // UseCase - ...
 type UseCase struct {
-	RepoCliente  repository.IRepository   // aqui referencia a interface Repository desse recurso
-	RepoTelefone repoTelefone.IRepository // aqui referencia a interface Repository do recurso Telefone
+	repoCliente  repository.IRepository   // aqui referencia a interface Repository desse recurso
+	repoTelefone repoTelefone.IRepository // aqui referencia a interface Repository do recurso Telefone
+	log          logger.Logger
 }
 
-func NewUseCase(repoCli repository.IRepository, repoTel repoTelefone.IRepository) *UseCase {
+func NewUseCase(repoCli repository.IRepository, repoTel repoTelefone.IRepository, l logger.Logger) *UseCase {
 	return &UseCase{
-		RepoCliente:  repoCli,
-		RepoTelefone: repoTel,
+		repoCliente:  repoCli,
+		repoTelefone: repoTel,
+		log:          l,
 	}
 }
 
 // Execute - ...
-func (u *UseCase) Execute(stamp string) ([]*dto.ResponseComTelefone, error) {
-	clientes, err := u.RepoCliente.FindAll(stamp)
+func (u *UseCase) Execute() ([]*dto.ResponseComTelefone, error) {
+	u.log.Debug("Entrou getallcomtelefone.Execute")
+	clientes, err := u.repoCliente.FindAll()
 	if err != nil {
-		slog.Error("Erro Cliente...", err, slog.String("id", stamp), slog.String("mtd", "cliente - UseCase - Execute"))
+		//u.log.Error("Error", err)
+		u.log.Error(err.Error(), "mtd", "repoCliente.FindAll")
 		return nil, err
 	}
 
 	var listaCli []*dto.ResponseComTelefone
 	for _, v := range *clientes {
-		tels, err := u.RepoTelefone.FindAll(stamp, v.Cpf)
+		tels, err := u.repoTelefone.FindAll(v.Cpf)
 		if err != nil {
-			slog.Error("Erro Telefone...", err, slog.String("id", stamp), slog.String("mtd", "cliente/get-cliente - UseCase - Execute"))
+			//u.log.Error(err.Error())
+			u.log.Error(err.Error(), "mtd", "repoTelefone.FindAll")
 			return nil, err
 		}
 		telsStr := make([]string, len(tels))

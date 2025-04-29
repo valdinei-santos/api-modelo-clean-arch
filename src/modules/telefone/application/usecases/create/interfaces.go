@@ -4,7 +4,7 @@ import "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/dt
 
 // IUsecase - ...
 type IUsecase interface {
-	Execute(stamp string, p *dto.Request) (*dto.OutputDefault, error)
+	Execute(t *dto.Request) (*dto.OutputDefault, error)
 }
 
 /* type IRepository interface {

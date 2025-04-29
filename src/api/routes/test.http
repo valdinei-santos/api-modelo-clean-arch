@@ -35,12 +35,12 @@ POST {{apiurl}}/cliente
 Content-Type: application/json
 
 {
-  "nome": "Cliente 1",
-  "cpf": "1",
-  "dt_nasc": "13/08/1978",
+  "nome": "Cliente 12",
+  "cpf": "12",
+  "dt_nasc": "16/06/1988",
   "telefones": [
-    "4832453504",
-    "4832215504"
+    "4832453507",
+    "4832215507"
   ]
 }
 

@@ -1,8 +1,7 @@
-package get_com_telefone
+package getcomtelefone
 
 import (
-	"log/slog"
-
+	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository"
 	repoTelefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/infra/repository"
@@ -10,28 +9,33 @@ import (
 
 // UseCase - ...
 type UseCase struct {
-	RepoCliente  repository.IRepository   // aqui referencia a interface Repository desse recurso
-	RepoTelefone repoTelefone.IRepository // aqui referencia a interface Repository do recurso Telefone
+	repoCliente  repository.IRepository   // aqui referencia a interface Repository desse recurso
+	repoTelefone repoTelefone.IRepository // aqui referencia a interface Repository do recurso Telefone
+	log          logger.Logger
 }
 
-func NewUseCase(repoCli repository.IRepository, repoTel repoTelefone.IRepository) *UseCase {
+func NewUseCase(repoCli repository.IRepository, repoTel repoTelefone.IRepository, l logger.Logger) *UseCase {
 	return &UseCase{
-		RepoCliente:  repoCli,
-		RepoTelefone: repoTel,
+		repoCliente:  repoCli,
+		repoTelefone: repoTel,
+		log:          l,
 	}
 }
 
 // Execute - ...
-func (u *UseCase) Execute(stamp, cpf string) (*dto.ResponseComTelefone, error) {
-	c, err := u.RepoCliente.FindById(stamp, cpf)
+func (u *UseCase) Execute(cpf string) (*dto.ResponseComTelefone, error) {
+	u.log.Debug("Entrou getcomtelefone.Execute")
+	c, err := u.repoCliente.FindById(cpf)
 	if err != nil {
-		slog.Error("Erro Cliente...", err, slog.String("id", stamp), slog.String("mtd", "cliente - UseCase - Execute"))
+		//u.log.Error(err.Error())
+		u.log.Error(err.Error(), "mtd", "repoCliente.FindById")
 		return nil, err
 	}
 
-	tels, err := u.RepoTelefone.FindAll(stamp, cpf)
+	tels, err := u.repoTelefone.FindAll(cpf)
 	if err != nil {
-		slog.Error("Erro Telefone...", err, slog.String("id", stamp), slog.String("mtd", "cliente/get-cliente - UseCase - Execute"))
+		//u.log.Error(err.Error())
+		u.log.Error(err.Error(), "mtd", "repoTelefone.FindAll")
 		return nil, err
 	}
 

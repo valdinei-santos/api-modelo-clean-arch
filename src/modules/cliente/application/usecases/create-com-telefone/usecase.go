@@ -1,8 +1,7 @@
-package create_com_telefone
+package createcomtelefone
 
 import (
-	"log/slog"
-
+	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository"
 	dtoTelefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/dto"
@@ -11,20 +10,22 @@ import (
 
 // UseCase - ...
 type UseCase struct {
-	RepoCliente  repository.IRepository   // aqui referencia a interface Repository desse recurso
-	RepoTelefone repoTelefone.IRepository // aqui referencia a interface Repository do recurso Telefone
+	repoCliente  repository.IRepository   // aqui referencia a interface Repository desse recurso
+	repoTelefone repoTelefone.IRepository // aqui referencia a interface Repository do recurso Telefone
+	log          logger.Logger
 }
 
-func NewUseCase(repoCli repository.IRepository, repoTel repoTelefone.IRepository) *UseCase {
+func NewUseCase(repoCli repository.IRepository, repoTel repoTelefone.IRepository, log logger.Logger) *UseCase {
 	return &UseCase{
-		RepoCliente:  repoCli,
-		RepoTelefone: repoTel,
+		repoCliente:  repoCli,
+		repoTelefone: repoTel,
+		log:          log,
 	}
 }
 
 // Execute - ...
-func (u *UseCase) Execute(stamp string, in *dto.RequestComTelefone) (*dto.OutputDefault, error) {
-	slog.Info("Entrou...", slog.String("id", stamp), slog.String("mtd", "cliente - create-com-telefone - UseCase - Execute"))
+func (u *UseCase) Execute(in *dto.RequestComTelefone) (*dto.OutputDefault, error) {
+	u.log.Debug("Entrou createcomtelefone.Execute")
 
 	// Cria um DTO Cliente
 	c := &dto.Cliente{
@@ -44,26 +45,29 @@ func (u *UseCase) Execute(stamp string, in *dto.RequestComTelefone) (*dto.Output
 	}
 
 	// Inicia a transação para salvar o cliente e telefones na mesma transação
-	tx, err := u.RepoCliente.BeginTransaction(stamp)
+	tx, err := u.repoCliente.BeginTransaction()
 	if err != nil {
-		slog.Error("Erro", err, slog.String("id", stamp), slog.String("mtd", "cliente - create-com-telefone - UseCase - BefginTransaction"))
+		//u.log.Error(err.Error())
+		u.log.Error(err.Error(), "mtd", "repoCliente.BeginTransaction")
 		return nil, err
 	}
 	defer tx.Rollback()
 
 	// Salva o cliente
-	err = u.RepoCliente.Save(stamp, c)
+	err = u.repoCliente.Save(c)
 	if err != nil {
 		tx.Rollback()
-		slog.Error("Erro", err, slog.String("id", stamp), slog.String("mtd", "cliente - create-com-telefone - UseCase - Execute"))
+		//u.log.Error(err.Error())
+		u.log.Error(err.Error(), "mtd", "repoCliente.Save")
 		return nil, err
 	}
 
 	// Salva os telefones
-	err = u.RepoTelefone.SaveAll(stamp, telefones)
+	err = u.repoTelefone.SaveAll(telefones)
 	if err != nil {
 		tx.Rollback()
-		slog.Error("Erro", err, slog.String("id", stamp), slog.String("mtd", "cliente - create-com-telefone - UseCase - Execute"))
+		//u.log.Error(err.Error())
+		u.log.Error(err.Error(), "mtd", "repoTelefone.SaveAll")
 		return nil, err
 	}
 
@@ -71,7 +75,8 @@ func (u *UseCase) Execute(stamp string, in *dto.RequestComTelefone) (*dto.Output
 	err = tx.Commit()
 	if err != nil {
 		tx.Rollback()
-		slog.Error("Erro ao fazer commit", err, slog.String("id", stamp), slog.String("mtd", "cliente - create-com-telefone - Usecase - Execute"))
+		//u.log.Error("Erro ao fazer commit: " + err.Error())
+		u.log.Error(err.Error(), "mtd", "tx.Commit")
 		return nil, err
 	}
 
