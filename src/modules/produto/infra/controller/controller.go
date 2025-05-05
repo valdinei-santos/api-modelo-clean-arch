@@ -7,10 +7,10 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
-	create "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/application/usecases/create"
-	get "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/application/usecases/get"
-	getAll "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/application/usecases/get-all"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/dto"
+	create "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/usecases/create"
+	get "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/usecases/get"
+	getAll "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/usecases/get-all"
 )
 
 // Create - Controlador para criar um produto

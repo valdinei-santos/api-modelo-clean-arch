@@ -5,9 +5,9 @@ import (
 	"net/http"
 
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
-	create "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/application/usecases/create"
-	getAll "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/application/usecases/get-all"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/dto"
+	create "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/usecases/create"
+	getAll "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/telefone/usecases/get-all"
 
 	"github.com/gin-gonic/gin"
 )

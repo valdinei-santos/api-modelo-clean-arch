@@ -5,13 +5,13 @@ import (
 	"net/http"
 
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
-	create "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases/create"
-	createComTelefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases/create-com-telefone"
-	get "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases/get"
-	getAll "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases/get-all"
-	getAllComTelefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases/get-all-com-telefone"
-	getComTelefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/application/usecases/get-com-telefone"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
+	create "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/usecases/create"
+	createComTelefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/usecases/create-com-telefone"
+	get "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/usecases/get"
+	getAll "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/usecases/get-all"
+	getAllComTelefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/usecases/get-all-com-telefone"
+	getComTelefone "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/usecases/get-com-telefone"
 
 	"github.com/gin-gonic/gin"
 )

@@ -10,11 +10,11 @@
 package mocks
 
 import (
-	sql "database/sql"
 	reflect "reflect"
 
 	entities "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/domain/entities"
 	dto "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
+	repository "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/infra/repository"
 	gomock "go.uber.org/mock/gomock"
 )
 
@@ -42,10 +42,10 @@ func (m *MockIRepository) EXPECT() *MockIRepositoryMockRecorder {
 }
 
 // BeginTransaction mocks base method.
-func (m *MockIRepository) BeginTransaction() (*sql.Tx, error) {
+func (m *MockIRepository) BeginTransaction() (repository.ITransaction, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BeginTransaction")
-	ret0, _ := ret[0].(*sql.Tx)
+	ret0, _ := ret[0].(repository.ITransaction)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -98,4 +98,55 @@ func (m *MockIRepository) Save(p *dto.Cliente) error {
 func (mr *MockIRepositoryMockRecorder) Save(p any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Save", reflect.TypeOf((*MockIRepository)(nil).Save), p)
+}
+
+// MockITransaction is a mock of ITransaction interface.
+type MockITransaction struct {
+	ctrl     *gomock.Controller
+	recorder *MockITransactionMockRecorder
+}
+
+// MockITransactionMockRecorder is the mock recorder for MockITransaction.
+type MockITransactionMockRecorder struct {
+	mock *MockITransaction
+}
+
+// NewMockITransaction creates a new mock instance.
+func NewMockITransaction(ctrl *gomock.Controller) *MockITransaction {
+	mock := &MockITransaction{ctrl: ctrl}
+	mock.recorder = &MockITransactionMockRecorder{mock}
+	return mock
+}
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockITransaction) EXPECT() *MockITransactionMockRecorder {
+	return m.recorder
+}
+
+// Commit mocks base method.
+func (m *MockITransaction) Commit() error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Commit")
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// Commit indicates an expected call of Commit.
+func (mr *MockITransactionMockRecorder) Commit() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Commit", reflect.TypeOf((*MockITransaction)(nil).Commit))
+}
+
+// Rollback mocks base method.
+func (m *MockITransaction) Rollback() error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Rollback")
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// Rollback indicates an expected call of Rollback.
+func (mr *MockITransactionMockRecorder) Rollback() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Rollback", reflect.TypeOf((*MockITransaction)(nil).Rollback))
 }

@@ -4,11 +4,11 @@ import (
 	"database/sql"
 
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
-	create "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/application/usecases/create"
-	get "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/application/usecases/get"
-	getAll "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/application/usecases/get-all"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/infra/controller"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/infra/repository"
+	create "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/usecases/create"
+	get "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/usecases/get"
+	getAll "github.com/valdinei-santos/api-modelo-clean-arch/src/modules/produto/usecases/get-all"
 
 	"github.com/gin-gonic/gin"
 )

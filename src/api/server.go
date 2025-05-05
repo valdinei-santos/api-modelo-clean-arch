@@ -6,6 +6,7 @@ import (
 
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/api/routes"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/config"
+	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/database"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
 
 	"github.com/gin-gonic/gin"
@@ -24,7 +25,7 @@ func main() {
 	log := logger.NewSlogLogger()
 	fmt.Println("Iniciou Log...")
 
-	db := config.InitDB()
+	db := database.InitDB(log)
 	defer db.Close()
 	fmt.Println("Iniciou BD...")
 

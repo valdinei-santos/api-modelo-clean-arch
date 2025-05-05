@@ -44,6 +44,20 @@ Content-Type: application/json
   ]
 }
 
+### Adicionar um cliente com Telefones
+POST {{apiurl}}/cliente/telefones
+Content-Type: application/json
+
+{
+  "nome": "Cliente 13",
+  "cpf": "13",
+  "dt_nasc": "16/06/1988",
+  "telefones": [
+    "4832453507",
+    "4832215507"
+  ]
+}
+
 ### PRODUTO
 
 ### Listar 1 produto

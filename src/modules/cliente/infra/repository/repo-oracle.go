@@ -1,13 +1,34 @@
 package repository
 
 import (
+	"context"
 	"database/sql"
+	"errors"
 	"fmt"
 
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/infra/logger"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/domain/entities"
 	"github.com/valdinei-santos/api-modelo-clean-arch/src/modules/cliente/dto"
 )
+
+// SqlTransaction implements ITransaction
+type SqlTransaction struct {
+	tx *sql.Tx
+}
+
+func (st *SqlTransaction) Commit() error {
+	if st.tx == nil {
+		return errors.New("transação não inicializada")
+	}
+	return st.tx.Commit()
+}
+
+func (st *SqlTransaction) Rollback() error {
+	if st.tx == nil {
+		return errors.New("transação não inicializada")
+	}
+	return st.tx.Rollback()
+}
 
 // RepoOracle implements Repository
 type RepoOracle struct {
@@ -23,14 +44,17 @@ func NewRepoOracle(db *sql.DB, l logger.Logger) *RepoOracle {
 	}
 }
 
-func (r *RepoOracle) BeginTransaction() (*sql.Tx, error) {
+// func (r *RepoOracle) BeginTransaction() (*sql.Tx, error) {
+func (r *RepoOracle) BeginTransaction() (ITransaction, error) {
 	r.log.Debug("Entrou repository.BeginTransaction")
-	tx, err := r.db.Begin()
+	//tx, err := r.db.Begin()
+	tx, err := r.db.BeginTx(context.Background(), nil)
 	if err != nil {
 		r.log.Error(err.Error(), "mtd", "db.Begin")
 		return nil, err
 	}
-	return tx, nil
+	//return tx, nil
+	return &SqlTransaction{tx: tx}, nil
 }
 
 // Save ...
